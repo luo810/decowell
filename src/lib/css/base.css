@@ -154,6 +154,10 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 	position: relative;
 	overflow: hidden;
 }
+._1300{
+	width: 1300px;
+	margin: 0 auto;
+}
 
 /*转换成行内元素*/
 .ibDisplay {
@@ -375,7 +379,10 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 	flex: 1;
 }
 
-
+/*margin部分*/
+.mgb40{
+	margin-bottom: 40px;
+}
 
 /*清除bootstrap中的container的padding值*/
 /*.container{
