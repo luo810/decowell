@@ -1,0 +1,143 @@
+/*面包屑*/
+.bread{
+    height: 60px;
+}
+.bread>ul>li{
+    padding: 0 8px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bread>ul>li>img{
+    width: 14px;
+    height: 14px;
+}
+/*商品大图*/
+.proBox{
+    margin-bottom: 55px;
+}
+.proBoxLeft{
+
+}
+.proBoxLeft>img{
+    width: 500px;
+}
+.proDetail{
+
+}
+.proBoxRig{
+    position: relative;
+}
+.proTitle{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #000000;
+}
+.proDes{
+    width: 300px;
+    height: 150px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+    opacity: 0.5;
+    margin: 30px 0 20px;
+}
+.proRigTable tr td:first-child{
+    width: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    vertical-align: top;
+}
+.proRigTable td p{
+    font-size: 11px;
+    font-weight: 400;
+    color: #000000;
+}
+.proRigTable tr {
+    padding-bottom: 20px;
+}
+
+.price{
+    font-size: 14px;
+    font-weight: 600;
+    color: #DA0013;
+}
+.buttonBox{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.buttonBox>button:first-child{
+    width: 150px;
+    height: 35px;
+    background: #DA0013;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+.buttonBox>button:last-child{
+    width: 150px;
+    height: 35px;
+    border: 1px solid #000000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #000000;
+}
+/*型号选择*/
+.modelSelectBox{
+    background: #F8F8F8;
+    vertical-align: middle;
+}
+.other{
+    width: 150px;
+    height: 35px;
+    background: #33AAB3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.allModel{
+    width: 100px;
+    height: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000;
+    opacity: 0.6;
+    text-align: center;
+    border-right: 1px solid rgba(0,0,0,0.6);
+}
+.modelDec{
+    height: 19px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000000;
+    opacity: 0.6;
+    margin-left: 18px;
+}
+.cal>input{
+    width: 50px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    text-align: center;
+    border-right: none;
+    border-left: none;
+}
+.cal>div{
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+}
