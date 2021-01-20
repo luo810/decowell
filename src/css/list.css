@@ -1,0 +1,119 @@
+.fonts_14{
+    font-size: 14px;
+}
+.fonts_11{
+    font-size: 11px;
+}
+.banner>img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/*list*/
+.bread{
+    height: 60px;
+}
+.bread>ul>li{
+    padding: 0 8px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bread>ul>li>img{
+    width: 14px;
+    height: 14px;
+}
+/*---------------------------------------------------------*/
+.productSelect{
+    width: 100%;
+    height: 300px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+table{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+tr{
+    height: 50px;
+    width: 1300px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+tr:last-child{
+    border-bottom: none;
+}
+td{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 2px;
+}
+.tableCol{
+    width: 150px!important;
+}
+td>img{
+    width: 14px;
+    height: 14px;
+    transform: rotate(90deg);
+    vertical-align:middle;
+}
+
+/*-------------------------------------------*/
+.productShow{
+    padding-left: 20px;
+}
+.proItemBox{
+    width: 260px;
+    margin: 20px 20px 20px 0;
+    cursor: pointer;
+
+}
+.proItemBox>img{
+    width: 100%;
+}
+
+.itemTitle{
+    height: 19px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #000000;
+    margin: 10px 0 10px;
+}
+.itemDec,.itemUsed,.itemSupport{
+    height: 15px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #000000;
+    opacity: 0.5;
+    margin-bottom: 10px;
+}
+
+.moreBox{
+    width: 140px;
+    height: 35px;
+    border: 1px solid #000000;
+    border-radius: 18px;
+}
+.moreBox>p{
+    height: 35px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 35px;
+    color: #000000;
+}
+.moreBox>img{
+    margin-left: 5px;
+    width: 14px;
+    height: 14px;
+}

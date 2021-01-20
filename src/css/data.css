@@ -1,0 +1,120 @@
+/*轮播样式*/
+.swiper-container {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide, .swiper-slide > img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    margin: 0 25px;
+}
+
+/*面包屑*/
+.bread {
+    height: 60px;
+}
+
+.bread > ul > li {
+    padding: 0 8px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bread > ul > li > img {
+    width: 14px;
+    height: 14px;
+}
+
+/*搜索框*/
+.search {
+    width: 600px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 auto 40px;
+}
+
+.search > input {
+    width: 520px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    background: #F8F8F8;
+    outline: none;
+}
+
+.search > button {
+    width: 80px;
+    height: 40px;
+    background-color: #33AAB3;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/*-----------------------------------------*/
+.select {
+    height: 35px;
+    background: #F8F8F8;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.select > ul > li {
+    width: 130px;
+    height: 18px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+    opacity: 0.6;
+    border-left: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/*-----------------------------------------------*/
+.dataBoxLeft {
+    display: block;
+    width: 300px;
+    height: 500px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
+    margin-right: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+.dataLeft {
+    position: fixed;
+    /*top: 500px;*/
+    margin-top: 0;
+    max-height: 869px;
+    width: 280px;
+}
+
+.dataBoxRig {
+    width: 985px;
+    height: 500px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
+    padding: 0 25px;
+}
+.dataSelect{
+    width: 100%;
+}
+.dataSelectShow{
+    width: 100%;
+}

@@ -8,6 +8,14 @@ let articleBig = $(".articleBig")
 let articleSmall = $(".articleSmall")
 
 function f() {
+    new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        slidesPerView: 1,
+        autoplay:2000,
+        speed:2000,
+        loop:true
+    })
     // 首页 我要选型和技术服务tab切换
     chooseType.click(function () {
         $('.chooseType').css("display", "flex")
@@ -32,14 +40,14 @@ function f() {
                 $(indexBottomBot[j]).addClass('hide')
 
             }
-            for(let k = 0; k < botArticleBoth.length;k++){
+            for (let k = 0; k < botArticleBoth.length; k++) {
                 $(articleBig[k]).addClass('hide')
                 $(articleSmall[k]).removeClass('hide')
             }
             $(botLine[i]).addClass('botLineAct')
             $(indexBottomBot[i]).removeClass('hide')
-            $(articleBig[i*3]).removeClass('hide')
-            $(articleSmall[i*3]).addClass('hide')
+            $(articleBig[i * 3]).removeClass('hide')
+            $(articleSmall[i * 3]).addClass('hide')
 
         })
     }
