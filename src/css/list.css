@@ -71,8 +71,10 @@ td>img{
     padding-left: 20px;
 }
 .proItemBox{
-    width: 260px;
-    margin: 20px 20px 20px 0;
+    width: 25%;
+    /*width: 260px;*/
+    /*margin: 20px 40px 20px 0;*/
+    padding: 40px;
     cursor: pointer;
 
 }
