@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <title>DECOWELL</title>
-    <link rel="stylesheet" href="../../src/lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../src/lib/css/base.css">
-    <link rel="stylesheet" href="../../src/lib/css/swiper.min.css">
-    <link rel="stylesheet" href="../css/data.css">
+    <link rel="stylesheet" href="src/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/lib/css/base.css">
+    <link rel="stylesheet" href="src/lib/css/swiper.min.css">
+    <link rel="stylesheet" href="src/css/data.css">
 </head>
 <body>
 <!--轮播图-->
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <img class="flex flex-hc flex-ac swiper-slide-img" src="../img/data/swiperImg.png" alt="">
+            <img class="flex flex-hc flex-ac swiper-slide-img" src="src/img/data/swiperImg.png" alt="">
         </div>
         <div class="swiper-slide">
-            <img class="flex flex-hc flex-ac swiper-slide-img" src="../img/data/swiperImg.png" alt="">
+            <img class="flex flex-hc flex-ac swiper-slide-img" src="src/img/data/swiperImg.png" alt="">
         </div>
         <div class="swiper-slide">
-            <img class="flex flex-hc flex-ac swiper-slide-img" src="../img/data/swiperImg.png" alt="">
+            <img class="flex flex-hc flex-ac swiper-slide-img" src="src/img/data/swiperImg.png" alt="">
         </div>
     </div>
     <div class="swiper-pagination swiper-pagination-white"></div>
@@ -29,7 +29,7 @@
 <div class="flex _1300 bread">
     <ul class="flex">
         <li>首页</li>
-        <li><img src="../img/list/toRight.png" alt=""></li>
+        <li><img src="src/img/list/toRight.png" alt=""></li>
         <li>资料中心</li>
     </ul>
 </div>
@@ -157,8 +157,18 @@
     </div>
 </article>
 
-<script src="../lib/js/jquery-3.5.1.min.js"></script>
-<script src="../lib/js/swiper.min.js"></script>
-<script src="../js/index.js"></script>
+<script src="src/lib/js/jquery-3.5.1.min.js"></script>
+<script src="src/lib/js/swiper.min.js"></script>
+<script src="src/js/index.js"></script>
+<script>
+    new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        slidesPerView: 1,
+        autoplay:2000,
+        speed:2000,
+        loop:true
+    })
+</script>
 </body>
 </html>

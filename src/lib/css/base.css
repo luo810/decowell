@@ -158,6 +158,10 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 	width: 1300px;
 	margin: 0 auto;
 }
+._1500{
+	width: 1500px;
+	margin: 0 auto;
+}
 
 /*转换成行内元素*/
 .ibDisplay {
