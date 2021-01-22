@@ -18,48 +18,64 @@
     margin-bottom: 55px;
 }
 .proBoxLeft{
-
+    width: 40%;
 }
 .proBoxLeft>img{
-    width: 500px;
+    width: 100%;
 }
 .proDetail{
 
 }
 .proBoxRig{
+    width: 40%;
+    height: 100%;
     position: relative;
+    padding-left: 40px;
+    padding-bottom: 40px;
 }
 .proTitle{
     height: 22px;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 600;
     line-height: 22px;
     color: #000000;
 }
 .proDes{
-    width: 300px;
-    height: 150px;
-    font-size: 11px;
+    /*width: 300px;*/
+    height: 134px;
+    font-size: 13px;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 23px;
     color: #000000;
     opacity: 0.5;
     margin: 30px 0 20px;
 }
 .proRigTable tr td:first-child{
     width: 50px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: #000000;
     vertical-align: top;
+    /*line-height: 30px;*/
 }
+
 .proRigTable td p{
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 400;
     color: #000000;
+    line-height: 30px;
 }
 .proRigTable tr {
     padding-bottom: 20px;
+}
+.proRigTable{
+    margin-bottom: 40px;
+}
+.proRigTable tr td{
+    padding: 10px 0;
+}
+.proRigService{
+    padding-top: 15px!important;
 }
 
 .price{
@@ -69,7 +85,7 @@
 }
 .buttonBox{
     position: absolute;
-    left: 0;
+    left: 40px;
     bottom: 0;
 }
 .buttonBox>button:first-child{
@@ -81,6 +97,7 @@
     font-weight: 400;
     line-height: 35px;
     color: #FFFFFF;
+    outline: none;
 }
 .buttonBox>button:last-child{
     width: 150px;
@@ -90,6 +107,21 @@
     font-weight: 400;
     line-height: 35px;
     color: #000000;
+    outline: none;
+}
+.singlePrice>span{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000000;
+}
+.price>span{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #DA0013;
 }
 /*型号选择*/
 .modelSelectBox{
@@ -100,7 +132,7 @@
     width: 150px;
     height: 35px;
     background: #33AAB3;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 35px;
     color: #FFFFFF;
@@ -109,7 +141,7 @@
 .allModel{
     width: 100px;
     height: 14px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 14px;
     color: #000000;
@@ -119,14 +151,17 @@
 }
 .modelDec{
     height: 19px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 19px;
     color: #000000;
     opacity: 0.6;
     margin-left: 18px;
 }
-.cal>input{
+.cal td{
+    /*text-align: right;*/
+}
+.calBox>input{
     width: 50px;
     height: 20px;
     background: #FFFFFF;
@@ -134,10 +169,194 @@
     text-align: center;
     border-right: none;
     border-left: none;
+    margin: auto 0;
 }
-.cal>div{
-    width: 20px;
+.calBox>button{
+    width: 25px;
     height: 20px;
     background: #FFFFFF;
     border: 1px solid #000000;
+    text-align: center;
+    line-height: 19px;
+    vertical-align: middle;
+    outline: none;
+}
+
+.modelTh th{
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #000000;
+}
+.modelTh th:last-child{
+    text-align: center;
+}
+.modelTr td{
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #000000;
+}
+.modelTrFirst{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.calResult{
+    position: relative;
+    margin-top: 30px;
+}
+.calNum{
+    /*width: 80px;*/
+    padding-right: 20px;
+
+}
+.modelTr>td{
+    width: 13%;
+}
+.modelTr>td:first-child,.modelTr>td:nth-child(2){
+    width: 30%;
+}
+
+.calNum>span{
+    height: 40px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #000000;
+}
+.calPrice{
+    height: 16px;
+    padding: 0 10px;
+    border-left: 1px solid rgba(0,0,0,.6);
+    margin: auto 0;
+    margin-right: 30px;
+    padding-left: 20px;
+}
+.calPrice>span{
+    height: 16px;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #DA0013;
+    margin: auto 0;
+}
+
+.addAlltoBuy{
+    width: 160px;
+    height: 40px;
+    background: #DA0013;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+.otherAdd,.otherSub{
+    width: 30px!important;
+    height: 20px!important;
+}
+.otherGoodNum{
+}
+.cal{
+
+}
+.calBox{
+    margin: auto 0;
+    vertical-align: center;
+}
+/*参数展示*/
+.tabSelectBox{
+    background: #F8F8F8;
+    margin-top: 40px;
+}
+.tabSelectBox>ul{
+    width: 100%;
+    height: 35px;
+}
+.tabSelectBox>ul>li{
+    padding: 0 20px;
+    height: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+    opacity: 0.6;
+    border-right: 1px solid rgba(0,0,0,.6);
+    cursor: pointer;
+}
+.tabSelectAct{
+    height: 35px!important;
+    line-height: 35px!important;
+    background: #33AAB3;
+    border-right: none!important;
+    color: #FFFFFF!important;
+    opacity: 1!important;
+}
+.tabSelLeft{
+    width: 80%;
+    padding-right: 20px;
+}
+.tabSelLeft>img{
+    width: 100%;
+}
+.tabSelRig{
+    width: 20%;
+}
+.tabRigBox{
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+.tabRigBox,.probotTitle,.probotDec,.probotMore{
+    width: 100%;
+}
+
+.tabRigBox>img{
+    width: 100%;
+}
+.probotTitle{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #000000;
+    margin: 20px 0;
+}
+.probotDec{
+    height: 36px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #000000;
+    opacity: 0.5;
+    margin: 20px 0;
+}
+.probotLine{
+    height: 2px;
+    background: #000000;
+    opacity: 0.05;
+    margin: 20px 0;
+}
+.probotMore{
+    height:40px;
+}
+.probotMoreBox{
+    width: 60%;
+    height: 100%;
+    border: 1px solid #000000;
+}
+.probotMoreBox>span{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000000;
+    text-align: center;
+}
+.probotMoreBox>img{
+    width: 22px;
+    height: 22px;
 }

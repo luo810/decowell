@@ -17,11 +17,24 @@ let threeMune = $('.plateThree>ul')
 let muneTemp = 1
 let secmuneTemp = 1
 // ------------------------------------------------------------
-let priceNumSingle = $('.priceNum').text()
-let productNum = $('#goodNum').val()
+let singleGoodNum = $('#goodNum')
+let singleTotalPrice = $('.totalPrice')
+let priceNumSingle = parseFloat($('.priceNum').text())
+let singleproductNum = parseInt(singleGoodNum.val())
+let singleGoodPrice = priceNumSingle * singleproductNum
+let otherGoodPrice = $('.otherGoodPrice')
+let otherGoodNum = $('.otherGoodNum')
+let totalMoney = 0
+let totalNum = 0
+let totalPriceTemp = 0
+let totalNumTemp = 0
+let addSingle = $('.addSingle')
+let otherSub = $('.otherSub')
+let otherAdd = $('.otherAdd')
+let detailtab = $('.tabSelectUl>li')
+let tabSelectShow = $('.tabSelectShow')
 
 function f() {
-
     // 首页拓展菜单显示隐藏
     indexMune.click(function () {
         $('header:first-child').hide()
@@ -30,6 +43,10 @@ function f() {
         $(secMune).hide()
         muneTemp = 1
         secmuneTemp = 1
+        selectMu()
+        // var setTimer =  setInterval(function () {
+        //     selectMu()
+        // },200)
     })
     $('.headerNavRig>img:last-child').click(function () {
         $('header:first-child').show()
@@ -44,12 +61,12 @@ function f() {
             if ($(this).hasClass('noWay')) {
                 secmuneTemp = 0
             }
-
+            selectMu()
         }, function () {
 
         })
     }
-    setInterval(function () {
+    function selectMu(){
         $(secMune).hide()
         let secTemp = '.sec' + muneTemp
         $(secTemp).show()
@@ -79,24 +96,25 @@ function f() {
         let threeTemp = '.' + muneTemp + '-sec' + secmuneTemp
         $(threeMune).hide()
         $(threeTemp).show()
-        if(secmuneTemp === 0){
+        if (secmuneTemp === 0) {
             $('.plateTwo').hide()
-        }else{
+        } else {
             $('.plateTwo').show()
         }
-
-    }, 100)
-
-
+    }
     // 二级菜单li色号调整
     $('.currentSec>li').hover(function () {
+        selectMu()
         $(this).children('a').children('span').css('color', '#666666')
         $(this).children('a').children('img:first-child').hide()
         $(this).children('a').children('img:last-child').removeClass('hide')
+
     }, function () {
+        // selectMu()
         $(this).children('a').children('span').css('color', '#FFFFFF')
         $(this).children('a').children('img:first-child').show()
         $(this).children('a').children('img:last-child').addClass('hide')
+
     })
 
     // 首页 二级机器展示
@@ -165,7 +183,7 @@ function f() {
             $(indexBottomBot[i]).removeClass('hide')
             $(articleBig[i * 3]).removeClass('hide')
             $(articleSmall[i * 3]).addClass('hide')
-            $(botArticleBoth[i*3]).css('width','55%')
+            $(botArticleBoth[i * 3]).css('width', '55%')
 
         })
     }
@@ -175,27 +193,109 @@ function f() {
             for (let j = 0; j < botArticleBoth.length; j++) {
                 $(articleBig[j]).addClass('hide')
                 $(articleSmall[j]).removeClass('hide')
-                $(botArticleBoth[j]).css('width','20%')
+                $(botArticleBoth[j]).css('width', '20%')
             }
             $(articleBig[i]).removeClass('hide')
             $(articleSmall[i]).addClass('hide')
-            $(botArticleBoth[i]).css('width','55%')
+            $(botArticleBoth[i]).css('width', '55%')
         })
     }
 
-
+    // 详情页价格计算
+    function calSingle() {
+        singleproductNum = parseInt(singleGoodNum.val())
+        singleGoodNum.val(singleproductNum)
+        if(singleproductNum < 0){
+            alert('请输入合理购买的数量')
+            singleGoodNum.val(1)
+            singleproductNum = parseInt(singleGoodNum.val())
+            singleGoodPrice = singleproductNum * priceNumSingle
+            $('.totalPrice').text(singleGoodPrice.toFixed(2))
+            return
+        }
+        singleGoodPrice = singleproductNum * priceNumSingle
+        singleTotalPrice.text(singleGoodPrice.toFixed(2))
+    }
+    function calTotal() {
+        totalNum = totalNumTemp
+        totalMoney = totalPriceTemp
+        for(let j = 0; j < otherGoodNum.length ; j++){
+            if($(otherGoodNum[j]).val() < 0){
+                alert('请输入合理购买的数量')
+                $(otherGoodNum[j]).val(0)
+            }
+            if($(otherGoodNum[j]).val() === ''){
+                $(otherGoodNum[j]).val(0)
+            }
+            $(otherGoodNum[j]).val(parseInt($(otherGoodNum[j]).val()))
+            totalMoney += parseInt($(otherGoodNum[j]).val()) * parseFloat($(otherGoodPrice[j]).text())
+            totalNum += parseInt($(otherGoodNum[j]).val())
+            $('.totalNum').text(totalNum)
+            $('.totalMoney').text(totalMoney.toFixed(2))
+        }
+    }
     // 详情页头部价格计算
-    setInterval(function () {
-        console.log(productNum)
-    },500)
+    singleTotalPrice.text(singleGoodPrice.toFixed(2))
+    $('#goodNum').bind('keypress', function (event) {
+        if (event.keyCode === 13) {
+            calSingle()
+        }
+    });
+    $(addSingle).click(function () {
+        calSingle()
+        totalNumTemp = parseInt(singleGoodNum.val())
+        totalPriceTemp = parseFloat(singleGoodPrice)
+        calTotal()
+
+    })
+    // 详情页其他型号价格计算
+    for(let i = 0; i < otherGoodNum.length ; i++){
+        $(otherGoodNum[i]).bind('keypress',function (event) {
+            if (event.keyCode === 13){
+                calTotal()
+            }
+
+        })
+    }
+    for(let i = 0 ; i < otherSub.length; i++){
+        $(otherSub[i]).click(function () {
+           let newotherGoodNum =  parseInt($(otherGoodNum[i]).val())
+            if(newotherGoodNum !== 0){
+                $(otherGoodNum[i]).val(newotherGoodNum - 1)
+                calTotal()
+            }else{
+                alert('请输入合理的购买数量')
+            }
+        })
+    }
+    for(let i = 0 ; i < otherAdd.length; i++){
+
+        $(otherAdd[i]).click(function () {
+            let newotherGoodNum =  parseInt($(otherGoodNum[i]).val())
+            $(otherGoodNum[i]).val(newotherGoodNum + 1)
+            calTotal()
+        })
+    }
+    // 详情页下方tab
+    for(let i = 0; i < detailtab.length ; i++){
+        $(detailtab[i]).click(function () {
+            for(let j = 0;j < detailtab.length; j++){
+                $(detailtab[j]).removeClass('tabSelectAct')
+                $(tabSelectShow[j]).addClass('hide')
+            }
+            $(this).addClass('tabSelectAct')
+            $(tabSelectShow[i]).removeClass('hide')
+        })
+    }
+
 
 }
 
 
 if (window.attachEvents) {
     window.attachEvents("load", f, false);
-    window.attachEvents("resize", f, false);
+    // window.attachEvents("resize", f, false);
 } else {
     window.addEventListener("load", f);
-    window.addEventListener("resize", f);
+    // window.addEventListener("resize", f);
 }

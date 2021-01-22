@@ -390,6 +390,18 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 	margin-bottom: 40px;
 }
 
+/*去除input输入数字右侧自带增减条*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+input{
+	border: none;
+	outline: none;
+}
+.hide{
+	display: none;
+}
 /*清除bootstrap中的container的padding值*/
 /*.container{
 	width: 1200px;
