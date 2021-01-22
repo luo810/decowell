@@ -11,7 +11,7 @@
 </head>
 <body>
 <!--面包屑-->
-<div class="flex _1300 bread">
+<div class="flex _1500 bread">
     <ul class="flex">
         <li><a href="#">首页</a></li>
         <li><img src="src/img/list/toRight.png" alt=""></li>
@@ -21,7 +21,7 @@
     </ul>
 </div>
 <!--商品大图-->
-<div class="flex _1300 proBox">
+<div class="flex _1500 proBox">
     <div class="flex proBoxLeft">
         <img class="productBigImg" src="src/img/detail/productImg.png" alt="">
         <div class="flex1 proDetail">
@@ -51,16 +51,20 @@
             <tr>
                 <td>数量:</td>
                 <td class="flex">
-                    <input placeholder="1" type="text"
+                    <input id="goodNum" name="goodNum" type="number"
                            style="text-align: center;width: 40px;height: 20px;
                     border: 1px solid rgba(0,0,0,0.4);border-radius: 2px">
-                    <p style="margin: 0 10px">x</p>
-                    <p>YYY（单价）</p>
+                    <span style="margin: 0 10px">x</span>
+                    <span class="priceNum">657</span>
+                    <span>（单价）</span>
                 </td>
             </tr>
             <tr>
                 <td>总价:</td>
-                <td class="price">¥XXX</td>
+                <td class="price">
+                    <span>¥</span>
+                    <span class="totalPrice"></span>
+                </td>
             </tr>
         </table>
         <div class="flex buttonBox">
@@ -70,12 +74,12 @@
     </div>
 </div>
 <!--型号选择-->
-<div class="flex _1300 flex-ac modelSelectBox">
+<div class="flex _1500 flex-ac modelSelectBox">
     <div class="other">其他型号</div>
     <div class="allModel">共9个型号</div>
     <div class="modelDec">如需查看具体型号的属性差异，请点击商品名称进行查阅。</div>
 </div>
-<table>
+<table class="_1500">
     <th>
         <td>商品</td>
         <td>数字量输入点数 电压</td>

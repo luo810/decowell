@@ -155,11 +155,13 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 	overflow: hidden;
 }
 ._1300{
-	width: 1300px;
+	max-width: 1300px;
+	width: 80%;
 	margin: 0 auto;
 }
 ._1500{
-	width: 1500px;
+	max-width: 1500px;
+	width: 100%;
 	margin: 0 auto;
 }
 
