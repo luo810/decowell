@@ -11,7 +11,6 @@ p{
 }
 /*header*/
 header{
-    width: 100%;
     height: 70px;
 }
 .prenavLeft{
@@ -71,6 +70,9 @@ header{
     margin: 0!important;
     top: 0;
     left: 0;
+}
+.current>li,.currentSec>li{
+    cursor: pointer;
 }
 .current>li:hover>a::before,
 .currentSec>li:hover>a::before{
@@ -251,10 +253,54 @@ header{
     top:50%;
     transform: translateY(-50%);
 }
+/*plateThree*/
+.tableThree{
+    width: 80%;
+    margin: 80px auto 0;
+
+}
+.tableTh th{
+    padding: 10px;
+}
+.tableTh th>a{
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+}
+.tableTr td{
+    padding: 10px;
+}
+.tableTr td>a{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
 .plateThree>ul{
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
+}
+.contactBox{
+    position: absolute;
+    width: 80%;
+    bottom: 120px;
+    left:50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+}
+.conBox{
+    width: 150px;
+    height: 40px;
+    background: #33AAB3;
+    float: right;
+    margin-right: 70px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
 }
 
 
@@ -278,8 +324,7 @@ header{
 }
 
 .product,.productSec{
-    padding: 35px 30px 0 30px;
-    min-height: 370px;
+    padding: 35px 30px 30px 30px;
 }
 .productItem{
     width: 20%;
@@ -376,6 +421,7 @@ header{
 }
 .machineBot{
     justify-content: space-between;
+    padding: 0 20px;
 }
 .machineBot>img{
     width: 15%;
@@ -797,8 +843,6 @@ footer{
     height: 110px;
 }
 .footerLine{
-    width: 1500px;
-    margin: 0 auto;
     height: 1px;
     background: #FFFFFF;
 }
