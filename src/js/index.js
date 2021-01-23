@@ -1,3 +1,4 @@
+// 首页
 let chooseType = $('.machineTop>div:first-child')
 let techService = $('.machineTop>div:last-child')
 let threeItemTitle = $('.indexBotActTitle')
@@ -16,7 +17,9 @@ let secMune = $(".currentSec")
 let threeMune = $('.plateThree>ul')
 let muneTemp = 1
 let secmuneTemp = 1
+let secTemp = '.sec' + muneTemp
 // ------------------------------------------------------------
+// 详情页
 let singleGoodNum = $('#goodNum')
 let singleTotalPrice = $('.totalPrice')
 let priceNumSingle = parseFloat($('.priceNum').text())
@@ -28,11 +31,22 @@ let totalMoney = 0
 let totalNum = 0
 let totalPriceTemp = 0
 let totalNumTemp = 0
+let secTempLi = []
 let addSingle = $('.addSingle')
 let otherSub = $('.otherSub')
 let otherAdd = $('.otherAdd')
 let detailtab = $('.tabSelectUl>li')
 let tabSelectShow = $('.tabSelectShow')
+// ---------------------------------------------------
+// 数据页
+let datafirstMune = $('.firstMune')
+let datafirstABox = $('.firstABox')
+let iconJiantou = $('.icon-jiantou')
+let datasecondABox = $('.secondABox')
+let datasecMune = $('.secMune')
+let datathrMune = $('.thrMune')
+let datathirdABox = $('.thirdABox')
+let datafourMune = $('.fourMune')
 
 function f() {
     // 首页拓展菜单显示隐藏
@@ -43,10 +57,8 @@ function f() {
         $(secMune).hide()
         muneTemp = 1
         secmuneTemp = 1
-        selectMu()
-        // var setTimer =  setInterval(function () {
-        //     selectMu()
-        // },200)
+        selectSecMune()
+        selectThrMune()
     })
     $('.headerNavRig>img:last-child').click(function () {
         $('header:first-child').show()
@@ -61,37 +73,63 @@ function f() {
             if ($(this).hasClass('noWay')) {
                 secmuneTemp = 0
             }
-            selectMu()
+            selectSecMune()
+            selectThrMune()
         }, function () {
 
         })
     }
-    function selectMu(){
+
+    $('.plateTwo').hover(function () {
+        for (let i = 0; i < secTempLi.length; i++) {
+            $(secTempLi[i]).hover(function () {
+                secmuneTemp = i + 1
+                selectSecMune()
+                selectThrMune()
+            }, function () {
+            })
+        }
+    }, function () {
+
+    })
+
+
+    function selectSecMune() {
+        // secmuneTemp = 1
+        // 二级菜单全隐藏,显示的二级菜单展示
         $(secMune).hide()
-        let secTemp = '.sec' + muneTemp
+        secTemp = '.sec' + muneTemp
+        secTempLi = $(secTemp).children('li')
         $(secTemp).show()
-        let secTempLi = $(secTemp).children('li')
-        $(firstMune).children('a').removeClass('afirhover')
-        $(secTempLi).children('a').removeClass('afirhover')
-        $(firstMune).removeClass('actFirstLi')
-        $(secTempLi).removeClass('actSecLi')
-        $(secTempLi).children('a').children('span').css('color', '#FFFFFF')
-        $(secTempLi).children('a').children('img:first-child').show()
-        $(secTempLi).children('a').children('img:last-child').addClass('hide')
+        // 一级默认第一个展示样式,余下样式清除
+        for (let i = 0; i < firstMune.length; i++) {
+            $(firstMune[i]).children('a').removeClass('afirhover')
+            $(firstMune[i]).removeClass('actFirstLi')
+        }
         $(firstMune[muneTemp - 1]).children('a').addClass('afirhover')
         $(firstMune[muneTemp - 1]).addClass('actFirstLi')
+
+    }
+
+    function selectThrMune() {
+        // 二级菜单默认状态恢复
+        let secTempLi = $(secTemp).children('li')
+        for (let i = 0; i < secTempLi.length; i++) {
+            $(secTempLi[i]).removeClass('actSecLi')
+            $(secTempLi[i]).children('a').children('span').css('color', '#FFFFFF')
+            $(secTempLi[i]).children('a').children('img:first-child').show()
+            $(secTempLi[i]).children('a').children('img:last-child').addClass('hide')
+            $(secTempLi[i]).children('a').removeClass('afirhover')
+        }
+        // 二级默认第一个展示样式
         $(secTempLi[secmuneTemp - 1]).addClass('actSecLi')
         $(secTempLi[secmuneTemp - 1]).children('a').children('span').css('color', '#666666')
         $(secTempLi[secmuneTemp - 1]).children('a').children('img:first-child').hide()
         $(secTempLi[secmuneTemp - 1]).children('a').children('img:last-child').removeClass('hide')
         $(secTempLi[secmuneTemp - 1]).children('a').addClass('afirhover')
-        let chooseSecLi = $(secTemp).children('li')
-        for (let i = 0; i < chooseSecLi.length; i++) {
-            $(chooseSecLi[i]).hover(function () {
-                secmuneTemp = i + 1
-            }, function () {
-
-            })
+        // 三级菜单
+        if ($(this).hasClass('noWay')) {
+            secmuneTemp = 0
         }
         let threeTemp = '.' + muneTemp + '-sec' + secmuneTemp
         $(threeMune).hide()
@@ -102,20 +140,8 @@ function f() {
             $('.plateTwo').show()
         }
     }
-    // 二级菜单li色号调整
-    $('.currentSec>li').hover(function () {
-        selectMu()
-        $(this).children('a').children('span').css('color', '#666666')
-        $(this).children('a').children('img:first-child').hide()
-        $(this).children('a').children('img:last-child').removeClass('hide')
 
-    }, function () {
-        // selectMu()
-        $(this).children('a').children('span').css('color', '#FFFFFF')
-        $(this).children('a').children('img:first-child').show()
-        $(this).children('a').children('img:last-child').addClass('hide')
-
-    })
+    // ---------------------------------------
 
     // 首页 二级机器展示
     for (let i = 0; i < product.length; i++) {
@@ -205,7 +231,7 @@ function f() {
     function calSingle() {
         singleproductNum = parseInt(singleGoodNum.val())
         singleGoodNum.val(singleproductNum)
-        if(singleproductNum < 0){
+        if (singleproductNum < 0) {
             alert('请输入合理购买的数量')
             singleGoodNum.val(1)
             singleproductNum = parseInt(singleGoodNum.val())
@@ -216,15 +242,16 @@ function f() {
         singleGoodPrice = singleproductNum * priceNumSingle
         singleTotalPrice.text(singleGoodPrice.toFixed(2))
     }
+
     function calTotal() {
         totalNum = totalNumTemp
         totalMoney = totalPriceTemp
-        for(let j = 0; j < otherGoodNum.length ; j++){
-            if($(otherGoodNum[j]).val() < 0){
+        for (let j = 0; j < otherGoodNum.length; j++) {
+            if ($(otherGoodNum[j]).val() < 0) {
                 alert('请输入合理购买的数量')
                 $(otherGoodNum[j]).val(0)
             }
-            if($(otherGoodNum[j]).val() === ''){
+            if ($(otherGoodNum[j]).val() === '') {
                 $(otherGoodNum[j]).val(0)
             }
             $(otherGoodNum[j]).val(parseInt($(otherGoodNum[j]).val()))
@@ -234,6 +261,7 @@ function f() {
             $('.totalMoney').text(totalMoney.toFixed(2))
         }
     }
+
     // 详情页头部价格计算
     singleTotalPrice.text(singleGoodPrice.toFixed(2))
     $('#goodNum').bind('keypress', function (event) {
@@ -249,37 +277,37 @@ function f() {
 
     })
     // 详情页其他型号价格计算
-    for(let i = 0; i < otherGoodNum.length ; i++){
-        $(otherGoodNum[i]).bind('keypress',function (event) {
-            if (event.keyCode === 13){
+    for (let i = 0; i < otherGoodNum.length; i++) {
+        $(otherGoodNum[i]).bind('keypress', function (event) {
+            if (event.keyCode === 13) {
                 calTotal()
             }
 
         })
     }
-    for(let i = 0 ; i < otherSub.length; i++){
+    for (let i = 0; i < otherSub.length; i++) {
         $(otherSub[i]).click(function () {
-           let newotherGoodNum =  parseInt($(otherGoodNum[i]).val())
-            if(newotherGoodNum !== 0){
+            let newotherGoodNum = parseInt($(otherGoodNum[i]).val())
+            if (newotherGoodNum !== 0) {
                 $(otherGoodNum[i]).val(newotherGoodNum - 1)
                 calTotal()
-            }else{
+            } else {
                 alert('请输入合理的购买数量')
             }
         })
     }
-    for(let i = 0 ; i < otherAdd.length; i++){
+    for (let i = 0; i < otherAdd.length; i++) {
 
         $(otherAdd[i]).click(function () {
-            let newotherGoodNum =  parseInt($(otherGoodNum[i]).val())
+            let newotherGoodNum = parseInt($(otherGoodNum[i]).val())
             $(otherGoodNum[i]).val(newotherGoodNum + 1)
             calTotal()
         })
     }
     // 详情页下方tab
-    for(let i = 0; i < detailtab.length ; i++){
+    for (let i = 0; i < detailtab.length; i++) {
         $(detailtab[i]).click(function () {
-            for(let j = 0;j < detailtab.length; j++){
+            for (let j = 0; j < detailtab.length; j++) {
                 $(detailtab[j]).removeClass('tabSelectAct')
                 $(tabSelectShow[j]).addClass('hide')
             }
@@ -288,6 +316,83 @@ function f() {
         })
     }
 
+    // 数据页
+    // 一级菜单的点击
+    for (let i = 0; i < datafirstABox.length; i++) {
+        $(datafirstABox[i]).click(function () {
+            for (let j = 0; j < datasecMune.length; j++) {
+                $(datasecMune[j]).addClass('hide')
+            }
+            for (let j = 0; j < datafirstABox.length; j++) {
+                $(datafirstABox[j]).children('a').css('color', '#333')
+                $(iconJiantou[j]).css('color', '#666')
+                $(iconJiantou[j]).css('transform', 'rotate(0deg)')
+            }
+            $(datasecMune[i]).removeClass('hide')
+            $(datafirstABox[i]).children('a').css('color', '#33AAB3')
+            $(iconJiantou[i]).css('color', '#33AAB3')
+            $(iconJiantou[i]).css('transform', 'rotate(90deg)')
+
+            for (let j = 0; j < datathrMune.length; j++) {
+                $(datathrMune[j]).hide()
+            }
+        })
+    }
+    // 二级菜单点击
+    for (let i = 0; i < datasecondABox.length; i++) {
+        $(datasecondABox[i]).click(function () {
+            for (let j = 0; j < datathrMune.length; j++) {
+                $(datathrMune[j]).hide()
+            }
+            for (let j = 0; j < datasecondABox.length; j++) {
+                if ($(datasecondABox[j]).hasClass('noChildren')) {
+
+                } else {
+                    let datasecondABoxI = $(datasecondABox[j]).children('i')
+                    $(datasecondABoxI).addClass('icon-yuanhuan-zeng')
+                    $(datasecondABoxI).removeClass('icon-yuanhuan-jian')
+                }
+
+            }
+            $(this).siblings('.thrMune').show()
+            // $(datathrMune[i]).show()
+            let datasecondABoxI = $(datasecondABox[i]).children('i')
+            if ($(datasecondABox[i]).hasClass('noChildren')) {
+            }else{
+                $(datasecondABoxI).addClass('icon-yuanhuan-jian')
+                $(datasecondABoxI).removeClass('icon-yuanhuan-zeng')
+            }
+            for (let j = 0; j < datafourMune.length; j++) {
+                $(datafourMune[j]).hide()
+            }
+        })
+    }
+    // 三级菜单点击
+    for (let i = 0; i < datathirdABox.length; i++){
+        $(datathirdABox[i]).click(function () {
+            for (let j = 0; j < datafourMune.length; j++) {
+                $(datafourMune[j]).hide()
+            }
+
+            for (let j = 0; j < datathirdABox.length; j++) {
+                if ($(datathirdABox[j]).hasClass('noChildren')) {
+
+                } else {
+                    let datathirdABoxI = $(datathirdABox[j]).children('i')
+                    $(datathirdABoxI).addClass('icon-yuanhuan-zeng')
+                    $(datathirdABoxI).removeClass('icon-yuanhuan-jian')
+                }
+
+            }
+            $(this).siblings('.fourMune').show()
+            let datathirdABoxI = $(datathirdABox[i]).children('i')
+            if ($(datathirdABox[i]).hasClass('noChildren')) {
+            }else{
+                $(datathirdABoxI).addClass('icon-yuanhuan-jian')
+                $(datathirdABoxI).removeClass('icon-yuanhuan-zeng')
+            }
+        })
+    }
 
 }
 
