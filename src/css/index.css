@@ -74,8 +74,8 @@ header{
 .current>li,.currentSec>li{
     cursor: pointer;
 }
-.current>li:hover>a::before,
-.currentSec>li:hover>a::before{
+/*.currentSec>li:hover>a::before*/
+.current>li:hover>a::before {
     content: 'firsta';
     width: 6px;
     min-height: 40px;
@@ -235,7 +235,7 @@ header{
     height: 40px;
 }
 .currentSec>li:hover{
-    background-color: #FFFFFF;
+    /*background-color: #FFFFFF;*/
 }
 .currentSec>li>a>span{
     font-size: 16px;
