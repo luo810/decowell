@@ -10,21 +10,6 @@
 a{
     text-decoration: none;
 }
-/*list*/
-.bread{
-    height: 60px;
-}
-.bread>ul>li{
-    padding: 0 8px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bread>ul>li>img{
-    width: 14px;
-    height: 14px;
-}
 /*---------------------------------------------------------*/
 .productSelect{
     width: 100%;

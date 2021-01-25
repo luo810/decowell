@@ -6,9 +6,691 @@
     <title>DECOWELL</title>
     <link rel="stylesheet" href="src/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/lib/css/base.css">
+    <link rel="stylesheet" href="src/css/common.css">
     <link rel="stylesheet" href="src/css/list.css">
 </head>
 <body>
+<!--    header-->
+<header class="flex _1500 flex-zBetween  ">
+    <!--    原先的导航-->
+    <!--    <div class="prenavLeft"></div>-->
+    <div class="flex flex-hc flex-ac navLeft">
+        <img src="src/img/index/logo.png" alt="">
+        <ul class="flex navLeftBox ">
+            <li>
+                <img src="src/img/index/menu.png" alt="">
+                <a href="#">菜单</a>
+            </li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">产品中心</a></li>
+            <li><a href="#">行业方案</a></li>
+            <li><a href="#">客户服务</a></li>
+            <li><a href="#">行业资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="flex flex-ac flex-zEnd  navRig">
+        <img src="src/img/index/search.png" alt="">
+        <img src="src/img/index/user.png" alt="">
+    </div>
+</header>
+<!--导航展开-->
+<header class="flex _1500 flex-hc headerSpan hide ">
+    <div class="flex flex-hc flex-ac headerNavLeft">
+        <img src="src/img/index/logo.png" alt="">
+    </div>
+    <div class="flex flex-ac flex-zBetween  headerNavRig">
+        <img src="src/img/index/searchGreen.png" alt="">
+        <input class="flex1" type="search" placeholder="路由器">
+        <img src="src/img/index/closeGreen.png" alt="">
+    </div>
+    <!--    <div class="prenavLeft"></div>-->
+</header>
+<!--菜单展开-->
+<div class="headSpanBox hide">
+    <div class="headSpan _1500">
+        <div class="scrollBox plateOne">
+            <div class="scrollContentDiv">
+                <ul class="current">
+                    <!--左侧一级导航-->
+                    <!--                    带noWay的类仅有二级菜单-->
+                    <li data-key="1" class="current">
+                        <a href="#">
+                            <span>产品与服务</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+                    <li data-key="2" class="">
+                        <a href="#">
+                            <span>行业</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+                    <li data-key="3" class="">
+                        <a href="#">
+                            <span>热点话题</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+                    <li data-key="4" class="noWay">
+                        <a href="#">
+                            <span>技术支持</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+
+                    <li data-key="5" class="noWay">
+                        <a href="#">
+                            <span>如何购买</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+
+                    <li data-key="6" class="noWay">
+                        <a href="#">
+                            <span>合作伙伴</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+
+                    <li data-key="7" class="noWay">
+
+                        <a href="#">
+                            <span>培训认证</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="scrollBox plateTwo">
+            <div class="scrollContentDiv" style="top: 0;">
+                <!--左侧二级导航-->
+                <ul data-key="sec1" class="currentSec sec1">
+
+                    <li class="">
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span>智慧园区</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="current">
+                        <a href="#">
+                            <span>能源</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span>交通</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul data-key="sec2" class="currentSec sec2">
+
+                    <li class="">
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul data-key="sec3" class="currentSec sec3">
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span>数字政府</span>
+                            <img src="src/img/index/toRightWhite.png" alt="">
+                            <img src="src/img/index/toRightBlack.png" class="hide" alt="">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="scrollBox plateThree">
+            <ul class="1-sec1">
+                <table class="tableThree">
+                    <tr class="tableTh">
+                        <th align="left" colspan="4"><a href="#">数字政府</a></th>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="contactBox">
+                    <div class="tableContact">
+                        <div class="conBox">联系我们</div>
+                    </div>
+                </div>
+
+            </ul>
+            <ul class="1-sec2">
+                <table class="tableThree">
+                    <tr class="tableTh">
+                        <th align="left" colspan="4"><a href="#">数字政府</a></th>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="contactBox">
+                    <div class="tableContact">
+                        <div class="conBox">联系我们</div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="2-sec4">
+                <table class="tableThree">
+                    <tr class="tableTh">
+                        <th align="left" colspan="4"><a href="#">数字政府</a></th>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="contactBox">
+                    <div class="tableContact">
+                        <div class="conBox">联系我们</div>
+                    </div>
+                </div>
+            </ul>
+            <ul class="3-sec1">
+                <table class="tableThree">
+                    <tr class="tableTh">
+                        <th align="left" colspan="4"><a href="#">数字政府</a></th>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="contactBox">
+                    <div class="tableContact">
+                        <div class="conBox">联系我们</div>
+                    </div>
+                </div>
+
+            </ul>
+            <ul class="3-sec2">
+                <table class="tableThree">
+                    <tr class="tableTh">
+                        <th align="left" colspan="4">
+                            <a href="#">数字政府</a></th>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+                    <tr class="tableTr">
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                        <td>
+                            <a href="#">新闻资讯</a>
+                        </td>
+                    </tr>
+
+                </table>
+                <div class="contactBox">
+                    <div class="tableContact">
+                        <div class="conBox">联系我们</div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class="banner">
     <img src="src/img/list/banner.png" alt="">
 </div>
@@ -268,5 +950,61 @@
 
     </div>
 </div>
+<!--footer-->
+<footer>
+    <div class="_1500 footer">
+        <div class="flex _1500 flex-zBetween flex-ac footerBox">
+            <div class="flex footerBoxLeft">
+
+                <ul>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                </ul>
+
+                <ul>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                </ul>
+
+                <ul>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                </ul>
+
+                <ul>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                    <li>关于我们</li>
+                </ul>
+
+
+            </div>
+            <div class="footerBoxRig">
+                <div class="footerContactUs">关注我们</div>
+                <img src="src/img/index/contactUs.png" alt="">
+            </div>
+        </div>
+        <div class="footerLine _1500"></div>
+        <div class="flex flex-hc flex-ac footerCopy">
+            <p>2015-2022@南京德克威尔自动化有限公司版权所有苏CP备17024971号</p>
+            <p>技术支持:深圳网站设计</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

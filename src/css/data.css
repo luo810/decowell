@@ -20,26 +20,10 @@
     margin: 0 25px;
 }
 
-/*面包屑*/
-.bread {
-    height: 60px;
-}
 
-.bread > ul > li {
-    padding: 0 8px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bread > ul > li > img {
-    width: 14px;
-    height: 14px;
-}
 
 /*搜索框*/
-.search {
+.dataSearch {
     width: 50%;
     min-width: 500px;
     height: 40px;
@@ -47,7 +31,7 @@
     margin: 0 auto 40px;
 }
 
-.search > input {
+.dataSearch > input {
     width: 85%;
     height: 40px;
     line-height: 40px;
@@ -58,12 +42,13 @@
     outline: none;
 }
 
-.search > button {
+.dataSearch > button {
     width: 15%;
     height: 40px;
     background-color: #33AAB3;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    outline: none;
 }
 
 /*-----------------------------------------*/
@@ -86,12 +71,21 @@
     border-left: 1px solid rgba(0, 0, 0, 0.6);
 }
 
+.select>ul li:hover{
+    color: #33AAB3;
+    opacity: 1;
+}
+.select>ul li>a:hover{
+    color: #33AAB3;
+    opacity: 1;
+    cursor: pointer;
+}
 /*---------------------------------------------------------------------------------*/
 .dataBoxLeft {
     display: block;
     min-width: 300px;
     width: 20%;
-    height: 500px;
+    height: 600px;
     background: #FFFFFF;
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
     margin-right: 15px;
@@ -102,19 +96,17 @@
 }
 
 .dataLeft {
-    /*position: fixed;*/
-    /*top: 500px;*/
-    /*margin-top: 0;*/
-    /*max-height: 869px;*/
     width: 280px;
 }
 
 .dataBoxRig {
     width: 80%;
-    height: 500px;
+    height: 600px;
     background: #FFFFFF;
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
     padding: 20px 25px;
+    overflow: auto;
+    position: relative;
 }
 .dataSelect{
     width: 100%;
@@ -163,6 +155,14 @@
     color: #333;
     cursor: pointer;
 }
+.firstABox>a:hover,
+.secondABox>a:hover,
+.thirdABox>a:hover,
+.forthABox>a:hover{
+    color: #33AAB3;
+}
+
+
 .secondABox>a,.thirdABox>a,.forthABox>a{
     font-size: 14px;
     font-weight: 400;
@@ -191,11 +191,18 @@
     padding: 5px 0 5px 60px;
 }
 /*--------------------------------------------*/
-
-.dataSelect>ul>li{
+.dataFixBox{
+    width: 100%;
+    background-color: #FFFFFF;
+    /*top:0;*/
+}
+.dataSelect{
+    background-color: #FFFFFF;
+}
+.dataSelect>dl>dd{
     width: 180px;
 }
-.dataSelect>ul>li>span{
+.dataSelect>dl>dd>span{
     height: 20px;
     font-size: 14px;
     font-weight: 400;
@@ -204,7 +211,7 @@
     letter-spacing: 2px;
     margin-right: 40px;
 }
-.dataSelect>ul>li:first-child{
+.dataSelect>dl>dt{
     width: 40px;
     height: 20px;
     font-size: 14px;
@@ -214,15 +221,188 @@
     letter-spacing: 2px;
     margin-right: 20px;
 }
-.dataSelect>ul>li input{
+.checkBox{
+    cursor: pointer;
+}
+.dataSelect>dl>dd input{
     margin-right: 10px;
 }
-.dataSelect>ul{
+.dataSelect>dl{
     margin-bottom: 20px;
 }
 .dataSelectResult{
     width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-
+    padding: 30px 0 18px 0;
+}
+.dataSelectResult>span{
+    height: 17px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #000000;
+    letter-spacing: 2px;
+}
+.checkBox>span{
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #000000;
+    letter-spacing: 2px;
 }
 
+.resuleLeft{
+    width: 60px;
+    margin-right: 20px;
+}
+.resuleMid{
+    width: 75%;
+}
+.resuleMidTop>span{
+    height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.resuleMidTop>span:hover{
+    opacity: 1;
+    color: #33AAB3;
+}
+.resuleMidTop{
+    margin-bottom: 14px;
+}
+.resuleMidBot>span{
+    height: 16px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    opacity: 0.5;
+    margin-right: 20px;
+}
+.resuleMidBot span>i{
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.6;
+    margin-right: 10px;
+}
+.resuleRig{
+    width: 15%;
+}
+.resuleRig>button{
+    width: 50%;
+    min-width: 50px;
+    margin: auto 0;
+    margin-bottom: 10px;
+    display: flex;
+    height: 18px;
+    line-height: 18px;
+    outline: none;
+    background-color: transparent;
+}
+.resuleRig button>p{
+    height: 18px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+.resuleRig button>i{
+    font-size: 18px;
+    margin: auto 0;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #000000;
+    opacity: 0.5;
+
+}
+.resuleRig>button:last-child{
+    margin-bottom: 0;
+}
+.resuleRig button:hover,
+.resuleRig button>p:hover,
+.resuleRig button>i:hover{
+    opacity: 1;
+    color: #33AAB3;
+}
+.dataSelectShow ul>li{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dataSelectShow{
+}
+.dataSelectShow ul {
+    overflow: auto;
+}
+.checkBox input[type='checkbox']{
+    width: 16px;
+    height: 16px;
+}
+.checkBox input[type='checkbox']:checked{
+    /*background: url("../../src/img/data/check.png") no-repeat center;*/
+}
+input[type='checkbox']:checked+i {
+    background: #33AAB3;
+    margin: -3.5px 5px 0 -29.5px;
+    line-height: 17px;
+}
+input[type='checkbox']:checked{
+    background-color: #FFFFFF;
+}
+label i{
+    width: 17px;
+    height: 17px;
+    font-style: normal;
+    display: inline-block;
+    text-align: center;
+    line-height: 17px;
+    color: #fff;
+    vertical-align: middle;
+    margin: -3.5px 5px 0 -29.5px;
+    border-radius: 2px;
+}
+.dataSelectShowTop{
+    width: 100%;
+}
+.dataSelectShowTop>h6{
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.dataSelectShowTopDl>dt{
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #000000;
+    letter-spacing: 2px;
+    margin: 0 20px 0 10px;
+    /*margin-right: 20px;*/
+}s
+.dataSelectShowTopDl>dd{
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid #e8e8e8;
+    margin: 0 20px 10px 0;
+}
+.dataSelectShowTopDl>dd>span{
+    font-size: 14px;
+    color: #33AAB3;
+}
