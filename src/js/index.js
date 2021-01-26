@@ -47,7 +47,12 @@ let datasecMune = $('.secMune')
 let datathrMune = $('.thrMune')
 let datathirdABox = $('.thirdABox')
 let datafourMune = $('.fourMune')
+let dataSelectDD = $('.dataSelect>dl>dd')
+let dataSelectDDFirst = $('.dataSelect>dl:first-child>dd')
+let dataSelectDDEnd = $('.dataSelect>dl:last-child>dd')
+let dataSelectShowTopDl = $('.dataSelectShowTopDl>dd')
 
+let dataMuneFirst = $('.dataMuneFirst')
 function f() {
     // 首页拓展菜单显示隐藏
     indexMune.click(function () {
@@ -141,8 +146,6 @@ function f() {
         }
     }
 
-    // ---------------------------------------
-
     // 首页 二级机器展示
     for (let i = 0; i < product.length; i++) {
         $(product[i]).hover(function () {
@@ -226,7 +229,7 @@ function f() {
             $(botArticleBoth[i]).css('width', '55%')
         })
     }
-
+    // -----------------详情页-----------------------------------------------------------------
     // 详情页价格计算
     function calSingle() {
         singleproductNum = parseInt(singleGoodNum.val())
@@ -316,83 +319,165 @@ function f() {
         })
     }
 
-    // 数据页
+    // -----------------数据页-----------------------------------------------------------------
+    // 清除所有菜单目录的链接样式
+    function clearAstyle() {
+        $('.firstABox').children('a').css('color','#000000')
+        $('.secondABox').children('a').css('color','#000000')
+        $('.thirdABox').children('a').css('color','#000000')
+        $('.forthABox').children('a').css('color','#000000')
+    }
+    // 默认一级菜单展开
+    function selectFirstMune() {
+        for (let j = 0; j < datasecMune.length; j++) {
+            $(datasecMune[j]).addClass('hide')
+        }
+        for (let i = 0; i < datathrMune.length; i++) {
+            $(datathrMune[i]).hide()
+        }
+        for (let j = 0; j < datafourMune.length; j++) {
+            $(datafourMune[j]).hide()
+        }
+        for (let j = 0; j < datafirstABox.length; j++) {
+            clearAstyle()
+            $(iconJiantou[j]).css('color', '#666')
+            $(iconJiantou[j]).css('transform', 'rotate(0deg)')
+        }
+        $(datasecMune[0]).removeClass('hide')
+        $(datafirstABox[0]).children('a').css('color', '#33AAB3')
+        $(iconJiantou[0]).css('transform', 'rotate(90deg)')
+    }
+    selectFirstMune()
     // 一级菜单的点击
     for (let i = 0; i < datafirstABox.length; i++) {
         $(datafirstABox[i]).click(function () {
-            for (let j = 0; j < datasecMune.length; j++) {
-                $(datasecMune[j]).addClass('hide')
-            }
-            for (let j = 0; j < datafirstABox.length; j++) {
-                $(datafirstABox[j]).children('a').css('color', '#333')
-                $(iconJiantou[j]).css('color', '#666')
-                $(iconJiantou[j]).css('transform', 'rotate(0deg)')
-            }
-            $(datasecMune[i]).removeClass('hide')
-            $(datafirstABox[i]).children('a').css('color', '#33AAB3')
-            $(iconJiantou[i]).css('color', '#33AAB3')
-            $(iconJiantou[i]).css('transform', 'rotate(90deg)')
+            if($(datasecMune[i]).hasClass('hide')){
+                for (let j = 0; j < datasecMune.length; j++) {
+                    $(datasecMune[j]).addClass('hide')
+                }
+                for (let j = 0; j < datafirstABox.length; j++) {
+                    clearAstyle()
+                    $(iconJiantou[j]).css('color', '#666')
+                    $(iconJiantou[j]).css('transform', 'rotate(0deg)')
+                }
+                $(datasecMune[i]).removeClass('hide')
+                $(datafirstABox[i]).children('a').css('color', '#33AAB3')
+                $(iconJiantou[i]).css('transform', 'rotate(90deg)')
 
-            for (let j = 0; j < datathrMune.length; j++) {
-                $(datathrMune[j]).hide()
+            }else{
+                for (let j = 0; j < datasecMune.length; j++) {
+                    $(datasecMune[j]).addClass('hide')
+                }
+                $(datasecMune[i]).addClass('hide')
+                $(iconJiantou[i]).css('transform', 'rotate(0deg)')
             }
         })
     }
     // 二级菜单点击
     for (let i = 0; i < datasecondABox.length; i++) {
         $(datasecondABox[i]).click(function () {
-            for (let j = 0; j < datathrMune.length; j++) {
-                $(datathrMune[j]).hide()
-            }
-            for (let j = 0; j < datasecondABox.length; j++) {
-                if ($(datasecondABox[j]).hasClass('noChildren')) {
-
-                } else {
-                    let datasecondABoxI = $(datasecondABox[j]).children('i')
-                    $(datasecondABoxI).addClass('icon-yuanhuan-zeng')
-                    $(datasecondABoxI).removeClass('icon-yuanhuan-jian')
+            if($(datathrMune[i]).is(':hidden')){
+                for (let j = 0; j < datathrMune.length; j++) {
+                    clearAstyle()
+                    $(datathrMune[j]).hide()
                 }
+                for (let j = 0; j < datasecondABox.length; j++) {
+                    if ($(datasecondABox[j]).hasClass('noChildren')) {
 
-            }
-            $(this).siblings('.thrMune').show()
-            // $(datathrMune[i]).show()
-            let datasecondABoxI = $(datasecondABox[i]).children('i')
-            if ($(datasecondABox[i]).hasClass('noChildren')) {
+                    } else {
+                        let datasecondABoxI = $(datasecondABox[j]).children('i')
+                        $(datasecondABoxI).addClass('icon-yuanhuan-zeng')
+                        $(datasecondABoxI).removeClass('icon-yuanhuan-jian')
+                    }
+
+                }
+                $(this).siblings('.thrMune').show()
+                let datasecondABoxI = $(datasecondABox[i]).children('i')
+                if ($(datasecondABox[i]).hasClass('noChildren')) {
+
+                }else{
+                    $(datasecondABoxI).addClass('icon-yuanhuan-jian')
+                    $(datasecondABoxI).removeClass('icon-yuanhuan-zeng')
+                }
+                $(this).children('a').css('color', '#33AAB3')
+
             }else{
-                $(datasecondABoxI).addClass('icon-yuanhuan-jian')
-                $(datasecondABoxI).removeClass('icon-yuanhuan-zeng')
+                $(this).children('i').removeClass('icon-yuanhuan-jian')
+                $(this).children('i').addClass('icon-yuanhuan-zeng')
+                $(this).siblings('.thrMune').hide()
+                clearAstyle()
+                // for (let j = 0; j < datathrMune.length; j++) {
+                //     clearAstyle()
+                //     $(datathrMune[j]).hide()
+                // }
+                $(this).children('a').css('color', '#33AAB3')
             }
-            for (let j = 0; j < datafourMune.length; j++) {
-                $(datafourMune[j]).hide()
-            }
+
         })
     }
     // 三级菜单点击
     for (let i = 0; i < datathirdABox.length; i++){
         $(datathirdABox[i]).click(function () {
-            for (let j = 0; j < datafourMune.length; j++) {
-                $(datafourMune[j]).hide()
-            }
-
-            for (let j = 0; j < datathirdABox.length; j++) {
-                if ($(datathirdABox[j]).hasClass('noChildren')) {
-
-                } else {
-                    let datathirdABoxI = $(datathirdABox[j]).children('i')
-                    $(datathirdABoxI).addClass('icon-yuanhuan-zeng')
-                    $(datathirdABoxI).removeClass('icon-yuanhuan-jian')
+            if($(this).siblings('.fourMune').is(':hidden')){
+                for (let j = 0; j < datafourMune.length; j++) {
+                    $(datafourMune[j]).hide()
+                    clearAstyle()
                 }
 
-            }
-            $(this).siblings('.fourMune').show()
-            let datathirdABoxI = $(datathirdABox[i]).children('i')
-            if ($(datathirdABox[i]).hasClass('noChildren')) {
+                for (let j = 0; j < datathirdABox.length; j++) {
+                    if ($(datathirdABox[j]).hasClass('noChildren')) {
+
+                    } else {
+                        let datathirdABoxI = $(datathirdABox[j]).children('i')
+                        $(datathirdABoxI).addClass('icon-yuanhuan-zeng')
+                        $(datathirdABoxI).removeClass('icon-yuanhuan-jian')
+                    }
+
+                }
+                $(this).siblings('.fourMune').show()
+                let datathirdABoxI = $(datathirdABox[i]).children('i')
+                if ($(datathirdABox[i]).hasClass('noChildren')) {
+                }else{
+                    $(datathirdABoxI).addClass('icon-yuanhuan-jian')
+                    $(datathirdABoxI).removeClass('icon-yuanhuan-zeng')
+                }
+                $(this).children('a').css('color', '#33AAB3')
             }else{
-                $(datathirdABoxI).addClass('icon-yuanhuan-jian')
-                $(datathirdABoxI).removeClass('icon-yuanhuan-zeng')
+                for (let j = 0; j < datafourMune.length; j++) {
+                    $(datafourMune[j]).hide()
+                    clearAstyle()
+                }
+                if ($(this).hasClass('noChildren')) {
+
+                }else{
+                    $(this).children('i').removeClass('icon-yuanhuan-jian')
+                    $(this).children('i').addClass('icon-yuanhuan-zeng')
+                }
+                $(this).children('a').css('color', '#33AAB3')
+
+
             }
+
         })
     }
+    // 四级菜单点击
+    for(let i = 0; i < datafourMune.length; i++){
+        $(datafourMune[i]).click(function () {
+            clearAstyle()
+            $(this).children('.forthABox').children('a').css('color', '#33AAB3')
+        })
+    }
+
+    // 已选类型部分
+    // for(let i = 0; i < dataSelectDD.length; i++){
+    //     $(dataSelectDD[i]).click(function () {
+    //         $('.dataSelectShowTop').removeClass('hide')
+    //         if(i <= dataSelectDDFirst.length - 1){
+    //             $(dataSelectShowTopDl[i]).removeClass('hide')
+    //         }else{
+    //         }
+    //     })
+    // }
 
 }
 

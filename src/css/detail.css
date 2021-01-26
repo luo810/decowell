@@ -1,18 +1,3 @@
-/*面包屑*/
-.bread{
-    height: 60px;
-}
-.bread>ul>li{
-    padding: 0 8px;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bread>ul>li>img{
-    width: 14px;
-    height: 14px;
-}
 /*商品大图*/
 .proBox{
     margin-bottom: 55px;
