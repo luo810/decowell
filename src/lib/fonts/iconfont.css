@@ -39,15 +39,18 @@
   content: "\e616";
 }
 
-.icon-bangongruanjianexcel:before {
+.icon-excel:before {
   content: "\e638";
 }
 
-.icon-bangongruanjianppt:before {
+.icon-ppt:before {
   content: "\e639";
 }
 
-.icon-bangongruanjianword:before {
+.icon-word:before {
+  content: "\e63a";
+}
+.icon-docx:before {
   content: "\e63a";
 }
 
@@ -55,7 +58,7 @@
   content: "\e6e4";
 }
 
-.icon-_huaban:before {
+.icon-pdf:before {
   content: "\e843";
 }
 

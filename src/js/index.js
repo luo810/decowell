@@ -36,7 +36,7 @@ let addSingle = $('.addSingle')
 let otherSub = $('.otherSub')
 let otherAdd = $('.otherAdd')
 let detailtab = $('.tabSelectUl>li')
-let tabSelectShow = $('.tabSelectShow')
+let tabSelLeft = $('.tabSelLeft')
 // ---------------------------------------------------
 // 数据页
 let datafirstMune = $('.firstMune')
@@ -51,8 +51,13 @@ let dataSelectDD = $('.dataSelect>dl>dd')
 let dataSelectDDFirst = $('.dataSelect>dl:first-child>dd')
 let dataSelectDDEnd = $('.dataSelect>dl:last-child>dd')
 let dataSelectShowTopDl = $('.dataSelectShowTopDl>dd')
-
+let showMoreType = $('.dataSelectRig')
+let datamoreType = $('.dataType>li')
+let datamoreFormat = $('.dataFormat>li')
 let dataMuneFirst = $('.dataMuneFirst')
+let pageLi = $('.pagination>li')
+
+
 function f() {
     // 首页拓展菜单显示隐藏
     indexMune.click(function () {
@@ -312,21 +317,22 @@ function f() {
         $(detailtab[i]).click(function () {
             for (let j = 0; j < detailtab.length; j++) {
                 $(detailtab[j]).removeClass('tabSelectAct')
-                $(tabSelectShow[j]).addClass('hide')
+                $(tabSelLeft[j]).addClass('hide')
             }
             $(this).addClass('tabSelectAct')
-            $(tabSelectShow[i]).removeClass('hide')
+            $(tabSelLeft[i]).removeClass('hide')
         })
     }
 
     // -----------------数据页-----------------------------------------------------------------
     // 清除所有菜单目录的链接样式
     function clearAstyle() {
-        $('.firstABox').children('a').css('color','#000000')
-        $('.secondABox').children('a').css('color','#000000')
-        $('.thirdABox').children('a').css('color','#000000')
-        $('.forthABox').children('a').css('color','#000000')
+        $('.firstABox').children('a').css('color', '#000000')
+        $('.secondABox').children('a').css('color', '#000000')
+        $('.thirdABox').children('a').css('color', '#000000')
+        $('.forthABox').children('a').css('color', '#000000')
     }
+
     // 默认一级菜单展开
     function selectFirstMune() {
         for (let j = 0; j < datasecMune.length; j++) {
@@ -347,11 +353,12 @@ function f() {
         $(datafirstABox[0]).children('a').css('color', '#33AAB3')
         $(iconJiantou[0]).css('transform', 'rotate(90deg)')
     }
+
     selectFirstMune()
     // 一级菜单的点击
     for (let i = 0; i < datafirstABox.length; i++) {
         $(datafirstABox[i]).click(function () {
-            if($(datasecMune[i]).hasClass('hide')){
+            if ($(datasecMune[i]).hasClass('hide')) {
                 for (let j = 0; j < datasecMune.length; j++) {
                     $(datasecMune[j]).addClass('hide')
                 }
@@ -364,7 +371,7 @@ function f() {
                 $(datafirstABox[i]).children('a').css('color', '#33AAB3')
                 $(iconJiantou[i]).css('transform', 'rotate(90deg)')
 
-            }else{
+            } else {
                 for (let j = 0; j < datasecMune.length; j++) {
                     $(datasecMune[j]).addClass('hide')
                 }
@@ -376,7 +383,7 @@ function f() {
     // 二级菜单点击
     for (let i = 0; i < datasecondABox.length; i++) {
         $(datasecondABox[i]).click(function () {
-            if($(datathrMune[i]).is(':hidden')){
+            if ($(datathrMune[i]).is(':hidden')) {
                 for (let j = 0; j < datathrMune.length; j++) {
                     clearAstyle()
                     $(datathrMune[j]).hide()
@@ -395,13 +402,13 @@ function f() {
                 let datasecondABoxI = $(datasecondABox[i]).children('i')
                 if ($(datasecondABox[i]).hasClass('noChildren')) {
 
-                }else{
+                } else {
                     $(datasecondABoxI).addClass('icon-yuanhuan-jian')
                     $(datasecondABoxI).removeClass('icon-yuanhuan-zeng')
                 }
                 $(this).children('a').css('color', '#33AAB3')
 
-            }else{
+            } else {
                 $(this).children('i').removeClass('icon-yuanhuan-jian')
                 $(this).children('i').addClass('icon-yuanhuan-zeng')
                 $(this).siblings('.thrMune').hide()
@@ -416,9 +423,9 @@ function f() {
         })
     }
     // 三级菜单点击
-    for (let i = 0; i < datathirdABox.length; i++){
+    for (let i = 0; i < datathirdABox.length; i++) {
         $(datathirdABox[i]).click(function () {
-            if($(this).siblings('.fourMune').is(':hidden')){
+            if ($(this).siblings('.fourMune').is(':hidden')) {
                 for (let j = 0; j < datafourMune.length; j++) {
                     $(datafourMune[j]).hide()
                     clearAstyle()
@@ -437,19 +444,19 @@ function f() {
                 $(this).siblings('.fourMune').show()
                 let datathirdABoxI = $(datathirdABox[i]).children('i')
                 if ($(datathirdABox[i]).hasClass('noChildren')) {
-                }else{
+                } else {
                     $(datathirdABoxI).addClass('icon-yuanhuan-jian')
                     $(datathirdABoxI).removeClass('icon-yuanhuan-zeng')
                 }
                 $(this).children('a').css('color', '#33AAB3')
-            }else{
+            } else {
                 for (let j = 0; j < datafourMune.length; j++) {
                     $(datafourMune[j]).hide()
                     clearAstyle()
                 }
                 if ($(this).hasClass('noChildren')) {
 
-                }else{
+                } else {
                     $(this).children('i').removeClass('icon-yuanhuan-jian')
                     $(this).children('i').addClass('icon-yuanhuan-zeng')
                 }
@@ -461,23 +468,208 @@ function f() {
         })
     }
     // 四级菜单点击
-    for(let i = 0; i < datafourMune.length; i++){
+    for (let i = 0; i < datafourMune.length; i++) {
         $(datafourMune[i]).click(function () {
             clearAstyle()
             $(this).children('.forthABox').children('a').css('color', '#33AAB3')
         })
     }
 
+    // 是否显示已选
+    function showSelect() {
+        if ($('.dataSelectShowTopDl').children('dd').length <= 0) {
+            $('.dataSelectShowTop').addClass('hide')
+        } else {
+            $('.dataSelectShowTop').removeClass('hide')
+        }
+    }
+
+    // 更多类型的点击
+    $(showMoreType).click(function () {
+        let spandis = $(this).children('span').text()
+        let expendText = $(this).attr('data-expend-text')
+        let unexpendText = $(this).attr('data-unexpend-text')
+        $(this).children('i').css('display', 'incline-block')
+        for (let i = 4; i < datamoreType.length; i++) {
+            $(datamoreType[i]).toggleClass('hide')
+        }
+        if (spandis === expendText) {
+            $(this).children('span').text(unexpendText)
+            $(this).children('i').css('transform', 'rotate(180deg)')
+        } else {
+            $(this).children('span').text(expendText)
+            $(this).children('i').css('transform', 'rotate(0deg)')
+        }
+    })
     // 已选类型部分
-    // for(let i = 0; i < dataSelectDD.length; i++){
-    //     $(dataSelectDD[i]).click(function () {
-    //         $('.dataSelectShowTop').removeClass('hide')
-    //         if(i <= dataSelectDDFirst.length - 1){
-    //             $(dataSelectShowTopDl[i]).removeClass('hide')
-    //         }else{
-    //         }
-    //     })
-    // }
+    for (let i = 0; i < datamoreType.length; i++) {
+        $(datamoreType[i]).children('label').children('input').click(function (event) {
+            let typeTemp = $(this).siblings('span').text()
+            let typeText = "<span data-chname=' " + typeTemp + " '>" + typeTemp + "</span>";
+            typeText += "<i class='iconfont icon-cross-fill' style='font-size: 14px;color: #33AAB3 '></i>"
+            event.stopPropagation()
+            if ($(this).is(':checked')) {
+                $("<dd></dd>")
+                    .insertBefore(".dataSelectShowTopDl>dt")
+                    .html(typeText)
+            } else {
+                let al = $(this).siblings('span').text()
+                for (let j = 0; j < dataSelectShowTopDl.length; j++) {
+                    let a = $(dataSelectShowTopDl[j]).children('span').text()
+                    if (a.trim() === al.trim()) {
+                        $(dataSelectShowTopDl[j]).remove()
+                    }
+                }
+            }
+            showSelect()
+            dataSelectShowTopDl = $('.dataSelectShowTopDl>dd')
+        })
+    }
+    // 已选格式
+    for (let i = 0; i < datamoreFormat.length; i++) {
+        $(datamoreFormat[i]).children('label').children('input').click(function (event) {
+            let typeTemp = $(this).siblings('span').text()
+            let typeText = "<span data-chname=' " + typeTemp + " '>" + typeTemp + "</span>";
+            typeText += "<i class='iconfont icon-cross-fill' style='font-size: 14px;color: #33AAB3 '></i>"
+            event.stopPropagation()
+            if ($(this).is(':checked')) {
+                $("<dd></dd>")
+                    .insertBefore(".dataSelectShowTopDl>dt")
+                    .html(typeText)
+            } else {
+                let al = $(this).siblings('span').text()
+                for (let j = 0; j < dataSelectShowTopDl.length; j++) {
+                    let a = $(dataSelectShowTopDl[j]).children('span').text()
+                    if (a.trim() === al.trim()) {
+                        $(dataSelectShowTopDl[j]).remove()
+                    }
+                }
+            }
+            showSelect()
+            dataSelectShowTopDl = $('.dataSelectShowTopDl>dd')
+        })
+    }
+
+    // 点击关闭选项
+    $('.dataSelectShowTop').hover(function () {
+        for (let i = 0; i < dataSelectShowTopDl.length; i++) {
+            $(dataSelectShowTopDl[i]).children('i').click(function (event) {
+                event.stopPropagation()
+                let selectFormat = $(this).siblings('span').data('chname')
+                for (let j = 0; j < datamoreType.length; j++) {
+                    let a = $(datamoreType[j]).children('label').children('span').text()
+                    if (a.trim() === selectFormat.trim()) {
+                        $(datamoreType[j]).children('label').children('input').prop("checked", false)
+                        $(this).parent('dd').remove()
+                    }
+                }
+
+                for (let j = 0; j < datamoreFormat.length; j++) {
+                    let a = $(datamoreFormat[j]).children('label').children('span').text()
+                    if (a.trim() === selectFormat.trim()) {
+                        $(datamoreFormat[j]).children('label').children('input').prop("checked", false)
+                        $(this).parent('dd').remove()
+                    }
+                }
+
+            })
+            showSelect()
+        }
+    })
+
+    // 清除全部
+    $('.dataSelectShowTopDl>dt').click(function (event) {
+        event.stopPropagation()
+        for (let j = 0; j < datamoreType.length; j++) {
+            let a = $(datamoreType[j]).children('label').children('span').text()
+            $(datamoreType[j]).children('label').children('input').prop("checked", false)
+        }
+        for (let j = 0; j < datamoreFormat.length; j++) {
+            let a = $(datamoreFormat[j]).children('label').children('span').text()
+            $(datamoreFormat[j]).children('label').children('input').prop("checked", false)
+        }
+        $(dataSelectShowTopDl).remove()
+        showSelect()
+    })
+    // 分页
+    // 判断是否显示分页
+    pageNumShow()
+    // 上一页
+    $('.toPrev').click(function (event) {
+        pageLi = $('.pagination>li')
+        event.stopPropagation()
+        if($('.pagination>li:nth-child(2)').hasClass('activePage')){
+            $(pageLi[1]).removeClass('activePage')
+            $(pageLi[pageLi.length - 2]).addClass('activePage')
+        }else{
+            let temp;
+            for(let j = 0; j < pageLi.length; j++){
+                if($(pageLi[j]).hasClass('activePage')){
+                    temp = j;
+                }
+            }
+            $(pageLi[temp]).removeClass('activePage')
+            $(pageLi[temp-1]).addClass('activePage')
+        }
+    })
+    // 下一页
+    $('.toNext').click(function (event) {
+        pageLi = $('.pagination>li')
+        event.stopPropagation()
+        if($('.pagination>li:nth-last-child(2)').hasClass('activePage')){
+            $('.pagination>li:nth-last-child(2)').removeClass('activePage')
+            $('.pagination>li:nth-child(2)').addClass('activePage')
+        }else{
+            let temp;
+            for(let j = 0; j < pageLi.length; j++){
+                if($(pageLi[j]).hasClass('activePage')){
+                    temp = j;
+                }
+            }
+            $(pageLi[temp]).removeClass('activePage')
+            $(pageLi[temp+1]).addClass('activePage')
+        }
+    })
+    // 选择页码
+    $('.pagination').hover(function () {
+        pageLi = $('.pagination>li')
+        for(let j = 1; j < pageLi.length - 1; j++){
+            $(pageLi[j]).click(function (event) {
+                event.stopPropagation()
+                console.log('ddd')
+                for(let k = 1; k < pageLi.length - 1; k++){
+                    $(pageLi[k]).removeClass('activePage')
+                }
+                $(pageLi[j]).addClass('activePage')
+            })
+        }
+    })
+
+
+    // 判断有几页
+    function pageNumShow() {
+        let total =  $('.dataPagination>li')
+        let pageNum
+        if(total.length >= 10){
+            pageNum = total.length / 10
+            if(total.length%10 === 0){
+
+            }else{
+                pageNum += 1
+            }
+            for(let i = 1;i <= pageNum;i++){
+                let innerBox = "<span>" + i + "</span>"
+                $("<li></li>")
+                    .insertBefore('.toNext')
+                    .html(innerBox)
+            }
+        $('.pagination>li:nth-child(2)').addClass('activePage')
+        }else{
+            $('.page').hide()
+        }
+        pageLi = $('.pagination>li')
+
+    }
 
 }
 

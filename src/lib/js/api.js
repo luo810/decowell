@@ -1,3 +1,5 @@
+let cate_array = [];
+let type_array = [];
 function ajax(options) {
     options = options || {};  //调用函数时如果options没有指定，就给它赋值{},一个空的Object
     options.type = (options.type || "GET").toUpperCase();/// 请求格式GET、POST，默认为GET
@@ -56,21 +58,18 @@ function formatParams(data) {
 
 }
 
-//基本的使用实例
-ajax({
-    url: "http://server-name/login",
-    type: 'post',
-    data: {
-        username: 'username',
-        password: 'password'
-    },
+$.ajax({
+    url: "http://192.168.0.183:8080/api.php/web/search/searchContentFile",
+    data: {cate: cate_array, file: type_array},
+    type: 'get',
     dataType: 'json',
     timeout: 10000,
     contentType: "application/json",
     success: function (data) {
-    //。。。。。。//服务器返回响应，根据响应结果，分析是否登录成功
-    },        //异常处理
+        console.log(data)
+    },
     error: function (e) {
         console.log(e);
     }
 })
+

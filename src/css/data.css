@@ -373,10 +373,11 @@ label i{
 }
 .dataSelectShowTop{
     width: 100%;
+    margin-top: 20px;
 }
 .dataSelectShowTop>h6{
     display: inline-block;
-    width: 100px;
+    width: 100px!important;
     vertical-align: middle;
     height: 30px;
     font-size: 14px;
@@ -387,15 +388,14 @@ label i{
     margin-right: 10px;
 }
 .dataSelectShowTopDl>dt{
-    height: 40px;
+    height: 30px;
     font-size: 14px;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 30px;
     color: #000000;
     letter-spacing: 2px;
     margin: 0 20px 0 10px;
-    /*margin-right: 20px;*/
-}s
+}
 .dataSelectShowTopDl>dd{
     padding: 5px 10px;
     border-radius: 15px;
@@ -405,4 +405,106 @@ label i{
 .dataSelectShowTopDl>dd>span{
     font-size: 14px;
     color: #33AAB3;
+    margin-right: 10px;
+}
+
+/*补充样式*/
+.dataSelectLeft{
+    display: block;
+    width: 40px!important;
+    height: 100%;
+    margin-right: 10px;
+}
+.dataSelectLeft>h6{
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 2px;
+}
+.dataSelectMid{
+
+}
+.dataSelectRig{
+    width: 100px;
+}
+.dataSelectRig>span{
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 2px;
+}
+.dataSelectMid>li:nth-child(-n+5){
+    width: 25%;
+}
+.dataSelectMid>li:nth-child(n+6){
+    /*margin-right: 20px;*/
+    width: 25%;
+}
+
+.dataSelectMid>li .checkBox>span{
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000000;
+    letter-spacing: 2px;
+    margin-right: 40px;
+}
+
+.checkBox input[type='checkbox']{
+    width: 16px;
+    height: 16px;
+}
+
+input[type='checkbox']:checked+i {
+    background: #33AAB3;
+    margin: -3.5px 10px 0 -20.5px;
+    line-height: 17px;
+}
+input[type='checkbox']:checked{
+    background-color: #FFFFFF;
+}
+label i{
+    width: 17px;
+    height: 17px;
+    font-style: normal;
+    display: inline-block;
+    text-align: center;
+    line-height: 17px;
+    color: #fff;
+    vertical-align: middle;
+    margin: -3.5px 10px 0 -20.5px;
+    border-radius: 2px;
+}
+.dataSelectFix{
+    margin-top: 10px;
+}
+
+/*.dataFormat{*/
+/*    margin-top: 10px;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+/*分页样式调整*/
+.page{
+    width: 100%;
+    margin: 10px 0 -10px 0;
+}
+.activePage{
+    background-color: #33AAB3!important;
+    color: #FFFFFF!important;
+}
+.pagination>li>span{
+    color: #33AAB3;
+}
+.activePage>span{
+    background-color: #33AAB3!important;
+    color: #FFFFFF!important;
+}
+.pagination>li>span:hover{
+    background-color: #33AAB3!important;
+    color: #FFFFFF!important;
 }
