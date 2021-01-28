@@ -19,20 +19,20 @@ a{
     margin-bottom: 30px;
     padding: 0 15px;
 }
-table{
+.listTable{
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
-tr{
+.listTableTr{
     height: 50px;
-    width: 1300px;
+    width: 100%;
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-tr:last-child{
+.listTable>tr:last-child{
     border-bottom: none;
 }
-td{
+.listTableTr td{
     width: 100px;
     height: 50px;
     line-height: 50px;
@@ -44,11 +44,12 @@ td{
 .tableCol{
     width: 150px!important;
 }
-td>img{
+.listTableImg td>img{
     width: 14px;
     height: 14px;
     transform: rotate(90deg);
     vertical-align:middle;
+    visibility: hidden;
 }
 
 /*-------------------------------------------*/
