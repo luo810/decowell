@@ -254,7 +254,11 @@
 
 .resuleLeft{
     width: 60px;
-    margin-right: 20px;
+    margin-right: 10px;
+    padding: 5px;
+}
+.resuleLeft>img{
+    width: 100%;
 }
 .resuleMid{
     width: 75%;
@@ -336,6 +340,7 @@
     color: #33AAB3;
 }
 .dataSelectShow ul>li{
+    padding: 5px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
