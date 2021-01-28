@@ -85,7 +85,6 @@
     display: block;
     min-width: 300px;
     width: 20%;
-    height: 600px;
     background: #FFFFFF;
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
     margin-right: 15px;
@@ -101,12 +100,13 @@
 
 .dataBoxRig {
     width: 80%;
-    height: 600px;
+    /*height: 600px;*/
     background: #FFFFFF;
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
     padding: 20px 25px;
     overflow: auto;
     position: relative;
+    float: right;
 }
 .dataSelect{
     width: 100%;
@@ -395,13 +395,19 @@ label i{
     color: #000000;
     letter-spacing: 2px;
     margin: 0 20px 0 10px;
+    cursor: pointer;
 }
 .dataSelectShowTopDl>dd{
     padding: 5px 10px;
     border-radius: 15px;
     border: 1px solid #e8e8e8;
     margin: 0 20px 10px 0;
+
 }
+.dataSelectShowTopDl>dd>i{
+    cursor: pointer;
+}
+
 .dataSelectShowTopDl>dd>span{
     font-size: 14px;
     color: #33AAB3;
@@ -508,3 +514,112 @@ label i{
     background-color: #33AAB3!important;
     color: #FFFFFF!important;
 }
+
+/*头部样式修改*/
+/*header{*/
+/*    position: fixed;*/
+/*    background-color: #FFFFFF;*/
+/*    z-index: 99999;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*}*/
+/*.swiper-container{*/
+/*    padding-top: 70px;*/
+/*}*/
+.materEveryNumBox{
+    width: 100%;
+    height: 50px;
+    padding-top: 15px;
+}
+.materEveryNum{
+    /*float: right;*/
+}
+.materEveryNum span {
+    font-size: 12px;
+    margin: 0 3px;
+    color: #999;
+}
+.materDropdown {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+.materDropdown span {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #e8e8e8;
+    padding-left: 16px;
+    padding-right: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.materDropdown ul{
+    position: absolute;
+    /*buttom:100%;*/
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px 0;
+    transform: translate(-15px,-190px);
+}
+.materDropdown li{
+    padding: 5px 30px;
+}
+.materDropdown li:hover{
+    background-color:#33AAB3;
+}
+
+.materDropdown li a {
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+    text-align: center;
+    display: block;
+    padding: 5px 10px;
+}
+
+.materDropdown i {
+    font-size: 18px;
+    line-height: 1;
+    position: absolute;
+    right: 16px;
+    top: 7px;
+    cursor: pointer;
+}
+.materDropdown ul {
+    position: absolute;
+    /*top: 100%;*/
+    left: 0;
+    buttom: 100%;
+    top:auto;
+    z-index: 1;
+    border: 1px solid #d2d2d2;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+input[type="hidden" i] {
+    display: none;
+    appearance: initial;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+.on{
+    position: fixed!important;
+    bottom: 0;
+    line-height: 40px;
+    background-color: #fff;
+    /*width: 60%;*/
+    padding: 0;
+}
+
+

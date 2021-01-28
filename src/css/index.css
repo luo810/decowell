@@ -398,6 +398,7 @@ p{
 .indexBottomBot{
     margin-bottom: 25px;
 }
+/*-------------------------------------------------------------------------*/
 .indexBottomBox{
     flex-direction: column;
     /*height: 380px;*/
@@ -478,12 +479,97 @@ p{
     letter-spacing: 2px;
     text-decoration: none;
 }
+/*-----------------文章----------------------------*/
 
+.indexArticleBox{
+    width: 20%;
+    height: 450px;
+    padding-right: 20px;
+}
+.botArtBox>.indexArticleBox:last-child{
+    padding-right: 0;
+}
 
+.indexArticle{
+    width: 100%;
+    height: 100%;
+    background-color:#F8F8F8;
+}
 
+.articleAct{
+    width: 60%;
+    height: 450px;
+    padding-right: 20px;
+}
 
+.artAct{
+    background: url("../img/index/articleImg.png") no-repeat center;
+}
 
+.titleBox{
+    width: 100%;
+    height: 100%;
+    padding: 150px 15px 0 15px;
+}
 
+.titleAct{
+    padding: 380px 0 0 20px;
+}
+
+.titleBox>h2{
+    height: 53px;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #333333;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.titleBox>h3{
+    display: none;
+}
+
+.titleBox>h4{
+    height: 17px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #333333;
+    display: block;
+    margin-bottom: 100px;
+}
+
+.titleBox>img{
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.titleAct>h2{
+    height: 26px;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.titleAct>h3{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: block;
+}
+
+.titleAct>h4{
+    display: none;
+}
+.titleAct>img{
+    display: none;
+}
 
 .show{
     display: flex;
