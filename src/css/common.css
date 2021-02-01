@@ -355,6 +355,12 @@ footer{
     color: #FFFFFF;
     cursor: pointer;
 }
+.footerBoxLeft>ul li>a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
 .footerBoxLeft>ul>li:first-child,.footerContactUs{
     height: 17px;
     font-size: 16px;

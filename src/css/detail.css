@@ -294,6 +294,7 @@
 .tabRigBox{
     padding-bottom: 30px;
     cursor: pointer;
+    width: 100%;
 }
 .tabRigBox,.probotTitle,.probotDec,.probotMore{
     width: 100%;
@@ -344,4 +345,10 @@
 .probotMoreBox>img{
     width: 22px;
     height: 22px;
+}
+.tabSelectShow{
+    position: relative;
+}
+.tabSelLeft{
+    position: relative;
 }
