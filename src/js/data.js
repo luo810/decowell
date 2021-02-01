@@ -217,18 +217,23 @@ for (let i = 0; i < type_array.length; i++) {
 
 
 // 已选类型部分 添加span标签上data-id的补充
+// $('.dataFixBox').mouseenter(function (event) {
+//     console.log('8')
+//     event.stopPropagation()
+//
+// })
 for (let i = 0; i < datamoreType.length; i++) {
-    $(datamoreType[i]).children('label').children('input').click(function (event) {
+    $(datamoreType[i]).children('label').children('input').on('click',function (event){
+        event.stopPropagation()
         let typeTemp = $(this).siblings('span').text()
         let cataTemp = cata_array[i]
         let typeText = "<span data-chname='" + typeTemp + "' data-id='" + cataTemp + "'>" + typeTemp + "</span>";
         typeText += "<i class='iconfont icon-cross-fill' style='font-size: 14px;color: #33AAB3 '></i>"
-
-        event.stopPropagation()
+        console.log('执行')
         if ($(this).is(':checked')) {
             $("<dd>" + typeText + "</dd>").insertBefore(".dataSelectShowTopDl>dt")
             cata_array_handle.push(cataTemp)
-        } else {
+        } else{
             let al = $(this).siblings('span').text()
             let idTemp = $(this).data('id')
             for (let j = 0; j < dataSelectShowTopDl.length; j++) {
@@ -242,8 +247,8 @@ for (let i = 0; i < datamoreType.length; i++) {
         showSelect()
         dataSelectShowTopDl = $('.dataSelectShowTopDl>dd')
     })
-
 }
+
 // 已选格式
 for (let i = 0; i < datamoreFormat.length; i++) {
     $(datamoreFormat[i]).children('label').children('input').click(function (event) {

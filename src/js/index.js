@@ -118,6 +118,39 @@ function f() {
         }
     }
 
+
+    // 首页样式
+    $('.productLearnMore').hover(function () {
+        $('.productLearnMore>p').css('color','#33AAB3')
+        $('.productLearnMore>i:last-child').css('transform','translateX(10px)')
+
+        $('.productLearnMore>i').css('color','#33AAB3')
+    },function () {
+        $('.productLearnMore>p').css('color','#FFFFFF')
+        $('.productLearnMore>i:last-child').css('transform','translateX(0)')
+        $('.productLearnMore>i').css('color','#FFFFFF')
+    })
+    $('.planItem').hover(function () {
+        $(this).children('.planItemImgBox').children('.planItemImg').css({'transform':'scale(1.06,1.06) matrix(1.02,0,0,1.02,0,0)','-webkit-transition-duration':'2s','overflow':'hidden'})
+    },function () {
+        $(this).children('.planItemImgBox').children('.planItemImg').css('transform','scale(1,1) matrix(1,0,0,1,0,0)')
+    })
+    $('.planLearnMore').hover(function () {
+        $(this).css('border-color','#33AAB3')
+        $(this).children('p').css('color','#33AAB3')
+        $(this).children('i').css('color','#33AAB3')
+        $(this).children('.icon-jiantou').css('transform','translateX(10px)')
+    },function () {
+        $(this).css('border-color','#000000')
+        $(this).children('p').css('color','#000000')
+        $(this).children('.icon-jiantou').css('transform','translateX(0)')
+        $(this).children('i').css('color','#000000')
+    })
+    $('.productItem').hover(function () {
+        $(this).children('img').css('transform','matrix(1.02,0,0,1.02,0,0)')
+    },function () {
+        $(this).children('img').css('transform','matrix(1,0,0,1,0,0)')
+    })
 }
 if (window.attachEvents) {
     window.attachEvents("load", f, false);

@@ -6,45 +6,51 @@
     <title>DECOWELL</title>
     <link rel="stylesheet" href="src/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/lib/css/base.css">
+    <link rel="stylesheet" href="src/lib/fonts/iconfont.css">
     <link rel="stylesheet" href="src/css/common.css">
     <link rel="stylesheet" href="src/css/list.css">
 </head>
 <body>
 <!--    header-->
-<header class="flex _1500 flex-zBetween  ">
-    <!--    原先的导航-->
-    <!--    <div class="prenavLeft"></div>-->
-    <div class="flex flex-hc flex-ac navLeft">
-        <img src="src/img/index/logo.png" alt="">
-        <ul class="flex navLeftBox ">
-            <li>
-                <img src="src/img/index/menu.png" alt="">
-                <a href="#">菜单</a>
-            </li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">产品中心</a></li>
-            <li><a href="#">行业方案</a></li>
-            <li><a href="#">客户服务</a></li>
-            <li><a href="#">行业资讯</a></li>
-            <li><a href="#">联系我们</a></li>
-        </ul>
-    </div>
-    <div class="flex flex-ac flex-zEnd  navRig">
-        <img src="src/img/index/search.png" alt="">
-        <img src="src/img/index/user.png" alt="">
+
+<header>
+    <div class="headerBox flex _1500 flex-zBetween">
+        <!--    原先的导航-->
+        <!--    <div class="prenavLeft"></div>-->
+        <div class="flex flex-hc flex-ac navLeft">
+            <img src="src/img/index/logo.png" alt="">
+            <ul class="flex navLeftBox ">
+                <li>
+                    <img src="src/img/index/menu.png" alt="">
+                    <a href="#">菜单</a>
+                </li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">产品中心</a></li>
+                <li><a href="#">行业方案</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">行业资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="flex flex-ac flex-zEnd  navRig">
+            <img src="src/img/index/search.png" alt="">
+            <img src="src/img/index/user.png" alt="">
+        </div>
     </div>
 </header>
 <!--导航展开-->
-<header class="flex _1500 flex-hc headerSpan hide ">
-    <div class="flex flex-hc flex-ac headerNavLeft">
-        <img src="src/img/index/logo.png" alt="">
+<header class="hide headHideBox ">
+    <div class="flex _1500  headerSpan hide headerBox">
+        <div class="flex flex-hc flex-ac headerNavLeft">
+            <img src="src/img/index/logo.png" alt="">
+        </div>
+        <div class="flex flex-ac flex-zBetween  headerNavRig">
+            <img src="src/img/index/searchGreen.png" alt="">
+            <input class="flex1" type="search" placeholder="路由器">
+            <img src="src/img/index/closeGreen.png" alt="">
+        </div>
     </div>
-    <div class="flex flex-ac flex-zBetween  headerNavRig">
-        <img src="src/img/index/searchGreen.png" alt="">
-        <input class="flex1" type="search" placeholder="路由器">
-        <img src="src/img/index/closeGreen.png" alt="">
-    </div>
-    <!--    <div class="prenavLeft"></div>-->
+
 </header>
 <!--菜单展开-->
 <div class="headSpanBox hide">
@@ -714,7 +720,7 @@
         <table class="listTable">
             <tr class="listTableTr">
                 <td class="tableCol">分类</td>
-                <td>手机</td>
+                <td><a>手机</a></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -773,178 +779,227 @@
     </div>
     <div class="flex flex-wrap flex-zStart _1500 productShow">
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
-
         <div class="proItemBox">
-            <img src="src/img/list/product.png" alt="">
-            <div class="itemTitle">
-                HUAWEI P40 PRO
-            </div>
-            <div class="itemDec">
-                3D散热，快速充电
-            </div>
-            <div class="itemUsed">
-                44737人评价
-            </div>
-            <div class="itemSupport">
-                98%好评
-            </div>
-            <div class="flex flex-zEnd  itemMore">
-                <div class="flex flex-ac flex-hc moreBox">
-                    <p>了解更多</p>
-                    <img src="src/img/list/toRight.png" alt="">
+            <div class="proHoverBox">
+                <div class="proImgFat">
+                    <img src="src/img/list/product.png" alt="">
                 </div>
+
+                <div class="itemTitle">
+                    HUAWEI P40 PRO
+                </div>
+                <div class="itemDec">
+                    3D散热，快速充电
+                </div>
+                <div class="itemUsed">
+                    44737人评价
+                </div>
+                <div class="itemSupport">
+                    98%好评
+                </div>
+            </div>
+
+            <div class="flex flex-zStart  itemMore">
+                <button class="flex flex-ac flex-hc moreBox">
+                    <p>了解更多</p>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.5,1);margin: 0 3px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
 
@@ -1008,5 +1063,6 @@
 </footer>
 <script src="src/lib/js/jquery-3.5.1.min.js"></script>
 <script src="src/js/common.js"></script>
+<script src="src/js/list.js"></script>
 </body>
 </html>
