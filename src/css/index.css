@@ -11,7 +11,11 @@ p{
 }
 
 /*------------------------------banner----------------------------------------*/
+banner{
+    /*padding-top: 70px;*/
+}
 .banner>img{
+    padding-top: 60px;
     width: 100%;
 }
 
@@ -26,20 +30,36 @@ p{
     line-height: 80px;
     color: #33AAB3;
 }
+.product{
+    position: relative;
+}
 
 .product,.productSec{
-    padding: 35px 30px 30px 30px;
+    padding: 35px 20px 30px 20px;
 }
 .productItem{
     width: 20%;
-    padding: 10px;
+    padding: 10px 8px;
     cursor: pointer;
 }
+
+.productItem>img{
+    width: 100%;
+    transform: matrix(1,0,0,1,0,0);
+}
+
+.product>.productItem{
+    border-bottom: 2px solid rgba(47,79,79,0.1);
+    padding-bottom: 14px;
+}
+
 .product>.productItem:last-child{
     margin-right: 0;
 }
-.productItem>img{
-    width: 100%;
+
+.productImgBox{
+    overflow: hidden;
+
 }
 .itemName{
     margin: 23px auto 20px;
@@ -96,13 +116,15 @@ p{
     background:url("../img/index/backgroundImg.png") no-repeat center;
 }
 .machineContent{
+    width: 100%;
     height: 100%;
 }
 .machineTop{
     height: 46px;
+    margin-bottom: 60px;
 }
 .chooseTip{
-    width: 20%;
+    width: 18%;
     height: 40px;
     background-color: #FFFFFF;
     border: 1px solid #DCDDE0;
@@ -114,19 +136,31 @@ p{
     cursor: pointer;
 }
 .chooseTipAct{
-    width: 20%;
+    width: 18%;
     height: 44px;
     line-height: 44px;
     box-shadow: 0 2px 16px rgba(137, 155, 255, 0.2);
 }
 .machineBot{
-    justify-content: space-between;
+    width: 100%;
     padding: 0 20px;
+    position: relative;
 }
 .machineBot>img{
-    width: 15%;
-    max-width: 210px;
-    min-width: 100px;
+    width: 20%;
+    max-width: 190px;
+    min-width: 80px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.machineBot>img:first-child{
+    left: 80px;
+    margin-left: -10px;
+}
+.machineBot>img:last-child{
+    right: 80px;
+    margin-right: -10px;
 }
 
 .programTop{
@@ -134,28 +168,40 @@ p{
     height: 188px;
     background: linear-gradient(357deg, #FFFFFF 0%, #F6F8FF 100%);
     border-radius: 50%;
+    transform: matrix(1,0,0,1,0,0);
 }
 .programTop>img{
     width: 76px;
     height: 76px;
+
+}
+.programTop:hover{
+    transform: matrix(1.04,0,0,1.04,0,0);
 }
 .chooseType{
-    justify-content: space-between;
-    padding: 0 100px;
+    width: 60%;
+    justify-content: center;
+    padding: 0 80px;
+    margin: 0 50px;
+    position: relative;
 }
 .techService{
     display: none;
-    justify-content: space-between;
-    padding: 0 100px;
+    width: 60%;
+    justify-content: center;
+    padding: 0 80px;
+    margin: 0 50px;
+    position: relative;
 }
 .programBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    padding: 10px;
+    width: 33.33%;
+    padding: 10px 20px;
     cursor: pointer;
+
 }
 .programTitle{
     width: 100%;
@@ -222,6 +268,13 @@ p{
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    background-color: transparent;
+}
+.productLearnMore:hover{
+    border: 1px solid #33AAB3;
+}
+i {
+    transition: transform 0.5s;
 }
 .productLearnMore>p{
     font-size: 14px;
@@ -229,11 +282,7 @@ p{
     font-weight: 400;
     line-height: 41px;
     color: #FFFFFF;
-    margin-right: 8px;
-}
-.productLearnMore>img{
-    width: 22px;
-    height: 22px;
+    margin-right: 15px;
 }
 /*----------------------------plan----------------------------------------------*/
 .planBox{
@@ -270,46 +319,52 @@ p{
     background:url("../../src/img/index/planImg.png") no-repeat center;
     width: 100%;
     height: 0;
-    padding-bottom: 75%;
+    padding-bottom: 55%;
     overflow: hidden;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     position: relative;
     transform: matrix(1,0,0,1,0,0);
 }
-.planItemImg:hover{
-    transform:scale(1.02,1.02) matrix(1.02,0,0,1.02,0,0);
-    -webkit-transition-duration:2s;
-    overflow: hidden;
-}
-
 .planItem>h2{
     height: 22px;
     font-weight: 600;
     line-height: 22px;
     color: #000000;
     margin: 12px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .planItem>p{
     width: 100%;
     height: 36px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     font-weight: 400;
     line-height: 18px;
     color: #000000;
     opacity: 0.5;
+    -webkit-line-clamp:2;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .planItemBox{
     width: 25%;
-    padding: 15px;
+    padding: 15px 8px;
+}
+.planItemBox:first-child{
+    margin-left: -8px;
+}
+.planItemBox:last-child{
+    margin-right: -8px;
 }
 .planItemBox>div:nth-child(2){
     width: 100%;
     height: 2px;
     background: #000000;
     opacity: 0.05;
-    margin: 23px 0 30px;
+    margin: 40px 0 25px;
 }
 .planItemBox>div:nth-child(3){
     width: 100%;
@@ -321,6 +376,7 @@ p{
     border: 1px solid #000000;
     margin: auto 0;
     cursor: pointer;
+    background-color: transparent;
 }
 .planLearnMore>p{
     width: 50%;
@@ -331,11 +387,6 @@ p{
     line-height: 24px;
     color: #000000;
 }
-.planLearnMore>img{
-    width: 22px;
-    height: 22px;
-}
-
 /*------------------threeItem-----------------------------------------------------------*/
 .threeItemBoxBox{
     width: 33.33%;
@@ -579,7 +630,9 @@ p{
 .titleAct>img{
     display: none;
 }
-
+.beforeLine{
+    
+}
 .show{
     display: flex;
 }

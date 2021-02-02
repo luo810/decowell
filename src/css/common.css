@@ -1,9 +1,28 @@
+img,div,i{
+    transition: transform 0.2s;
+}
+
 /*header*/
 header{
-    height: 70px;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background-color: #FFFFFF;
+    z-index: 99;
+}
+.headHideBox{
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 60px;
+    background-color: #FFFFFF;
+    z-index: 999;
 }
 .prenavLeft{
     width: 130px;
+}
+.headerNavLeft{
+    margin-right: 20px;
 }
 .navLeft>img:first-child,
 .headerNavLeft>img:first-child{
@@ -42,8 +61,7 @@ header{
     cursor: pointer;
 }
 .navRig>img:last-child{
-    margin-right: 62px;
-    margin-left: 32px;
+    margin-left: 40px;
 }
 
 /*headerspan*/
@@ -96,9 +114,10 @@ header{
 
 }
 .headerNavRig{
-    width: 800px;
+    flex: 1;
     height: 40px;
     margin: auto 0;
+    margin-right: 60px;
     border-bottom:2px solid rgba(0,0,0,0.05);
 }
 .headerNavRig>img{
@@ -119,12 +138,11 @@ header{
 }
 .headSpanBox{
     width: 100%;
-    position: absolute;
+    position: fixed;
+    top:60px;
     height: 850px;
     left: 0;
-    top: 60px;
     background-color: #FFFFFF;
-    /*background:linear-gradient(90deg,#111214,#111214 30%,#fff 0,#fff 50%);*/
     z-index: 1000;
     cursor: default;
     border-bottom: 1px solid #e5e5e5;
@@ -133,20 +151,16 @@ header{
     background-size: contain;
 }
 .headSpan{
-    /*display: block;*/
     display: flex;
     height: 100%;
     position: relative;
     z-index: 1000;
-    padding: 0 20px;
     overflow: hidden;
 }
 .plateOne{
-    /*display: block;*/
     display: flex;
     width: 30%;
     max-width: 350px;
-    /*width: 350px;*/
     height: 100%;
     background-color:#111214;
     position: relative;
@@ -154,8 +168,6 @@ header{
     padding-right: 0;
 }
 .plateTwo{
-    /*display: block;*/
-    /*width: 300px;*/
     display: flex;
     width: 25%;
     max-width: 300px;
@@ -166,8 +178,6 @@ header{
     padding-right: 0;
 }
 .plateThree{
-    /*display: block;*/
-    /*width: 100%;*/
     display: flex;
     flex: 1;
     height: 100%;

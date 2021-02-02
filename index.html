@@ -6,46 +6,51 @@
     <title>DECOWELL</title>
     <link rel="stylesheet" href="src/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="src/lib/css/base.css">
+    <link rel="stylesheet" href="src/lib/fonts/iconfont.css">
     <link rel="stylesheet" href="src/css/common.css">
     <link rel="stylesheet" href="src/css/index.css">
 </head>
 <body>
 <!--    header-->
 
-<header class="flex _1500 flex-zBetween  ">
-    <!--    原先的导航-->
-    <!--    <div class="prenavLeft"></div>-->
-    <div class="flex flex-hc flex-ac navLeft">
-        <img src="src/img/index/logo.png" alt="">
-        <ul class="flex navLeftBox ">
-            <li>
-                <img src="src/img/index/menu.png" alt="">
-                <a href="#">菜单</a>
-            </li>
-            <li><a href="#">关于我们</a></li>
-            <li><a href="#">产品中心</a></li>
-            <li><a href="#">行业方案</a></li>
-            <li><a href="#">客户服务</a></li>
-            <li><a href="#">行业资讯</a></li>
-            <li><a href="#">联系我们</a></li>
-        </ul>
-    </div>
-    <div class="flex flex-ac flex-zEnd  navRig">
-        <img src="src/img/index/search.png" alt="">
-        <img src="src/img/index/user.png" alt="">
+<header>
+    <div class="headerBox flex _1500 flex-zBetween">
+        <!--    原先的导航-->
+        <!--    <div class="prenavLeft"></div>-->
+        <div class="flex flex-hc flex-ac navLeft">
+            <img src="src/img/index/logo.png" alt="">
+            <ul class="flex navLeftBox ">
+                <li>
+                    <img src="src/img/index/menu.png" alt="">
+                    <a href="#">菜单</a>
+                </li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">产品中心</a></li>
+                <li><a href="#">行业方案</a></li>
+                <li><a href="#">客户服务</a></li>
+                <li><a href="#">行业资讯</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="flex flex-ac flex-zEnd  navRig">
+            <img src="src/img/index/search.png" alt="">
+            <img src="src/img/index/user.png" alt="">
+        </div>
     </div>
 </header>
 <!--导航展开-->
-<header class="flex _1500 flex-hc headerSpan hide ">
-    <div class="flex flex-hc flex-ac headerNavLeft">
-        <img src="src/img/index/logo.png" alt="">
+<header class="hide headHideBox ">
+    <div class="flex _1500  headerSpan hide headerBox">
+        <div class="flex flex-hc flex-ac headerNavLeft">
+            <img src="src/img/index/logo.png" alt="">
+        </div>
+        <div class="flex flex-ac flex-zBetween  headerNavRig">
+            <img src="src/img/index/searchGreen.png" alt="">
+            <input class="flex1" type="search" placeholder="路由器">
+            <img src="src/img/index/closeGreen.png" alt="">
+        </div>
     </div>
-    <div class="flex flex-ac flex-zBetween  headerNavRig">
-        <img src="src/img/index/searchGreen.png" alt="">
-        <input class="flex1" type="search" placeholder="路由器">
-        <img src="src/img/index/closeGreen.png" alt="">
-    </div>
-    <!--    <div class="prenavLeft"></div>-->
+
 </header>
 <!--菜单展开-->
 <div class="headSpanBox hide">
@@ -822,14 +827,15 @@
 </div>
 <!--machine-->
 <div class="machineBox">
-    <div class="_1500 machineContent">
+    <div class="machineContent">
         <div class="flex flex-hc flex-ac machineTop">
             <div class="chooseTip chooseTipAct">我要选型</div>
             <div class="chooseTip">技术服务</div>
         </div>
-        <div class="flex _1500  machineBot">
+        <div class="flex flex-hc flex-ac machineBot">
             <img src="src/img/index/machine.png" alt="">
-            <div class="flex flex1  chooseType">
+
+            <div class=" flex   chooseType">
                 <div class="programBox">
                     <div class="flex flex-hc flex-ac programTop">
                         <img src="src/img/index/programIcon.png" alt="">
@@ -850,7 +856,7 @@
                 </div>
             </div>
 
-            <div class="flex flex1 techService">
+            <div class="flex  techService">
                 <div class="programBox">
                     <div class="flex flex-hc flex-ac programTop">
                         <img src="src/img/index/programIcon.png" alt="">
@@ -870,8 +876,8 @@
                     <div class="programTitle">电话咨询AA</div>
                 </div>
             </div>
-
             <img src="src/img/index/machine.png" alt="">
+
         </div>
     </div>
 </div>
@@ -883,10 +889,11 @@
             <p>每年,我们将15%的销售收入投入研发,其中30%的研发经费投入高端技术的预研</p>
             <p>每年,我们将15%的销售收入投入研发,其中30%的研发经费投入高端技</p>
         </div>
-        <div class="flex flex-ac flex-hc productLearnMore">
+        <button class="flex flex-ac flex-hc productLearnMore">
             <p>了解更多</p>
-            <img src="src/img/index/rightArrowWhite.png" alt="">
-        </div>
+            <i class="iconfont icon-line" style="color: #FFFFFF;transform: scale(1.8,1);margin: 0 5px"></i>
+            <i class="iconfont icon-jiantou" style="color: #FFFFFF"></i>
+        </button>
     </div>
 </div>
 <!--plan-->
@@ -905,14 +912,15 @@
                 </div>
 
                 <h2>楼宇自控</h2>
-                <p>一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</p>
+                <p>一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</p>
             </div>
             <div></div>
-            <div class="flex flex-zEnd  flex-ac">
-                <div class="flex flex-hc flex-ac planLearnMore">
+            <div class="flex flex-zStart  flex-ac">
+                <button class="flex flex-hc flex-ac planLearnMore">
                     <p>了解更多</p>
-                    <img src="src/img/index/rightArrowBlack.png" alt="">
-                </div>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.8,1);margin: 0 5px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
         <div class="planItemBox">
@@ -925,11 +933,12 @@
                 <p>一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</p>
             </div>
             <div></div>
-            <div class="flex flex-zEnd  flex-ac">
-                <div class="flex flex-hc flex-ac planLearnMore">
+            <div class="flex flex-zStart  flex-ac">
+                <button class="flex flex-hc flex-ac planLearnMore">
                     <p>了解更多</p>
-                    <img src="src/img/index/rightArrowBlack.png" alt="">
-                </div>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.8,1);margin: 0 5px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
         <div class="planItemBox">
@@ -942,11 +951,12 @@
                 <p>一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</p>
             </div>
             <div></div>
-            <div class="flex flex-zEnd  flex-ac">
-                <div class="flex flex-hc flex-ac planLearnMore">
+            <div class="flex flex-zStart  flex-ac">
+                <button class="flex flex-hc flex-ac planLearnMore">
                     <p>了解更多</p>
-                    <img src="src/img/index/rightArrowBlack.png" alt="">
-                </div>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.8,1);margin: 0 5px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
         <div class="planItemBox">
@@ -959,11 +969,12 @@
                 <p>一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</p>
             </div>
             <div></div>
-            <div class="flex flex-zEnd  flex-ac">
-                <div class="flex flex-hc flex-ac planLearnMore">
+            <div class="flex flex-zStart  flex-ac">
+                <button class="flex flex-hc flex-ac planLearnMore">
                     <p>了解更多</p>
-                    <img src="src/img/index/rightArrowBlack.png" alt="">
-                </div>
+                    <i class="iconfont icon-line" style="color: #000000;transform: scale(1.8,1);margin: 0 5px"></i>
+                    <i class="iconfont icon-jiantou" style="color: #000000"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -1122,6 +1133,9 @@
                 <div class="indexArticleBox articleAct">
                     <div class="indexArticle artAct">
                         <div class="titleBox titleAct">
+                            <div class="beforeLine">
+
+                            </div>
                             <h2>第22届高变交会暨华为智慧城市峰会2020</h2>
                             <h3>共筑城市智能体&nbsp&nbsp点亮孪生新未来</h3>
                             <h4>2020年9月23日14:00-15:30</h4>

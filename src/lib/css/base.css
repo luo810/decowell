@@ -164,6 +164,11 @@ input[type="button"], input[type="submit"], input[type="reset"] {
 	width: 100%;
 	margin: 0 auto;
 }
+._1000{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
 
 /*转换成行内元素*/
 .ibDisplay {
@@ -407,6 +412,14 @@ input{
 	width: 0;
 	height: 0;
 	color: transparent;
+}
+.overell{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+button{
+	background-color: transparent;
 }
 /*清除bootstrap中的container的padding值*/
 /*.container{

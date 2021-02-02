@@ -5,22 +5,32 @@ let threeMune = $('.plateThree>ul')
 let muneTemp = 1
 let secmuneTemp = 1
 let secTemp = '.sec' + muneTemp
+let searchImg = $('.navRig>img:first-child')
 function f() {
     // 首页拓展菜单显示隐藏
-    indexMune.click(function () {
+    function showMoreMune(){
         $('header:first-child').hide()
         $('.headerSpan').removeClass('hide')
         $('.headSpanBox').removeClass('hide')
+        $('.headHideBox').removeClass('hide')
         $(secMune).hide()
         muneTemp = 1
         secmuneTemp = 1
         selectSecMune()
         selectThrMune()
+    }
+    indexMune.click(function () {
+        showMoreMune()
     })
+    searchImg.click(function () {
+        showMoreMune()
+    })
+
     $('.headerNavRig>img:last-child').click(function () {
         $('header:first-child').show()
         $('.headerSpan').addClass('hide')
         $('.headSpanBox').addClass('hide')
+        $('.headHideBox').addClass('hide')
     })
     // 一级菜单选中
     for (let i = 0; i < firstMune.length; i++) {
@@ -96,6 +106,21 @@ function f() {
         } else {
             $('.plateTwo').show()
         }
+    }
+
+    // 了解更多的箭头动画
+    function knowMore(e) {
+        $(e).hover(function () {
+            $(this).css('border-color','#33AAB3')
+            $(this).children('p').css('color','#33AAB3')
+            $(this).children('i').css('color','#33AAB3')
+            $(this).children('.icon-jiantou').css('transform','translateX(10px)')
+        },function () {
+            $(this).css('border-color','#000000')
+            $(this).children('p').css('color','#000000')
+            $(this).children('.icon-jiantou').css('transform','translateX(0)')
+            $(this).children('i').css('color','#000000')
+        })
     }
 }
 if (window.attachEvents) {

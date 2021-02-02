@@ -4,6 +4,9 @@
 .fonts_11{
     font-size: 11px;
 }
+.banner{
+    padding-top: 60px;
+}
 .banner>img{
     width: 100%;
 }
@@ -58,11 +61,20 @@ a{
 }
 .proItemBox{
     width: 25%;
-    /*width: 260px;*/
-    /*margin: 20px 40px 20px 0;*/
     padding: 40px;
     cursor: pointer;
-
+    overflow: hidden;
+}
+.proHoverBox{
+    width: 100%;
+    overflow: hidden!important;
+}
+.proImgFat{
+    width: 100%;
+    overflow: hidden;
+}
+.proImgFat>img{
+    width: 100%;
 }
 .proItemBox>img{
     width: 100%;
@@ -91,6 +103,7 @@ a{
     height: 35px;
     border: 1px solid #000000;
     border-radius: 18px;
+    margin-top: 20px;
 }
 .moreBox>p{
     height: 35px;
@@ -99,9 +112,5 @@ a{
     text-align: center;
     line-height: 35px;
     color: #000000;
-}
-.moreBox>img{
-    margin-left: 5px;
-    width: 14px;
-    height: 14px;
+    margin-right: 3px;
 }
