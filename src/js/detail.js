@@ -15,6 +15,7 @@ let otherSub = $('.otherSub')
 let otherAdd = $('.otherAdd')
 let detailtab = $('.tabSelectUl>li')
 let tabSelLeft = $('.tabSelLeft')
+let bottomTab = $('.tabBox')
 function f() {
     // 详情页价格计算
     function calSingle() {
@@ -104,8 +105,36 @@ function f() {
             $(tabSelLeft[i]).removeClass('hide')
         })
     }
+    let bottomTabHeight = $(bottomTab).offset().top
+    $(document).scroll(() => {
+        if (bottomTabHeight <= $(this).scrollTop()) {
+            $('.tabSelectBox').css('position', 'fixed')
+            $('.tabSelectBox').css('top', 20 + 'px')
+            $('.tabSelectBox').css('z-index','99')
+            $('.tabSelLeft').css('padding-top',35 + 'px')
+            // $('.materEveryNumBox').addClass('on')
 
+        } else {
+            $('.tabSelectBox').css('position', 'static')
+            $('.tabSelectBox').css('top', 0 + 'px')
+            $('.tabSelLeft').css('padding-top',0 + 'px')
 
+        }
+    })
+    $('.productLearnMore').hover(function () {
+        $(this).children('p').css('color','#33AAB3')
+        $(this).children('i:last-child').css('transform','translateX(10px)')
+        $(this).children('i').css('color','#33AAB3')
+    },function () {
+        $(this).children('p').css('color','#333333')
+        $(this).children('i:last-child').css('transform','translateX(0)')
+        $(this).children('i').css('color','#333333')
+    })
+    $('.detailScaleBox').hover(function () {
+        $(this).children('.detailImgBox').children('img').css('transform','matrix(1.06,0,0,1.06,0,0)')
+    } ,function () {
+        $(this).children('.detailImgBox').children('img').css('transform','matrix(1,0,0,1,0,0)')
+    })
 }
 
 if (window.attachEvents) {
