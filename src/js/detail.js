@@ -135,6 +135,39 @@ function f() {
     } ,function () {
         $(this).children('.detailImgBox').children('img').css('transform','matrix(1,0,0,1,0,0)')
     })
+    // 右侧型号对应小图
+    let typeChooseBut = $('.typeChooseBut>button')
+    let proDetImgBox = $('.proDetImgBox')
+    $(typeChooseBut[0]).css('border-color','#33AAB3')
+    $(typeChooseBut[0]).css('color','#33AAB3')
+    for(let i = 0 ; i < typeChooseBut.length;i++){
+        $(typeChooseBut[i]).click(function(){
+            for(let j = 0 ; j < typeChooseBut.length;j++){
+                $(typeChooseBut[j]).css('border-color','rgba(0,0,0,0.6)')
+                $(typeChooseBut[j]).css('color','rgba(0,0,0,0.6)')
+                $(proDetImgBox[j]).removeClass('proDetImgAct')
+            }
+            $(this).css('border-color','#33AAB3')
+            $(this).css('color','#33AAB3')
+            $(proDetImgBox[i]).addClass('proDetImgAct')
+        })
+    }
+    // 左侧小图对应型号
+    for(let i = 0 ; i < proDetImgBox.length;i++){
+        $(proDetImgBox[i]).click(function(){
+            for(let j = 0 ; j < proDetImgBox.length;j++){
+                $(typeChooseBut[j]).css('border-color','rgba(0,0,0,0.6)')
+                $(typeChooseBut[j]).css('color','rgba(0,0,0,0.6)')
+                $(proDetImgBox[j]).removeClass('proDetImgAct')
+            }
+            $(typeChooseBut[i]).css('border-color','#33AAB3')
+            $(typeChooseBut[i]).css('color','#33AAB3')
+            $(this).addClass('proDetImgAct')
+        })
+    }
+
+
+
 }
 
 if (window.attachEvents) {

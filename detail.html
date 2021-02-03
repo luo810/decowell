@@ -711,9 +711,21 @@
 </div>
 <!--商品大图-->
 <div class="flex _1500 flex-zStart  flex-ac proBox">
-    <div class="flex proBoxLeft">
-        <img class="productBigImg" src="src/img/detail/productImg.png" alt="">
-        <div class="flex1 proDetail">
+    <div class="flex flex-zTopBottom proBoxLeft">
+        <div class="detailBigImg">
+            <img class="productBigImg" src="src/img/detail/productImg.png" alt="">
+        </div>
+
+        <div class="flex flex1 proDetail">
+            <div class="proDetImgBox proDetImgAct">
+                <img src="src/img/detail/productImg.png" alt="">
+            </div>
+            <div class="proDetImgBox">
+                <img src="src/img/detail/productImg.png" alt="">
+            </div>
+            <div class="proDetImgBox">
+                <img src="src/img/detail/productImg.png" alt="">
+            </div>
 
         </div>
     </div>
@@ -727,8 +739,13 @@
             商品编号:TR0002262 <br>
             商品描述:4000Vms20VA初级115V,230V
         </p>
+        <div class="typeChooseBut">
+            <button>A型号</button>
+            <button>B型号</button>
+            <button>C型号</button>
+        </div>
         <table class="proRigTable">
-            <tr>
+            <tr class="hide">
                 <td class="proRigService">库存:</td>
                 <td>
                     <p>现货36（1起订） <br>
@@ -1155,9 +1172,9 @@
                 <span>¥</span>
                 <span class="totalMoney">00.00</span>
             </div>
-            <div class="addAlltoBuy">
+            <button class="addAlltoBuy">
                 批量加车
-            </div>
+            </button>
         </div>
     </div>
 </div>
@@ -1169,17 +1186,52 @@
             <li class="tabSelectAct">规格参数</li>
             <li>PDF数据手册</li>
             <li>技术文档</li>
-            <li>成交记录</li>
+            <li class="hide">成交记录</li>
             <li>相关问答</li>
         </ul>
     </div>
     <div class="_1500 flex tabSelectShow">
+<!--        规格参数-->
         <div class="tabSelLeft">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
+            <table class="specification">
+                <tr>
+                    <td colspan="2">规格参数</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+            </table>
         </div>
-
+<!--        pdf文档-->
         <div class="tabSelLeft hide">
             <ul class="dataPagination" style="padding-top: 10px">
                 <li class="flex flex-ac flex-hc dataPaginationLi">
@@ -1208,7 +1260,7 @@
                 </li>
             </ul>
         </div>
-
+<!--        技术文档-->
         <div class="tabSelLeft hide">
             <ul class="dataPagination" style="padding-top: 10px">
                 <li class="flex flex-ac flex-hc dataPaginationLi">
@@ -1357,21 +1409,27 @@
                 </li>
             </ul>
         </div>
-
+<!--        成交记录未定-->
         <div class="tabSelLeft hide">
             <img src="src/img/detail/detailCamera.png" alt="">
             <img src="src/img/detail/detailCamera.png" alt="">
             <img src="src/img/detail/detailCamera.png" alt="">
         </div>
-
+<!--        FAQ-->
         <div class="tabSelLeft hide">
             <dl class="detailFAQ">
                 <dd>
                     <div class="detailFAQTop">
-                        <span>1、问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①</span>
+                        <span>1、问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①
+                            问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①</span>
                     </div>
                     <div class="detailFAQBot">
-                        <span>答：测试测试测试不要超过三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行</span>
+                        <span>答：测试测试测试不要超过三行三行三行三行三行三行行三行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三
+                            行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行</span>
                     </div>
                 </dd>
                 <dd>
@@ -1392,6 +1450,7 @@
                 </dd>
             </dl>
         </div>
+<!--        右侧推荐文章-->
         <div class="tabSelRig">
             <div class="tabRigBox">
                 <div class="detailScaleBox">
@@ -1444,106 +1503,8 @@
                     <i class="iconfont icon-jiantou" style="color: #333333"></i>
                 </button>
             </div>
-
         </div>
     </div>
-
-    <div class="_1500 flex tabSelectShow hide">
-        <div class="tabSelLeft">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-        </div>
-        <div class="tabSelRig">
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="_1500 flex tabSelectShow hide">
-        <div class="tabSelLeft">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-        </div>
-        <div class="tabSelRig">
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
 </div>
 
 <!--footer-->

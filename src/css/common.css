@@ -125,6 +125,14 @@ header{
     height: 20px;
     cursor: pointer;
 }
+.headerNavRig input::-webkit-input-placeholder,
+.headerNavRig input::-moz-placeholder,
+.headerNavRig input:-moz-placeholder,
+.headerNavRig input:-ms-input-placeholder{
+    color: rgba(0,0,0,0.2);
+}
+
+
 .headerNavRig>input{
     border: none;
     outline: none;
@@ -133,8 +141,8 @@ header{
     font-size: 14px;
     font-weight: 400;
     line-height: 40px;
-    color: #000000;
-    opacity: 0.15;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
 }
 .headSpanBox{
     width: 100%;

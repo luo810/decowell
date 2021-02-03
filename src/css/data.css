@@ -93,14 +93,13 @@
     float: left;
     padding-bottom: 30px;
     /*max-height: 900px;*/
-    /*overflow-y: auto;*/
+    overflow-y: auto;
 }
 
 .dataLeft {
     position: relative;
     width: 280px;
-    overflow-y: auto;
-    max-height: 590px;
+    /*overflow-y: auto;*/
     padding-bottom: 10px;
 }
 .dataBoxRig {
@@ -528,14 +527,6 @@ label i{
     color: #FFFFFF!important;
 }
 
-/*头部样式修改*/
-/*header{*/
-/*    position: fixed;*/
-/*    background-color: #FFFFFF;*/
-/*    z-index: 99999;*/
-/*    left: 50%;*/
-/*    transform: translateX(-50%);*/
-/*}*/
 .swiper-container{
     padding-top: 60px;
 }
@@ -545,7 +536,6 @@ label i{
     padding-top: 15px;
 }
 .materEveryNum{
-    /*float: right;*/
 }
 .materEveryNum span {
     font-size: 12px;
@@ -631,7 +621,6 @@ input[type="hidden" i] {
     bottom: 0;
     line-height: 40px;
     background-color: #fff;
-    /*width: 60%;*/
     padding: 0;
 }
 
