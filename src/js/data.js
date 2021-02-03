@@ -437,9 +437,10 @@ let tempHeight = $('.dataLeft').offset().top
 $(document).scroll(function () {
     let PageWidth = $('.dataPagination').innerWidth()
     $('.materEveryNumBox').css('width',PageWidth + 'px')
-    if (tempHeight <= $(this).scrollTop()) {
+    if (tempHeight - 60 <= $(this).scrollTop()) {
         $(dataLeftMune).css('position', 'fixed')
-        $(dataLeftMune).css('top', '0')
+        $(dataLeftMune).css('top', 60+ 'px')
+        // $(dataLeftMune).css('max-height', 1000+ 'px')
         $('.materEveryNumBox').addClass('on')
 
     } else {

@@ -91,13 +91,18 @@
     padding: 10px;
     position: relative;
     float: left;
-    overflow: auto;
+    padding-bottom: 30px;
+    /*max-height: 900px;*/
+    /*overflow-y: auto;*/
 }
 
 .dataLeft {
+    position: relative;
     width: 280px;
+    overflow-y: auto;
+    max-height: 590px;
+    padding-bottom: 10px;
 }
-
 .dataBoxRig {
     width: 80%;
     /*height: 600px;*/
@@ -113,6 +118,9 @@
 }
 .dataSelectShow{
     width: 100%;
+}
+.secMune{
+    overflow-y: auto;
 }
 /*.secMune{*/
 /*    padding-left: 15px;*/
@@ -528,9 +536,9 @@ label i{
 /*    left: 50%;*/
 /*    transform: translateX(-50%);*/
 /*}*/
-/*.swiper-container{*/
-/*    padding-top: 70px;*/
-/*}*/
+.swiper-container{
+    padding-top: 60px;
+}
 .materEveryNumBox{
     width: 100%;
     height: 50px;

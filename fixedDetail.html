@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="product-message-intro">
+    <div class="container w1200 clearfix">
+        <!-- 图片展示 -->
+        <div class="preview-wrap fl">
+            <div class="magnifier" id="magnifier1" style="width: 500px;">
+                <div class="magnifier-container" style="width: 500px; height: 500px;">
+                    <div class="images-cover"><img src="https://ctcgimg.junjs.cn/b6d51202009151634348010.jpg" width="469.67895362663495" height="500" style="left:50%;margin-left:-234.83947681331748px"></div>
+                    <!--当前图片显示容器-->
+                    <div class="move-view" style="width: 300px; height: 300px; left: 15.1605px; top: 0px; display: none;"></div>
+                    <!--跟随鼠标移动的盒子-->
+                </div>
+                <div class="magnifier-assembly">
+                    <div class="magnifier-btn">
+                        <span class="magnifier-btn-left"></span>
+                        <span class="magnifier-btn-right"></span>
+                    </div>
+                    <!--按钮组-->
+                    <div class="magnifier-line">
+                        <ul class="clearfix animation03">
+                            <li class="active">
+                                <div class="small-img">
+                                    <img big-img="https://ctcgimg.junjs.cn/b6d51202009151634348010.jpg" max-img="https://ctcgimg.junjs.cn/b6d51202009151634348010.jpg" src="https://ctcgimg.junjs.cn/b6d51202009151634348010.jpg">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--缩略图-->
+                </div>
+                <div class="magnifier-view" style="width: 500px; height: 500px; display: none;"><img src="https://ctcgimg.junjs.cn/b6d51202009151634348010.jpg" width="782.7982560443916" height="833.3333333333334" style="margin-left: 0px; margin-top: 0px;"></div>
+            </div>
+
+            <div class="block">
+                <span class="fl-btn fl-follow" onclick="collectGoods('188','');"><i></i><em>收藏</em></span>
+            </div>
+        </div>
+
+        <!-- 属性 -->
+        <div class="message-info-wrap fr">
+            <div class="p-name">
+                防滑跑步老爹鞋女款-（一双） &nbsp;&nbsp;
+            </div>
+            <div class="p-msg" style="font-size: 13px; color: #e72a00;">老爹鞋女士2020年秋季新款户外休闲鞋跑步鞋透气防滑运动鞋子</div>
+
+            <div class="p-summary">
+                <div class="summary-item summary-price">
+                    <span>单价：</span>
+                    <span class="price mr20 color--b1191a">
+								¥65.00							</span>
+                </div>
+            </div>
+            <!-- 属性、规格 -->
+            <form action="/shop/buying/commodity.html" id="buy_goods_form" name="buy_goods_form" method="get">
+                <div class="p-area">
+
+
+                    <!-- 属性规格调整部分begin，因为对下面的逻辑不是很清楚，只拿这部分出来做样式调整 -->
+                    <div class="area-item clearfix" id="gSpec_0">
+
+                        <div class="ptitle">颜色：</div>
+
+                        <div class="m">
+                            <!-- 调整部分end -->
+
+
+                            <label for="c00" data-url="/goods/188/s/6.html" class="check-item   on">
+
+
+                                <input type="radio" id="c00" value="6" checked="checked">
+
+                                <!--<span data-id="6" title="粉色">粉色1</span>-->
+                                <span data-id="6" title="粉色">
+
+
+										<b>粉色</b>
+                                    <!-- 如果为颜色类型加下面这个标签，否则不用加 -->
+																				<b class="span-color">
+                                          <i style="background:#"></i>
+                                  		</b>
+
+									</span>
+
+                            </label>
+
+
+                            <label for="c01" data-url="/goods/188/s/7.html" class="check-item ">
+
+
+                                <input type="radio" id="c01" value="7">
+
+                                <!--<span data-id="7" title="绿色">绿色1</span>-->
+                                <span data-id="7" title="绿色">
+
+
+										<b>绿色</b>
+                                    <!-- 如果为颜色类型加下面这个标签，否则不用加 -->
+																				<b class="span-color">
+                                          <i style="background:#"></i>
+                                  		</b>
+
+									</span>
+
+                            </label>
+
+
+                            <label for="c02" data-url="/goods/188/s/57.html" class="check-item ">
+
+
+                                <input type="radio" id="c02" value="57">
+
+                                <!--<span data-id="57" title="黑色">黑色1</span>-->
+                                <span data-id="57" title="黑色">
+
+
+										<b>黑色</b>
+                                    <!-- 如果为颜色类型加下面这个标签，否则不用加 -->
+																				<b class="span-color">
+                                          <i style="background:#"></i>
+                                  		</b>
+
+									</span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <!-- 附加信息 -->
+                <div class="p-extra-message">
+                    <div class="extra-item">
+                        <div class="n">选中：</div>
+                        <div class="m clearfix">
+                            <div class="e-list e-n" style="width: 340px;">
+                                <p title="防滑跑步老爹鞋女款-（一双）">防滑跑步老爹鞋女款-（一双）...</p>
+                                <p>粉色</p>
+                            </div>
+                            <div class="e-list e-num">
+                                <div class="shop-num">
+                                    <span class="num-btn reduce">-</span>
+                                    <input type="text" style="width:40px;" name="goods_num" id="goods_num" value="1" onkeyup="inputKeyUpHandler(this)">
+                                    <span class="num-btn add" data-max="1000">+</span>
+                                </div>
+                                <script>
+                                    function inputKeyUpHandler(e) {
+                                        var inputNumber = $(e).val();
+                                        if (inputNumber.length == 1) {
+                                            inputNumber = inputNumber.replace(/[^1-9]/g, '');
+                                            $("#goods_num").val(inputNumber);
+                                        } else {
+                                            inputNumber = inputNumber.replace(/\D/g, '');
+                                            $("#goods_num").val(inputNumber);
+                                        }
+                                    }
+                                </script>
+                            </div>
+                            <div class="e-list e-ex" style="display: none;">
+                                <span class="ex-item ex-item-1">减免0.00</span>
+                            </div>
+                            <input id="one_price" type="hidden" name="" value="65.00">
+                            <div class="e-list e-price" id="selected_total">65.00</div>
+                            <div class="e-list e-contorl"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="goods_id" value="188">
+                <input type="hidden" id="goods_stock" name="goods_stock" value="64">
+                <input type="hidden" name="goods_spec" value="6">
+                <div class="btn-box mt40">
+                    <span class="p mr20" id="goods_total">￥65.00</span>
+                    <input type="hidden" id="fee_total" value="65.00">
+                    <a href="javascript:void(0);" onclick="AjaxAddCart(188,$('#goods_num').val(),1);" class="cmall-cart-btn">加入购物车</a>
+                    <a href="javascript:void(0);" onclick="buy();" class="cmall-cart-btn" style="background: #3CBE06;">直接购买</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
