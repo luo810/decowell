@@ -82,7 +82,7 @@
 }
 /*---------------------------------------------------------------------------------*/
 .dataBoxLeft {
-    display: block;
+    display: inline-block;
     min-width: 300px;
     width: 20%;
     background: #FFFFFF;
@@ -92,19 +92,16 @@
     position: relative;
     float: left;
     padding-bottom: 30px;
-    /*max-height: 900px;*/
     overflow-y: auto;
 }
 
 .dataLeft {
     position: relative;
     width: 280px;
-    /*overflow-y: auto;*/
     padding-bottom: 10px;
 }
 .dataBoxRig {
     width: 80%;
-    /*height: 600px;*/
     background: #FFFFFF;
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
     padding: 20px 25px;
@@ -534,6 +531,7 @@ label i{
     width: 100%;
     height: 50px;
     padding-top: 15px;
+    padding-right: 10px;
 }
 .materEveryNum{
 }
@@ -623,5 +621,6 @@ input[type="hidden" i] {
     background-color: #fff;
     padding: 0;
 }
-
+.noList{
+}
 
