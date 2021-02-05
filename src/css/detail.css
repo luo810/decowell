@@ -326,6 +326,7 @@ img{
     color: #FFFFFF;
     text-align: center;
     cursor: pointer;
+    outline: none;
 }
 .otherAdd,.otherSub{
     width: 30px!important;
