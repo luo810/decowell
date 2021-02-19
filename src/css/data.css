@@ -82,36 +82,36 @@
 }
 /*---------------------------------------------------------------------------------*/
 .dataBoxLeft {
-    display: block;
-    min-width: 300px;
+    display: inline-block;
     width: 20%;
     background: #FFFFFF;
-    box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
-    margin-right: 15px;
-    padding: 10px;
+
+    /*margin-right: 15px;*/
+    /*padding: 10px 0;*/
     position: relative;
     float: left;
-    padding-bottom: 30px;
-    /*max-height: 900px;*/
+    padding-bottom: 20px;
     /*overflow-y: auto;*/
+    box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
 }
 
 .dataLeft {
     position: relative;
-    width: 280px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
     overflow-y: auto;
-    max-height: 590px;
-    padding-bottom: 10px;
+    /*box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);*/
 }
 .dataBoxRig {
-    width: 80%;
-    /*height: 600px;*/
+    width: 78%;
     background: #FFFFFF;
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
     padding: 20px 25px;
     overflow: auto;
     position: relative;
     float: right;
+    margin-left: 10px;
 }
 .dataSelect{
     width: 100%;
@@ -528,14 +528,6 @@ label i{
     color: #FFFFFF!important;
 }
 
-/*头部样式修改*/
-/*header{*/
-/*    position: fixed;*/
-/*    background-color: #FFFFFF;*/
-/*    z-index: 99999;*/
-/*    left: 50%;*/
-/*    transform: translateX(-50%);*/
-/*}*/
 .swiper-container{
     padding-top: 60px;
 }
@@ -543,9 +535,9 @@ label i{
     width: 100%;
     height: 50px;
     padding-top: 15px;
+    padding-right: 10px;
 }
 .materEveryNum{
-    /*float: right;*/
 }
 .materEveryNum span {
     font-size: 12px;
@@ -631,8 +623,8 @@ input[type="hidden" i] {
     bottom: 0;
     line-height: 40px;
     background-color: #fff;
-    /*width: 60%;*/
     padding: 0;
 }
-
+.noList{
+}
 

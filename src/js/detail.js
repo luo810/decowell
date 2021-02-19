@@ -59,10 +59,21 @@ function f() {
             calSingle()
         }
     });
-    $(addSingle).click(function () {
+    $(addSingle).click(function (event) {
+        event.stopPropagation()
+        alert('已加入购物车')
+        $(singleGoodNum).val(1)
         calSingle()
-        totalNumTemp = parseInt(singleGoodNum.val())
-        totalPriceTemp = parseFloat(singleGoodPrice)
+        // totalNumTemp = parseInt(singleGoodNum.val())
+        // totalPriceTemp = parseFloat(singleGoodPrice)
+        // calTotal()
+    })
+    $('.addAlltoBuy').click(function (event) {
+        event.stopPropagation()
+        alert('已加入购物车')
+        for(let i = 0; i < otherGoodNum.length; i++){
+            $(otherGoodNum[i]).val(0)
+        }
         calTotal()
 
     })
@@ -135,6 +146,43 @@ function f() {
     } ,function () {
         $(this).children('.detailImgBox').children('img').css('transform','matrix(1,0,0,1,0,0)')
     })
+    // 右侧型号对应小图
+    let typeChooseBut = $('.typeChooseBut>button')
+    let proDetImgBox = $('.proDetImgBox')
+    $(typeChooseBut[0]).css('border-color','#33AAB3')
+    $(typeChooseBut[0]).css('color','#33AAB3')
+    for(let i = 0 ; i < typeChooseBut.length;i++){
+        $(typeChooseBut[i]).click(function(){
+            for(let j = 0 ; j < typeChooseBut.length;j++){
+                $(typeChooseBut[j]).css('border-color','rgba(0,0,0,0.6)')
+                $(typeChooseBut[j]).css('color','rgba(0,0,0,0.6)')
+                $(proDetImgBox[j]).removeClass('proDetImgAct')
+            }
+            $(this).css('border-color','#33AAB3')
+            $(this).css('color','#33AAB3')
+            $(proDetImgBox[i]).addClass('proDetImgAct')
+            if(proDetImgBox.length === 1){
+                $(proDetImgBox[0]).addClass('proDetImgAct')
+            }
+        })
+    }
+    // 左侧小图对应型号
+    for(let i = 0 ; i < proDetImgBox.length;i++){
+        $(proDetImgBox[i]).click(function(){
+            for(let j = 0 ; j < proDetImgBox.length;j++){
+                $(typeChooseBut[j]).css('border-color','rgba(0,0,0,0.6)')
+                $(typeChooseBut[j]).css('color','rgba(0,0,0,0.6)')
+                $(proDetImgBox[j]).removeClass('proDetImgAct')
+            }
+            $(typeChooseBut[i]).css('border-color','#33AAB3')
+            $(typeChooseBut[i]).css('color','#33AAB3')
+            $(this).addClass('proDetImgAct')
+            if(proDetImgBox.length === 1){
+                $(proDetImgBox[0]).addClass('proDetImgAct')
+            }
+        })
+    }
+
 }
 
 if (window.attachEvents) {

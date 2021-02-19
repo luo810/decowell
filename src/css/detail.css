@@ -24,7 +24,7 @@ img{
     width: 40%;
     height: 100%;
     position: relative;
-    padding-left: 40px;
+    padding-left: 60px;
     padding-bottom: 40px;
 }
 .proTitle{
@@ -79,7 +79,7 @@ img{
 }
 .buttonBox{
     position: absolute;
-    left: 40px;
+    left: 60px;
     bottom: 0;
 }
 .buttonBox>button:first-child{
@@ -326,6 +326,7 @@ img{
     color: #FFFFFF;
     text-align: center;
     cursor: pointer;
+    outline: none;
 }
 .otherAdd,.otherSub{
     width: 30px!important;
@@ -606,4 +607,63 @@ i {
     -webkit-box-orient:vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+/*规格参数表格*/
+.specification{
+    width: 95%;
+    margin: 30px auto 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.specification tr>td{
+    width: 50%;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 5px 0 5px 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/*头部产品类型选择按钮部分*/
+.typeChooseBut>button{
+    width: 150px;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,0.6);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 40px;
+    margin:10px 15px 20px 0;
+    outline:none ;
+}
+.typeChooseBut>button:hover{
+    color: #33AAB3;
+    border: 1px solid #33AAB3;
+}
+
+/*头部小图样式补充*/
+.detailBigImg{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.proDetail{
+    width: 100%;
+}
+.productBigImg{
+    width: 100%;
+}
+.proDetImgBox{
+    width: 22%;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-right: 5px;
+}
+.proDetImgBox:hover{
+    border: 1px solid #33AAB3;
+}
+.proDetImgBox>img{
+    width: 100%;
+    cursor: pointer;
+}
+.proDetImgAct{
+    border: 1px solid #33AAB3;
 }
