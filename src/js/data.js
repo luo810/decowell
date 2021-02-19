@@ -1,5 +1,4 @@
 // 数据页
-let datafirstMune = $('.firstMune')
 let datafirstABox = $('.firstABox')
 let iconJiantou = $('.icon-jiantou')
 let datasecondABox = $('.secondABox')
@@ -29,7 +28,6 @@ let totalPage //总共有几页
 let curPage = 1 //当前页码
 let total = $('.dataPagination>li') //总共append结果数量
 let totalLiNum = total.length //总共筛选结果数量
-let dataLeftMune = $('.dataLeft')
 // -----------------数据页-----------------------------------------------------------------
 // 清除所有菜单目录的链接样式
 function clearAstyle() {
@@ -145,12 +143,13 @@ for (let i = 0; i < datathirdABox.length; i++) {
             }
             $(this).siblings('.fourMune').show()
             let datathirdABoxI = $(datathirdABox[i]).children('i')
+            let datathirdLi = $(datathirdABox[i]).parent('li')
             if ($(datathirdABox[i]).hasClass('noChildren')) {
             } else {
                 $(datathirdABoxI).addClass('icon-yuanhuan-jian')
                 $(datathirdABoxI).removeClass('icon-yuanhuan-zeng')
+                $(this).parent('li').addClass('thrAct')
             }
-
             $(this).children('a').css('color', '#33AAB3')
         } else {
             for (let j = 0; j < datafourMune.length; j++) {
@@ -216,12 +215,6 @@ for (let i = 0; i < type_array.length; i++) {
 }
 
 
-// 已选类型部分 添加span标签上data-id的补充
-// $('.dataFixBox').mouseenter(function (event) {
-//     console.log('8')
-//     event.stopPropagation()
-//
-// })
 for (let i = 0; i < datamoreType.length; i++) {
     $(datamoreType[i]).children('label').children('input').on('click', function (event) {
         event.stopPropagation()
@@ -287,6 +280,7 @@ $('.dataSelectShowTop').hover(function () {
                 let a = $(datamoreType[j]).children('label').children('span').text()
                 if (a.trim() === selectFormat.trim()) {
                     $(datamoreType[j]).children('label').children('input').prop("checked", false)
+                    $(datamoreType[j]).children('label').children('i').css('visibility', 'hidden')
                     $(this).parent('dd').remove()
                 }
             }
@@ -295,6 +289,7 @@ $('.dataSelectShowTop').hover(function () {
                 let a = $(datamoreFormat[j]).children('label').children('span').text()
                 if (a.trim() === selectFormat.trim()) {
                     $(datamoreFormat[j]).children('label').children('input').prop("checked", false)
+                    $(datamoreFormat[j]).children('label').children('i').css('visibility', 'hidden')
                     $(this).parent('dd').remove()
                 }
             }
@@ -311,10 +306,12 @@ $('.dataSelectShowTopDl>dt').click(function (event) {
     for (let j = 0; j < datamoreType.length; j++) {
         let a = $(datamoreType[j]).children('label').children('span').text()
         $(datamoreType[j]).children('label').children('input').prop("checked", false)
+        $(datamoreType[j]).children('label').children('i').css('visibility', 'hidden')
     }
     for (let j = 0; j < datamoreFormat.length; j++) {
         let a = $(datamoreFormat[j]).children('label').children('span').text()
         $(datamoreFormat[j]).children('label').children('input').prop("checked", false)
+        $(datamoreFormat[j]).children('label').children('i').css('visibility', 'hidden')
     }
     $(dataSelectShowTopDl).remove()
     showSelect()

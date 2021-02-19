@@ -85,13 +85,9 @@
     display: inline-block;
     width: 20%;
     background: #FFFFFF;
-
-    /*margin-right: 15px;*/
-    /*padding: 10px 0;*/
     position: relative;
     float: left;
     padding-bottom: 20px;
-    /*overflow-y: auto;*/
     box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);
 }
 
@@ -101,7 +97,6 @@
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
-    /*box-shadow: 0 2px 14px rgba(137, 155, 255, 0.2);*/
 }
 .dataBoxRig {
     width: 78%;
@@ -122,35 +117,12 @@
 .secMune{
     overflow-y: auto;
 }
-/*.secMune{*/
-/*    padding-left: 15px;*/
-/*}*/
-/*.thrMune{*/
-/*    position: relative;*/
-/*    padding-left: 30px;*/
-/*}*/
 .thirdABox{
     position: relative;
 }
-/*.thirdABox::before{*/
-/*    position: absolute;*/
-/*    border-right: 1px dashed #d0d0d0;*/
-/*    content: " ";*/
-/*    left: 47.5px;*/
-/*    top: 19px;*/
-/*    bottom: -7px;*/
-/*}*/
 .forthABox{
     position: relative;
 }
-/*.forthABox>a::before{*/
-/*    position: absolute;*/
-/*    border-right: 1px dashed #d0d0d0;*/
-/*    content: " ";*/
-/*    left: 57.5px;*/
-/*    top: 5px;*/
-/*    bottom: -1px;*/
-/*}*/
 /*一级菜单样式*/
 .firstMune{
     position: relative;
@@ -169,7 +141,6 @@
 .forthABox>a:hover{
     color: #33AAB3;
 }
-
 
 .secondABox>a,.thirdABox>a,.forthABox>a{
     font-size: 14px;
@@ -202,7 +173,6 @@
 .dataFixBox{
     width: 100%;
     background-color: #FFFFFF;
-    /*top:0;*/
 }
 .dataSelect{
     background-color: #FFFFFF;
@@ -362,7 +332,6 @@
     height: 16px;
 }
 .checkBox input[type='checkbox']:checked{
-    /*background: url("../../src/img/data/check.png") no-repeat center;*/
 }
 input[type='checkbox']:checked+i {
     background: #33AAB3;
@@ -460,7 +429,6 @@ label i{
     width: 25%;
 }
 .dataSelectMid>li:nth-child(n+6){
-    /*margin-right: 20px;*/
     width: 25%;
 }
 
@@ -503,10 +471,6 @@ label i{
     margin-top: 10px;
 }
 
-/*.dataFormat{*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 10px;*/
-/*}*/
 /*分页样式调整*/
 .page{
     width: 100%;
@@ -564,7 +528,6 @@ label i{
 }
 .materDropdown ul{
     position: absolute;
-    /*buttom:100%;*/
     top: 100%;
     left: 0;
     z-index: 1;
@@ -600,7 +563,6 @@ label i{
 }
 .materDropdown ul {
     position: absolute;
-    /*top: 100%;*/
     left: 0;
     buttom: 100%;
     top:auto;
@@ -628,3 +590,23 @@ input[type="hidden" i] {
 .noList{
 }
 
+/*添加四级菜单线*/
+.thrAct li::before{
+    position: absolute;
+    border-right: 1px dashed #d0d0d0;
+    content: " ";
+    left: 48px;
+    top: 0;
+    bottom: -6px;
+}
+/*火狐浏览器滚动条设置*/
+body{
+    overflow-y: scroll;
+    scrollbar-color: transparent transparent;
+    scrollbar-track-color: transparent;
+    -ms-scrollbar-track-color: transparent;
+}
+/*右侧已选类型*/
+.icon-gou{
+    visibility: hidden;
+}
