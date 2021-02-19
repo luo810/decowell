@@ -328,9 +328,11 @@ img{
     cursor: pointer;
     outline: none;
 }
+
 .otherAdd,.otherSub{
     width: 30px!important;
     height: 20px!important;
+    background-color: #e3e3e3!important;
 }
 .otherGoodNum{
 }

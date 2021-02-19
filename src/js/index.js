@@ -10,9 +10,12 @@ let product = $(".product>.productItem")
 let productSec = $(".productSec")
 let itemName = $(".product>.productItem>.itemName")
 let itemDesc = $(".product>.productItem>.itemDesc>span")
-let indexTabFirst = $('.tabFirst .indexArticle')
-let indexTabSecond = $('.tabSecond .indexArticle')
-let indexTabThird = $('.tabThird .indexArticle')
+//首页文章修改
+let secArtTop = $('.secUl>li')
+let secArtBot = $('.secBot>ul')
+let asideTop = $('.asideUl>li')
+let asideBot = $('.asideBot>ul')
+
 // ------------------------------------------------------------
 function f() {
     // 首页 二级机器展示
@@ -97,26 +100,7 @@ function f() {
             $(indexBottomBot[i]).removeClass('hide')
         })
     }
-    // 首页底部文章展示切换
-    articleChange(indexTabFirst)
-    articleChange(indexTabSecond)
-    articleChange(indexTabThird)
 
-    function articleChange(pageArr) {
-        for (let i = 0; i < pageArr.length; i++) {
-            $(pageArr).hover(function (event) {
-                event.stopPropagation()
-                for (let j = 0; j < pageArr.length; j++) {
-                    $(pageArr[j]).parent('.indexArticleBox').removeClass('articleAct')
-                    $(pageArr[j]).removeClass('artAct')
-                    $(pageArr[j]).children('.titleBox').removeClass('titleAct')
-                }
-                $(this).addClass('artAct')
-                $(this).children('.titleBox').addClass('titleAct')
-                $(this).parent('.indexArticleBox').addClass('articleAct')
-            })
-        }
-    }
 
 
     // 首页样式
@@ -151,7 +135,55 @@ function f() {
     },function () {
         $(this).children('img').css('transform','matrix(1,0,0,1,0,0)')
     })
+
+    //首页底部文章修改
+    $(secArtTop[0])
+        .addClass('secAct')
+        .data("key",true)
+    $(asideTop[0])
+        .addClass('secAct')
+
+    for (let i = 0; i < secArtTop.length; i++){
+        $(secArtTop[i]).hover(function () {
+            $(secArtTop[i]).addClass('secAct')
+
+        },function () {
+            if($(secArtTop[i].data(key))){
+                $(secArtTop[i]).addClass('secAct')
+            }else{
+                $(secArtTop[i]).removeClass('secAct')
+            }
+        })
+        $(secArtTop[i]).click(function (event) {
+            event.stopPropagation()
+            for (let j = 0; j < secArtBot.length; j++){
+                $(secArtBot[j]).addClass('hide')
+                $(secArtTop[j]).removeClass('secAct')
+            }
+            $(secArtBot[i]).removeClass('hide')
+            $(secArtTop[i]).addClass('secAct')
+        })
+    }
+    for (let i = 0; i < asideTop.length; i++){
+        $(asideTop[i]).hover(function () {
+            $(asideTop[i]).addClass('secAct')
+        },function () {
+            $(asideTop[i]).removeClass('secAct')
+        })
+        $(asideTop[i]).click(function (event) {
+            event.stopPropagation()
+            for (let j = 0; j < asideBot.length; j++){
+                $(asideBot[j]).addClass('hide')
+                $(asideTop[j]).removeClass('secAct')
+            }
+            $(asideBot[i]).removeClass('hide')
+            $(asideTop[i]).addClass('secAct')
+        })
+    }
+
+
 }
+
 if (window.attachEvents) {
     window.attachEvents("load", f, false);
 } else {
