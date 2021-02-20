@@ -17,6 +17,10 @@ let asideTop = $('.asideUl>li')
 let asideBot = $('.asideBot>ul')
 
 // ------------------------------------------------------------
+// $(window).scroll(function () {
+//
+//     $(window).scrollTop()
+// })
 function f() {
     // 首页 二级机器展示
     for (let i = 0; i < product.length; i++) {
@@ -84,6 +88,14 @@ function f() {
         $(this).addClass("chooseTipAct")
         chooseType.removeClass("chooseTipAct")
     })
+    $('.machineBox').hover(function () {
+        $('.machineBot>img:first-child').css({'left':'140px','transition':'all .8s'})
+        $('.machineBot>img:last-child').css({'right':'140px','transition':'all .8s'})
+    },function () {
+        $('.machineBot>img:first-child').css({'left':'80px','transition':'all .8s'})
+        $('.machineBot>img:last-child').css({'right':'80px','transition':'all .8s'})
+    })
+
 
     // 首页 直播资讯展会tab切换
     for (let i = 0; i < threeItemTitle.length; i++) {
@@ -100,8 +112,6 @@ function f() {
             $(indexBottomBot[i]).removeClass('hide')
         })
     }
-
-
 
     // 首页样式
     $('.productLearnMore').hover(function () {
@@ -137,22 +147,12 @@ function f() {
     })
 
     //首页底部文章修改
-    $(secArtTop[0])
-        .addClass('secAct')
-        .data("key",true)
-    $(asideTop[0])
-        .addClass('secAct')
 
     for (let i = 0; i < secArtTop.length; i++){
         $(secArtTop[i]).hover(function () {
-            $(secArtTop[i]).addClass('secAct')
-
+            $(this).addClass('asideAct')
         },function () {
-            if($(secArtTop[i].data(key))){
-                $(secArtTop[i]).addClass('secAct')
-            }else{
-                $(secArtTop[i]).removeClass('secAct')
-            }
+            $(this).removeClass('asideAct')
         })
         $(secArtTop[i]).click(function (event) {
             event.stopPropagation()
@@ -161,14 +161,15 @@ function f() {
                 $(secArtTop[j]).removeClass('secAct')
             }
             $(secArtBot[i]).removeClass('hide')
+            $(secArtBot[i]).addClass('animated fadeInRight')
             $(secArtTop[i]).addClass('secAct')
         })
     }
     for (let i = 0; i < asideTop.length; i++){
         $(asideTop[i]).hover(function () {
-            $(asideTop[i]).addClass('secAct')
+            $(this).addClass('asideAct')
         },function () {
-            $(asideTop[i]).removeClass('secAct')
+            $(this).removeClass('asideAct')
         })
         $(asideTop[i]).click(function (event) {
             event.stopPropagation()
@@ -177,9 +178,16 @@ function f() {
                 $(asideTop[j]).removeClass('secAct')
             }
             $(asideBot[i]).removeClass('hide')
+            $(asideBot[i]).addClass('animated fadeInRight')
             $(asideTop[i]).addClass('secAct')
         })
     }
+    $(secArtBot).children('li').hover(function () {
+        $(this).addClass('secHoverLi')
+    },function () {
+        $(this).removeClass('secHoverLi')
+    })
+
 
 
 }

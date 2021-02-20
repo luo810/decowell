@@ -57,7 +57,7 @@ function selectFirstMune() {
     $(datafirstABox[0]).children('a').css('color', '#33AAB3')
     $(iconJiantou[0]).css('transform', 'rotate(90deg)')
 }
-
+// 默认一级菜单展开
 selectFirstMune()
 // 一级菜单的点击
 for (let i = 0; i < datafirstABox.length; i++) {
@@ -177,7 +177,8 @@ for (let i = 0; i < datafourMuneABox.length; i++) {
     })
 }
 
-// 是否显示已选
+//------------------------------------------右侧目录----------------------------------------------
+// 是否显示已选类型
 function showSelect() {
     if ($('.dataSelectShowTopDl').children('dd').length <= 0) {
         $('.dataSelectShowTop').addClass('hide')
@@ -264,7 +265,6 @@ for (let i = 0; i < datamoreFormat.length; i++) {
 
         }
         showSelect()
-        muneHeight()
         dataSelectShowTopDl = $('.dataSelectShowTopDl>dd')
 
     })
@@ -293,7 +293,6 @@ $('.dataSelectShowTop').hover(function () {
                     $(this).parent('dd').remove()
                 }
             }
-            muneHeight()
         })
         showSelect()
     }
@@ -317,10 +316,24 @@ $('.dataSelectShowTopDl>dt').click(function (event) {
     showSelect()
     cata_array_handle = [] //置空数组
     type_array_handle = []
-    muneHeight()
 })
 
-// 分页部分
+//更新时间展开
+$('.dataSelectResult>span:last-child').click(function (event) {
+    event.stopPropagation()
+    $(this).children('ul').toggleClass('hide')
+    $(this).children('i').toggleClass('timeI')
+})
+//右侧目录样式
+$('.resuleRig>button').hover(function () {
+    $(this).children('i').css('color','#33AAB3')
+    $(this).children('a').css('color','#33AAB3')
+},function () {
+    $(this).children('i').css('color','#666666')
+    $(this).children('a').css('color','#666666')
+})
+
+//------------------------------------分页部分-----------------------------------------------------------
 // 判断是否显示分页
 pageNumShow()
 //默认加载第一页内容
@@ -429,125 +442,107 @@ function pageNumShow() {
     $('.materDropdown>span').text(pageSize)
     $('.materDropdown>input').attr('value', pageSize)
 }
-
-$(this).scroll(function () {
-    muneHeight()
-})
-
+//-------------------------------------滚动部分----------------------------------------------
 // 设定左右宽度
 let bothMuneWidth = $('.dataBox').innerWidth()
 $('.dataBoxLeft').css('width', bothMuneWidth * 0.2 + 'px')
 $('.dataBoxRig').css('width', bothMuneWidth * 0.8 - 10 + 'px')
-
-function muneHeight() {
+//页面滚动
+$(this).scroll(function () {
     let leftMuneTop = $('.dataLeft').offset().top //左侧目录距顶高度
-    let rightMuneHeight = $('.dataBoxRig').innerHeight() //右侧目录高度,会变
+    let rightMuneHeight = $('.dataBoxRig').innerHeight() //右侧目录高度
     let rightMuneTop = $('.dataBoxRig').offset().top //右侧 目录距顶高度
     let tabHei = $('.headerBox').innerHeight() //头部固定定位导航栏的高度
-    let rightMuneWid = $('.dataBoxRig').innerWidth()
-    let totalCliheight = $(window).height() - tabHei
-    $(this).scroll(function () {
-            // 设定左右宽度
+    let totalCliheight = $(window).height() - tabHei //可视区高度减顶部导航
+    let tempMaxHei = $(window).height() - leftMuneTop + $(this).scrollTop()
+    let finMaxHei = $(window).height() - tabHei
+    let rightWid = $('.dataFixBox').innerWidth() //右侧目录上方选择区域宽度
+    let rightFixWid = $('.dataBoxRig').innerWidth() //右侧目录宽度
+    let rigMuneLeft = $('.dataBoxRig').offset().left //右侧目录距左侧距离
+    // 设定左右宽度
+    bothMuneWidth = $('.dataBox').innerWidth()
+    $('.dataBoxLeft').css('width', bothMuneWidth * 0.2 + 'px')
+    $('.dataBoxRig').css('width', bothMuneWidth * 0.8 - 10 + 'px')
+    rightMuneHeight = $('.dataBoxRig').innerHeight() //右侧高度
+    if (rightMuneHeight < totalCliheight) {
+        //筛选结果少
+        $('.dataLeft').css({
+            'max-height': rightMuneHeight - 20 + 'px',
+            'position': 'static',
+            'top': '0px',
+            'box-shadow': 'none',
+            'margin-top': '0px'
+        })
+    } else {
+        // 上方未滚动到可视区
+        if ($(this).scrollTop() + tabHei < rightMuneTop) {
+            //未滚到左侧时下方最大高度为页面可视区度-左侧上方高度
+            //左侧上方高度为左侧目录距顶部距离减去滚动高度
+            tempMaxHei = $(window).height() - leftMuneTop + $(this).scrollTop()
+            $('.dataLeft').css({
+                'max-height': tempMaxHei + 'px',
+                'position': 'static',
+                'top': '0px',
+                'margin-top': '0px'
+            })
+        } else if (rightMuneHeight + rightMuneTop - $(this).scrollTop() < $(window).height()) {
+            // 右侧目录滚完
+            finMaxHei = $(window).height() - tabHei
+            leftMarTop = rightMuneHeight - finMaxHei
+            leftMarTop = leftMarTop > 0? leftMarTop: - leftMarTop
+            $('.dataLeft').css({
+                'max-height': finMaxHei - 20 + 'px',
+                'position': 'static',
+                'top': '0px',
+                'margin-top': leftMarTop + 'px',
+                'width': bothMuneWidth * 0.2 + 'px',
+            })
+        } else {
+            // 上方到达可视区且右侧目录未滚完
+            finMaxHei = $(window).height() - tabHei
             bothMuneWidth = $('.dataBox').innerWidth()
-            $('.dataBoxLeft').css('width', bothMuneWidth * 0.2 + 'px')
-            $('.dataBoxRig').css('width', bothMuneWidth * 0.8 - 10 + 'px')
-            rightMuneHeight = $('.dataBoxRig').innerHeight() //右侧高度
-            if (rightMuneHeight < totalCliheight) {
-                $('.dataLeft').css({
-                    'max-height': rightMuneHeight - 20 + 'px',
-                    'position': 'static',
-                    'top': '0px',
-                    'box-shadow': 'none',
-                    'margin-top': '0px'
-                })
-            } else {
-                if ($(this).scrollTop() + tabHei < leftMuneTop) {
-                    //未滚到左侧时下方最大高度为页面可视区度-左侧上方高度
-                    //左侧上方高度为左侧目录距顶部距离减去滚动高度
-                    let tempMaxHei = $(window).height() + $(this).scrollTop() - leftMuneTop
-                    tempMaxHei = $(window).height() - leftMuneTop + $(this).scrollTop()
-                    $('.dataLeft').css({
-                        'max-height': tempMaxHei + 'px',
-                        'position': 'static',
-                        'top': '0px',
-                        'box-shadow': 'none',
-                        'margin-top': '0px'
-                    })
-                } else if (rightMuneHeight + rightMuneTop - $(this).scrollTop() < $(window).height()) {
-                    let finMaxHei = $(window).height() - tabHei //可视区去除导航高度
-                    leftMarTop = rightMuneHeight - finMaxHei
-                    if (leftMarTop > 0) {
-                        $('.dataLeft').css({
-                            'max-height': finMaxHei - 20 + 'px',
-                            'position': 'static',
-                            'top': '0px',
-                            'margin-top': leftMarTop + 'px',
-                            'width': bothMuneWidth * 0.2 + 'px',
-                            'box-shadow': 'none',
-                        })
-
-                    } else {
-                        let finMaxHei = $(window).height() - tabHei //可视区去除导航高度
-                        rightMuneHeight = $('.dataBoxRig').innerHeight()
-                        leftMarTop = rightMuneHeight - finMaxHei
-                        bothMuneWidth = $('.dataBox').innerWidth()
-                        $('.dataLeft').css({
-                            'max-height': finMaxHei + 10 + 'px',
-                            'position': 'fixed',
-                            'top': tabHei + 'px',
-                            'margin-top': '0px',
-                            'width': bothMuneWidth * 0.2 + 'px',
-                            'box-shadow': '0 2px 14px rgba(137, 155, 255, 0.2)',
-                        })
-                    }
-                } else {
-                    let finMaxHei = $(window).height() - tabHei //可视区去除导航高度
-                    rightMuneHeight = $('.dataBoxRig').innerHeight()
-                    leftMarTop = rightMuneHeight - finMaxHei
-                    bothMuneWidth = $('.dataBox').innerWidth()
-                    $('.dataLeft').css({
-                        'max-height': finMaxHei + 10 + 'px',
-                        'position': 'fixed',
-                        'top': tabHei + 'px',
-                        'margin-top': '0px',
-                        'width': bothMuneWidth * 0.2 + 'px',
-                        'box-shadow': '0 2px 14px rgba(137, 155, 255, 0.2)',
-                    })
-                }
-                // 筛选出现在可视区
-                let selectSpanTop = $('.dataSelectResult').offset().top
-                let selectSpanHei = $('.dataSelectResult').innerHeight()
-                let selectCli = selectSpanTop + selectSpanHei - $(this).scrollTop()
-                let rigMuneLeft = $('.dataBoxRig').offset().left
-                let rightFixWid = $('.dataBoxRig').innerWidth()
-                let rightWid = $('.dataFixBox').innerWidth()
-                if ((selectCli < $(window).height()) && (rightMuneHeight + rightMuneTop - $(this).scrollTop() - 200 > $(window).height())) {
-                    $('.materEveryNumBox').addClass('on')
-                    $('.materEveryNumBox').css({
-                        'width': rightFixWid + 'px',
-                        'left': rigMuneLeft + 'px',
-                        'padding-right': '10px'
-                    })
-                } else if (rightMuneHeight + rightMuneTop - $(this).scrollTop() - 200 < $(window).height()) {
-                    $('.materEveryNumBox').removeClass('on')
-                    $('.materEveryNumBox').css({
-                        'width': rightWid + 'px',
-                        'left': '0px',
-                        'padding-right': '0px'
-                    })
-                }
-            }
+            $('.dataLeft').css({
+                'max-height': finMaxHei + 10 + 'px',
+                'position': 'fixed',
+                'top': tabHei + 'px',
+                'margin-top': '0px',
+                'width': bothMuneWidth * 0.2 + 'px',
+            })
         }
-    )
-}
+        // 筛选出现在可视区
+        rightWid = $('.dataFixBox').innerWidth()
+        rightFixWid = $('.dataBoxRig').innerWidth()
+        rigMuneLeft = $('.dataBoxRig').offset().left
+        if($('.dataPagination').offset().top + $('.dataPagination').innerHeight() - $(this).scrollTop() < $(window).height()){
+            $('.materEveryNumBox').removeClass('on')
+                $('.materEveryNumBox').css({
+                    'width': rightWid + 'px',
+                    'left': '1px',
+                    'padding-right': '0px'
+                })
+        }else{
+            $('.materEveryNumBox').addClass('on')
+                $('.materEveryNumBox').css({
+                    'width': rightFixWid + 'px',
+                    'left': rigMuneLeft + 1 + 'px',
+                    'padding-right': '10px'
+                })
+        }
+
+
+    }
+})
+
 
 // 显示页码选择
 $('.materDropdown').click(function (event) {
     event.stopPropagation()
     if ($(this).children('ul').is(':hidden')) {
         $(this).children('ul').css('display', 'block')
+        $(this).children('i').css('transform','rotate(270deg)')
     } else {
         $(this).children('ul').css('display', 'none')
+        $(this).children('i').css('transform','rotate(90deg)')
     }
 })
 // 选择pageSize
@@ -562,6 +557,7 @@ for (let i = 0; i < pageSizeSelect.length; i++) {
         pageNumShow()
         firstPageShow()
         $(this).parent('ul').css('display', 'none')
+        $(this).parent('ul').siblings('i').css('transform','rotate(90deg)')
     })
 }
 
@@ -573,7 +569,7 @@ function firstPageShow() {
     }
     $('.dataSelectResult>span:first-child').text("筛选(" + totalLiNum + "条结果)")
 }
-
+//暂无检索结果
 if (totalLiNum <= 0) {
     $('.dataPagination').append("<div>暂无检索结果</div>")
     $('.dataPagination').children('div').css({
