@@ -1,0 +1,434 @@
+@charset "utf-8";
+/*初始化样式*/
+body,ul,ol,p,h1,h2,h3,h4,h5{margin: 0;padding: 0;}
+img{border: none;vertical-align: top;}
+ul,ol{list-style: none;}
+input,button{border: 0;}
+a{color: #666;text-decoration: none;}
+a:hover{text-decoration: none;color: #666;}
+h1,h2,h3,h4,h5{font-weight: normal;}
+i,em{font-style: normal;}
+/*body{font-family: PingFang SC,"微软雅黑",arial;font-size: 12px;color: #666;background: #fff;}*/
+body{font-family: "微软雅黑",arial;font-size: 12px;color: #666;background: #fff;}
+/*bootstrap字体图标*/
+@font-face {
+    font-family: Glyphicons Halflings;
+    src: url('../lib/bootstrap/fonts/glyphicons-halflings-regular.eot') format('embedded-opentype'),
+    url('../lib/bootstrap/fonts/glyphicons-halflings-regular.svg') format('svg'),
+    url('../lib/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+    url('../lib/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff');
+}
+
+
+@charset "utf-8";
+/* CSS Reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, img, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*font-family: PingFang SC;*/
+}
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    font-size: 12px;
+    position: relative;
+    *overflow-x: hidden;
+
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 0 dotted;
+}
+
+a:focus, input:focus {
+    -moz-outline-style: none;
+}
+/*去除链接点击后的下划线*/
+a:link{
+    text-decoration: none;
+}
+/*配置全局字体*/
+* {
+    font-family: 'Ubuntu-R', Arial, "微软雅黑", 'Microsoft YaHei';
+    /*font-family: PingFang SC,'Ubuntu-R', Arial, "微软雅黑", 'Microsoft YaHei';*/
+    box-sizing: border-box;
+}
+
+::selection {
+    background: #0080c8;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #0080c8;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background: #0080c8;
+    color: #fff;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+._1200 {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+._1300{
+    max-width: 1300px;
+    width: 80%;
+    margin: 0 auto;
+}
+._1500{
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+}
+._1000{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*转换成行内元素*/
+.ibDisplay {
+    display: inline-block;
+}
+
+/*主要内容最大尺寸*/
+.main-container {
+    width: 100%;
+    height: 100%;
+    max-width: 1680px;
+    min-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 31px;
+    padding-right: 31px;
+}
+
+/*hover时候放大的元素*/
+.hoverScale{
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.hoverScale:hover{
+    transform: scale(1.1,1.1);
+}
+
+.wColor{
+    color: #FFFFFF;
+}
+
+.bColor{
+    color: #1A1A1A;
+}
+
+/* 弹性布局 */
+.flex {
+    display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+/* 主轴居中 */
+.flex-hc {
+    -webkit-box-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+/* 主轴两端对齐 */
+.flex-zBetween {
+    -webkit-box-pack: justify;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+/* 主轴end对齐 */
+.flex-zEnd {
+    -webkit-box-pack: end;
+    -moz-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+/* 主轴start对齐 */
+.flex-zStart {
+    -webkit-box-pack: start;
+    -moz-justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+/* 侧轴居中 */
+.flex-ac {
+    -webkit-box-align: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* 侧轴start对齐 */
+.flex-cStart {
+    -webkit-box-align: start;
+    -moz-align-items: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+
+/* 侧轴底部对齐 */
+.flex-cEnd {
+    -webkit-box-align: end;
+    -moz-align-items: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+/* 侧轴文本基线对齐 */
+.flex-cBaseline {
+    -webkit-box-align: baseline;
+    -moz-align-items: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+
+/* 侧轴上下对齐并铺满 */
+.flex-cStretch {
+    -webkit-box-align: stretch;
+    -moz-align-items: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+/* 主轴从上到下 */
+.flex-zTopBottom {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/* 主轴从下到上 */
+.flex-zBottomTop {
+    -webkit-box-pack: end;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+
+/* 主轴从左到右 */
+.flex-zLeftRight {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+/* 主轴从右到左 */
+.flex-zRightLeft {
+    -webkit-box-pack: end;
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+
+/* 不允许子元素缩小 */
+.flex-shrink {
+    -webkit-box-flex: 0;
+    -moz-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+}
+
+/*各个行中间对齐*/
+.flex-container {
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+/*各个行中间对齐*/
+.flex-container {
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+}
+
+/*各个行中间对齐*/
+.flex-container {
+    -webkit-align-content: flex-end;
+    align-content: flex-end;
+}
+
+/*各个行平均分布*/
+.flex-container {
+    -webkit-align-content: space-between;
+    align-content: space-between;
+}
+
+/*各个行两端保留子元素与子元素之间间距大小的一半*/
+.flex-container {
+    -webkit-align-content: space-around;
+    align-content: space-around;
+}
+
+/*父元素-横向换行 */
+.flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/*父元素-不允许横向换行 */
+.flex-nowrap {
+    -webkit-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -o-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+/*充满父元素*/
+.flex1 {
+    -prefix-box-flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/*margin部分*/
+.mgb40{
+    margin-bottom: 40px;
+}
+
+/*去除input输入数字右侧自带增减条*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input{
+    border: none;
+    outline: none;
+}
+.hide{
+    display: none;
+}
+/*谷歌浏览器滑动条隐藏*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+.overell{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+button{
+    background-color: transparent;
+}
+/*清除bootstrap中的container的padding值*/
+/*.container{
+	width: 1200px;
+	padding: 0;
+}
+*/

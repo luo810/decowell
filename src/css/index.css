@@ -5,15 +5,10 @@ h1{
 h2{
     font-size: 14px;
 }
-
 p{
     font-size: 11px;
 }
-
 /*------------------------------banner----------------------------------------*/
-banner{
-    /*padding-top: 70px;*/
-}
 .banner>img{
     padding-top: 60px;
     width: 100%;

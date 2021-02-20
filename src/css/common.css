@@ -7,27 +7,13 @@ header{
     height: 60px;
     position: fixed;
     background-color: #FFFFFF;
-    z-index: 99;
+    z-index: 9;
 }
-.headHideBox{
-    position: fixed;
-    top:0;
-    width: 100%;
-    height: 60px;
-    background-color: #FFFFFF;
-    z-index: 999;
-}
-.prenavLeft{
-    width: 130px;
-}
-.headerNavLeft{
-    margin-right: 20px;
-}
-.navLeft>img:first-child,
-.headerNavLeft>img:first-child{
+.navLeft>img,
+.headerNavLeft>img{
     width: 228px;
     height: 60px;
-    margin-right: 38px;
+    margin-right: 40px;
 }
 .navLeftBox>li>img{
     width: 15px;
@@ -41,16 +27,18 @@ header{
     justify-content: center;
     align-items: center;
 }
-.navLeftBox>li>a{
+.navLeftBox>li a{
     padding: 20px;
     font-size: 14px;
     text-align: center;
     color: #C8C8CA;
 }
-.navLeftBox>li:first-child>a{
+
+.navLeftBox>li:first-child a{
     color: #33AAB3;
 }
-.navLeftBox>li>a:hover{
+
+.navLeftBox>li a:hover{
     color: #33AAB3
 }
 
@@ -60,8 +48,8 @@ header{
     cursor: pointer;
 }
 
-.navRig>a>img{
-    margin-left: 40px;
+.navRig>a img{
+    margin: 0 5px 0 40px;
 }
 
 /*headerspan*/
