@@ -419,7 +419,10 @@ input{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
 button{
+	border:none;
+	outline:none;
 	background-color: transparent;
 }
 /*清除bootstrap中的container的padding值*/
