@@ -99,6 +99,10 @@ a:focus {
 a:focus, input:focus {
 	-moz-outline-style: none;
 }
+/*去除链接点击后的下划线*/
+a:link{
+	text-decoration: none;
+}
 /*配置全局字体*/
 * {
 	font-family: 'Ubuntu-R', Arial, "微软雅黑", 'Microsoft YaHei';

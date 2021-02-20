@@ -37,10 +37,13 @@ banner{
 .product,.productSec{
     padding: 35px 20px 30px 20px;
 }
-.productItem{
+.productSec>a{
+    display: inline-block;
     width: 20%;
+}
+.productItem{
+    width: 100%;
     padding: 10px 8px;
-    cursor: pointer;
 }
 
 .productItem>img{
@@ -84,10 +87,10 @@ banner{
     color: rgba(0,0,0,0.5);
     padding-bottom: 15px;
 }
-.productSec>.productItem{
+.productSec>a .productItem{
     margin-bottom: 10px;
 }
-.productSec>.productItem>.itemDesc{
+.productSec>a .productItem>.itemDesc{
     opacity: 0.5;
 }
 .itemNameAct{
@@ -193,12 +196,18 @@ banner{
     margin: 0 50px;
     position: relative;
 }
+.techService>a{
+    width: 33.33%;
+}
+.chooseType>a{
+    width: 33.33%;
+}
 .programBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33.33%;
+    width: 100%;
     padding: 10px 20px;
     cursor: pointer;
 
@@ -349,8 +358,11 @@ i {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.planItemBox{
+.planItemFather>a{
     width: 25%;
+}
+.planItemBox{
+    width: 100%;
     padding: 15px 8px;
 }
 .planItemBox:first-child{
@@ -388,8 +400,11 @@ i {
     color: #000000;
 }
 /*------------------threeItem-----------------------------------------------------------*/
-.threeItemBoxBox{
+.threeItemBoxBoxCont>a{
     width: 33.33%;
+}
+.threeItemBoxBox{
+    width: 100%;
     overflow: hidden;
 }
 .threeItemBox{
@@ -539,100 +554,7 @@ i {
     letter-spacing: 2px;
     text-decoration: none;
 }
-/*-----------------文章--------------------------------------------------------------*/
 
-.indexArticleBox{
-    width: 20%;
-    height: 450px;
-    padding-right: 20px;
-}
-.botArtBox>.indexArticleBox:last-child{
-    padding-right: 0;
-}
-
-.indexArticle{
-    width: 100%;
-    height: 100%;
-    background-color:#F8F8F8;
-}
-
-.articleAct{
-    width: 60%;
-    height: 450px;
-    padding-right: 20px;
-}
-
-.artAct{
-    background: url("../img/index/articleImg.png") no-repeat center;
-}
-
-.titleBox{
-    width: 100%;
-    height: 100%;
-    padding: 150px 15px 0 15px;
-}
-
-.titleAct{
-    padding: 380px 0 0 20px;
-}
-
-.titleBox>h2{
-    height: 53px;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 26px;
-    color: #333333;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-}
-
-.titleBox>h3{
-    display: none;
-}
-
-.titleBox>h4{
-    height: 17px;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 17px;
-    color: #333333;
-    display: block;
-    margin-bottom: 100px;
-}
-
-.titleBox>img{
-    width: 25px;
-    height: 25px;
-    display: block;
-}
-
-.titleAct>h2{
-    height: 26px;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 26px;
-    color: #FFFFFF;
-    margin-bottom: 10px;
-}
-
-.titleAct>h3{
-    height: 22px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #FFFFFF;
-    display: block;
-}
-
-.titleAct>h4{
-    display: none;
-}
-.titleAct>img{
-    display: none;
-}
-.beforeLine{
-    
-}
 .show{
     display: flex;
 }
@@ -640,6 +562,121 @@ i {
     display: none;
 }
 
+/*首页底部修改部分*/
+._1500>section{
+    width: 65%;
+}
+._1500>aside{
+    width: 35%;
+    padding-left: 20px;
+}
+.secTop{
+    width: 100%;
+}
+.secUl,.asideUl{
+    border-bottom: 1px solid #dee2e6;
+}
 
+.secUl>li,.asideUl>li{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+}
+.secUl>a,.asideUl>a{
+    margin: auto;
+    margin-right: 0;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #cdcdcd;
+    color: #fff;
+    border-radius: 3px;
+    font-weight: normal;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+.secUl>a:hover,.asideUl>a:hover{
+    background: #33AAB3;
+}
+.secBot>ul{
+    position: relative;
+}
+.secBot>ul li>span{
+    position: absolute;
+    right:0;
+}
+.secBot>ul>li{
+    padding-right: 100px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px dotted #d0d0d0;
+    font-size: 14px;
+    position: relative;
+}
+.secBot>ul li>a{
+    padding-left: 10px;
+    display: inline-block;
+    width: 96%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s;
+    color: #000;
+}
+.asideBot>ul{
+    margin: 15px 0;
+}
+.asideBot>ul>li{
+    width: 100%;
+    height: 135px;
+    margin: 10px 0;
+}
+.asideBot>ul>li a>img{
+    width: 195px;
+    height: 135px;
+    float: left;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.asideBot>ul>li h4>a{
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+}
+.asideBot>ul>li .more{
+    color: #33AAB3;
+    margin-top: 90px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.secAct{
+    color: #33AAB3;
+    margin-bottom: -1px;
+    border-bottom:solid 1px #33AAB3;
+}
+.asideAct{
+    color: #33AAB3;
+    margin-bottom: -1px;
+    border-bottom:solid 1px #33AAB3;
+}
+.secHoverLi{
+    padding-left: 10px;
+    transition: all 0.5s;
+}
+.secBot>ul>li a:hover{
+    color: #33AAB3;
+    transition: all 0.5s;
+}
+.asideBot>ul>li h4>a:hover{
+    color: #33AAB3;
+}
 
-
+.asideBot>ul li>a:first-child img:hover{
+    transform: scale(1.01,1.01);
+}
+.fadeInRight{
+    animation-duration:1s;
+}

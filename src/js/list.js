@@ -13,11 +13,6 @@ function f() {
         })
     }
     knowMore($('.moreBox'))
-    $('.proHoverBox').hover(function () {
-        $(this).children('.proImgFat').children('img').css('transform','matrix(1.02,0,0,1.02,0,0)')
-    },function () {
-        $(this).children('.proImgFat').children('img').css('transform','matrix(1,0,0,1,0,0)')
-    })
 }
 if (window.attachEvents) {
     window.attachEvents("load", f, false);

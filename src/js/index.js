@@ -10,10 +10,17 @@ let product = $(".product>.productItem")
 let productSec = $(".productSec")
 let itemName = $(".product>.productItem>.itemName")
 let itemDesc = $(".product>.productItem>.itemDesc>span")
-let indexTabFirst = $('.tabFirst .indexArticle')
-let indexTabSecond = $('.tabSecond .indexArticle')
-let indexTabThird = $('.tabThird .indexArticle')
+//首页文章修改
+let secArtTop = $('.secUl>li')
+let secArtBot = $('.secBot>ul')
+let asideTop = $('.asideUl>li')
+let asideBot = $('.asideBot>ul')
+
 // ------------------------------------------------------------
+// $(window).scroll(function () {
+//
+//     $(window).scrollTop()
+// })
 function f() {
     // 首页 二级机器展示
     for (let i = 0; i < product.length; i++) {
@@ -81,6 +88,14 @@ function f() {
         $(this).addClass("chooseTipAct")
         chooseType.removeClass("chooseTipAct")
     })
+    $('.machineBox').hover(function () {
+        $('.machineBot>img:first-child').css({'left':'140px','transition':'all .8s'})
+        $('.machineBot>img:last-child').css({'right':'140px','transition':'all .8s'})
+    },function () {
+        $('.machineBot>img:first-child').css({'left':'80px','transition':'all .8s'})
+        $('.machineBot>img:last-child').css({'right':'80px','transition':'all .8s'})
+    })
+
 
     // 首页 直播资讯展会tab切换
     for (let i = 0; i < threeItemTitle.length; i++) {
@@ -97,27 +112,6 @@ function f() {
             $(indexBottomBot[i]).removeClass('hide')
         })
     }
-    // 首页底部文章展示切换
-    articleChange(indexTabFirst)
-    articleChange(indexTabSecond)
-    articleChange(indexTabThird)
-
-    function articleChange(pageArr) {
-        for (let i = 0; i < pageArr.length; i++) {
-            $(pageArr).hover(function (event) {
-                event.stopPropagation()
-                for (let j = 0; j < pageArr.length; j++) {
-                    $(pageArr[j]).parent('.indexArticleBox').removeClass('articleAct')
-                    $(pageArr[j]).removeClass('artAct')
-                    $(pageArr[j]).children('.titleBox').removeClass('titleAct')
-                }
-                $(this).addClass('artAct')
-                $(this).children('.titleBox').addClass('titleAct')
-                $(this).parent('.indexArticleBox').addClass('articleAct')
-            })
-        }
-    }
-
 
     // 首页样式
     $('.productLearnMore').hover(function () {
@@ -151,7 +145,53 @@ function f() {
     },function () {
         $(this).children('img').css('transform','matrix(1,0,0,1,0,0)')
     })
+
+    //首页底部文章修改
+
+    for (let i = 0; i < secArtTop.length; i++){
+        $(secArtTop[i]).hover(function () {
+            $(this).addClass('asideAct')
+        },function () {
+            $(this).removeClass('asideAct')
+        })
+        $(secArtTop[i]).click(function (event) {
+            event.stopPropagation()
+            for (let j = 0; j < secArtBot.length; j++){
+                $(secArtBot[j]).addClass('hide')
+                $(secArtTop[j]).removeClass('secAct')
+            }
+            $(secArtBot[i]).removeClass('hide')
+            $(secArtBot[i]).addClass('animated fadeInRight')
+            $(secArtTop[i]).addClass('secAct')
+        })
+    }
+    for (let i = 0; i < asideTop.length; i++){
+        $(asideTop[i]).hover(function () {
+            $(this).addClass('asideAct')
+        },function () {
+            $(this).removeClass('asideAct')
+        })
+        $(asideTop[i]).click(function (event) {
+            event.stopPropagation()
+            for (let j = 0; j < asideBot.length; j++){
+                $(asideBot[j]).addClass('hide')
+                $(asideTop[j]).removeClass('secAct')
+            }
+            $(asideBot[i]).removeClass('hide')
+            $(asideBot[i]).addClass('animated fadeInRight')
+            $(asideTop[i]).addClass('secAct')
+        })
+    }
+    $(secArtBot).children('li').hover(function () {
+        $(this).addClass('secHoverLi')
+    },function () {
+        $(this).removeClass('secHoverLi')
+    })
+
+
+
 }
+
 if (window.attachEvents) {
     window.attachEvents("load", f, false);
 } else {

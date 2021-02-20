@@ -13,11 +13,8 @@
 </head>
 <body>
 <!--    header-->
-
 <header>
     <div class="headerBox flex _1500 flex-zBetween">
-        <!--    原先的导航-->
-        <!--    <div class="prenavLeft"></div>-->
         <div class="flex flex-hc flex-ac navLeft">
             <img src="src/img/index/logo.png" alt="">
             <ul class="flex navLeftBox ">
@@ -35,7 +32,9 @@
         </div>
         <div class="flex flex-ac flex-zEnd  navRig">
             <img src="src/img/index/search.png" alt="">
-            <img src="src/img/index/user.png" alt="">
+            <a href="#">
+                <img src="src/img/index/user.png" alt="">
+            </a>
         </div>
     </div>
 </header>
@@ -711,9 +710,21 @@
 </div>
 <!--商品大图-->
 <div class="flex _1500 flex-zStart  flex-ac proBox">
-    <div class="flex proBoxLeft">
-        <img class="productBigImg" src="src/img/detail/productImg.png" alt="">
-        <div class="flex1 proDetail">
+    <div class="flex flex-zTopBottom proBoxLeft">
+        <div class="detailBigImg">
+            <img class="productBigImg" src="src/img/detail/productImg.png" alt="">
+        </div>
+
+        <div class="flex flex1 proDetail">
+            <div class="proDetImgBox proDetImgAct">
+                <img src="src/img/detail/productImg.png" alt="">
+            </div>
+            <div class="proDetImgBox">
+                <img src="src/img/detail/productImg.png" alt="">
+            </div>
+            <div class="proDetImgBox">
+                <img src="src/img/detail/productImg.png" alt="">
+            </div>
 
         </div>
     </div>
@@ -727,8 +738,13 @@
             商品编号:TR0002262 <br>
             商品描述:4000Vms20VA初级115V,230V
         </p>
+        <div class="typeChooseBut">
+            <button>A型号</button>
+            <button>B型号</button>
+            <button>C型号</button>
+        </div>
         <table class="proRigTable">
-            <tr>
+            <tr class="hide">
                 <td class="proRigService">库存:</td>
                 <td>
                     <p>现货36（1起订） <br>
@@ -767,7 +783,9 @@
 <div class="flex flex-zTopBottom _1500 typeSelect">
     <div class="flex _1500 flex-ac modelSelectBox">
         <div class="other">其他型号</div>
-        <div class="allModel">共9个型号</div>
+        <div class="allModel">共
+            <span >9</span>
+            个型号</div>
         <div class="modelDec">如需查看具体型号的属性差异，请点击商品名称进行查阅。</div>
     </div>
     <ul class="flex _1500 modelTh">
@@ -784,7 +802,7 @@
     </ul>
     <div class="flex flex-zTopBottom _1500 tableDiv">
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
@@ -799,13 +817,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -814,13 +832,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -829,13 +847,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -844,13 +862,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -859,13 +877,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -874,13 +892,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -889,13 +907,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -904,13 +922,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -919,13 +937,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -934,13 +952,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -949,193 +967,13 @@
             </li>
         </ul>
         <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
+            <li class="detailItemTitle"><a href="#">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</a></li>
             <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
             <li>
                 <span>¥</span>
                 <span class="otherGoodPrice">380.00</span></li>
             <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
-                <div class="calBox flex flex-hc flex-ac">
-                    <button class="otherSub">-</button>
-                    <input class="otherGoodNum" type="number" value="0">
-                    <button class="otherAdd">+</button>
-                </div>
-            </li>
-        </ul>
-        <ul class="flex detailItem">
-            <li class="detailItemTitle">工贝PLC控制器CPU224XP带模拟量国产兼容工贝PLC控制器CPU224XP带模拟量国产兼容</li>
-            <li class="detailItemDec">继电器输出2142BD23-0X80定制LOGO</li>
-            <li>
-                <span>¥</span>
-                <span class="otherGoodPrice">380.00</span></li>
-            <li>现货</li>
-            <li>
+            <li class="flex flex-hc flex-ac">
                 <div class="calBox flex flex-hc flex-ac">
                     <button class="otherSub">-</button>
                     <input class="otherGoodNum" type="number" value="0">
@@ -1155,9 +993,9 @@
                 <span>¥</span>
                 <span class="totalMoney">00.00</span>
             </div>
-            <div class="addAlltoBuy">
+            <button class="addAlltoBuy">
                 批量加车
-            </div>
+            </button>
         </div>
     </div>
 </div>
@@ -1169,17 +1007,81 @@
             <li class="tabSelectAct">规格参数</li>
             <li>PDF数据手册</li>
             <li>技术文档</li>
-            <li>成交记录</li>
+            <li class="hide">成交记录</li>
             <li>相关问答</li>
         </ul>
     </div>
     <div class="_1500 flex tabSelectShow">
+<!--        规格参数-->
         <div class="tabSelLeft">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
+            <table class="specification">
+                <tr>
+                    <td colspan="2">规格参数</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+                <tr>
+                    <td>品牌</td>
+                    <td>上工</td>
+                </tr>
+                <tr>
+                    <td>类别</td>
+                    <td>手用丝锤</td>
+                </tr>
+            </table>
         </div>
-
+<!--        pdf文档-->
+        <div class="tabSelLeft hide">
+            <ul class="dataPagination" style="padding-top: 10px">
+                <li class="flex flex-ac flex-hc dataPaginationLi">
+                        <div class="flex flex-hc flex-ac resuleLeft">
+                            <img src="src/img/data/excel.png" alt="">
+                        </div>
+                        <div class="flex flex-zTopBottom flex-zBetween resuleMid">
+                            <div class="resuleMidTop">
+                                <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
+                            </div>
+                            <div class=" resuleMidBot">
+                            <span>
+                                <i class="iconfont icon-yan1"></i>4745</span>
+                                <span>
+                                <i class="iconfont icon-xiazai"></i>
+                                666</span>
+                                <span>2020-12-10</span>
+                                <span>0.57（MB）</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
+                            <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
+                            <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
+                            <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
+                        </div>
+                </li>
+            </ul>
+        </div>
+<!--        技术文档-->
         <div class="tabSelLeft hide">
             <ul class="dataPagination" style="padding-top: 10px">
                 <li class="flex flex-ac flex-hc dataPaginationLi">
@@ -1188,7 +1090,127 @@
                     </div>
                     <div class="flex flex-zTopBottom flex-zBetween resuleMid">
                         <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
+                            <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
+                        </div>
+                        <div class=" resuleMidBot">
+                            <span>
+                                <i class="iconfont icon-yan1"></i>4745</span>
+                            <span>
+                                <i class="iconfont icon-xiazai"></i>
+                                666</span>
+                            <span>2020-12-10</span>
+                            <span>0.57（MB）</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
+                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
+                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
+                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
+                    </div>
+                </li>
+                <li class="flex flex-ac flex-hc dataPaginationLi">
+                    <div class="flex flex-hc flex-ac resuleLeft">
+                        <img src="src/img/data/excel.png" alt="">
+                    </div>
+                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
+                        <div class="resuleMidTop">
+                            <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
+                        </div>
+                        <div class=" resuleMidBot">
+                            <span>
+                                <i class="iconfont icon-yan1"></i>4745</span>
+                            <span>
+                                <i class="iconfont icon-xiazai"></i>
+                                666</span>
+                            <span>2020-12-10</span>
+                            <span>0.57（MB）</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
+                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
+                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
+                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
+                    </div>
+                </li>
+                <li class="flex flex-ac flex-hc dataPaginationLi">
+                    <div class="flex flex-hc flex-ac resuleLeft">
+                        <img src="src/img/data/excel.png" alt="">
+                    </div>
+                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
+                        <div class="resuleMidTop">
+                            <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
+                        </div>
+                        <div class=" resuleMidBot">
+                            <span>
+                                <i class="iconfont icon-yan1"></i>4745</span>
+                            <span>
+                                <i class="iconfont icon-xiazai"></i>
+                                666</span>
+                            <span>2020-12-10</span>
+                            <span>0.57（MB）</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
+                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
+                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
+                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
+                    </div>
+                </li>
+                <li class="flex flex-ac flex-hc dataPaginationLi">
+                    <div class="flex flex-hc flex-ac resuleLeft">
+                        <img src="src/img/data/excel.png" alt="">
+                    </div>
+                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
+                        <div class="resuleMidTop">
+                            <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
+                        </div>
+                        <div class=" resuleMidBot">
+                            <span>
+                                <i class="iconfont icon-yan1"></i>4745</span>
+                            <span>
+                                <i class="iconfont icon-xiazai"></i>
+                                666</span>
+                            <span>2020-12-10</span>
+                            <span>0.57（MB）</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
+                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
+                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
+                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
+                    </div>
+                </li>
+                <li class="flex flex-ac flex-hc dataPaginationLi">
+                    <div class="flex flex-hc flex-ac resuleLeft">
+                        <img src="src/img/data/excel.png" alt="">
+                    </div>
+                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
+                        <div class="resuleMidTop">
+                            <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
+                        </div>
+                        <div class=" resuleMidBot">
+                            <span>
+                                <i class="iconfont icon-yan1"></i>4745</span>
+                            <span>
+                                <i class="iconfont icon-xiazai"></i>
+                                666</span>
+                            <span>2020-12-10</span>
+                            <span>0.57（MB）</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
+                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
+                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
+                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
+                    </div>
+                </li>
+                <li class="flex flex-ac flex-hc dataPaginationLi">
+                    <div class="flex flex-hc flex-ac resuleLeft">
+                        <img src="src/img/data/excel.png" alt="">
+                    </div>
+                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
+                        <div class="resuleMidTop">
+                            <a href="#">[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</a>
                         </div>
                         <div class=" resuleMidBot">
                             <span>
@@ -1208,170 +1230,27 @@
                 </li>
             </ul>
         </div>
-
-        <div class="tabSelLeft hide">
-            <ul class="dataPagination" style="padding-top: 10px">
-                <li class="flex flex-ac flex-hc dataPaginationLi">
-                    <div class="flex flex-hc flex-ac resuleLeft">
-                        <img src="src/img/data/excel.png" alt="">
-                    </div>
-                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
-                        <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
-                        </div>
-                        <div class=" resuleMidBot">
-                            <span>
-                                <i class="iconfont icon-yan1"></i>4745</span>
-                            <span>
-                                <i class="iconfont icon-xiazai"></i>
-                                666</span>
-                            <span>2020-12-10</span>
-                            <span>0.57（MB）</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
-                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
-                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
-                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
-                    </div>
-                </li>
-                <li class="flex flex-ac flex-hc dataPaginationLi">
-                    <div class="flex flex-hc flex-ac resuleLeft">
-                        <img src="src/img/data/excel.png" alt="">
-                    </div>
-                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
-                        <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
-                        </div>
-                        <div class=" resuleMidBot">
-                            <span>
-                                <i class="iconfont icon-yan1"></i>4745</span>
-                            <span>
-                                <i class="iconfont icon-xiazai"></i>
-                                666</span>
-                            <span>2020-12-10</span>
-                            <span>0.57（MB）</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
-                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
-                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
-                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
-                    </div>
-                </li>
-                <li class="flex flex-ac flex-hc dataPaginationLi">
-                    <div class="flex flex-hc flex-ac resuleLeft">
-                        <img src="src/img/data/excel.png" alt="">
-                    </div>
-                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
-                        <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
-                        </div>
-                        <div class=" resuleMidBot">
-                            <span>
-                                <i class="iconfont icon-yan1"></i>4745</span>
-                            <span>
-                                <i class="iconfont icon-xiazai"></i>
-                                666</span>
-                            <span>2020-12-10</span>
-                            <span>0.57（MB）</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
-                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
-                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
-                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
-                    </div>
-                </li>
-                <li class="flex flex-ac flex-hc dataPaginationLi">
-                    <div class="flex flex-hc flex-ac resuleLeft">
-                        <img src="src/img/data/excel.png" alt="">
-                    </div>
-                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
-                        <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
-                        </div>
-                        <div class=" resuleMidBot">
-                            <span>
-                                <i class="iconfont icon-yan1"></i>4745</span>
-                            <span>
-                                <i class="iconfont icon-xiazai"></i>
-                                666</span>
-                            <span>2020-12-10</span>
-                            <span>0.57（MB）</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
-                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
-                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
-                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
-                    </div>
-                </li>
-                <li class="flex flex-ac flex-hc dataPaginationLi">
-                    <div class="flex flex-hc flex-ac resuleLeft">
-                        <img src="src/img/data/excel.png" alt="">
-                    </div>
-                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
-                        <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
-                        </div>
-                        <div class=" resuleMidBot">
-                            <span>
-                                <i class="iconfont icon-yan1"></i>4745</span>
-                            <span>
-                                <i class="iconfont icon-xiazai"></i>
-                                666</span>
-                            <span>2020-12-10</span>
-                            <span>0.57（MB）</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
-                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
-                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
-                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
-                    </div>
-                </li>
-                <li class="flex flex-ac flex-hc dataPaginationLi">
-                    <div class="flex flex-hc flex-ac resuleLeft">
-                        <img src="src/img/data/excel.png" alt="">
-                    </div>
-                    <div class="flex flex-zTopBottom flex-zBetween resuleMid">
-                        <div class="resuleMidTop">
-                            <span>[成功案例]第一个一级彩页华为 Netengine AR600-S系列企业分销路由器版彩页</span>
-                        </div>
-                        <div class=" resuleMidBot">
-                            <span>
-                                <i class="iconfont icon-yan1"></i>4745</span>
-                            <span>
-                                <i class="iconfont icon-xiazai"></i>
-                                666</span>
-                            <span>2020-12-10</span>
-                            <span>0.57（MB）</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap flex-ac flex-zStart resuleRig">
-                        <button><i class="iconfont icon-yan1"></i><a>查看</a></button>
-                        <button><i class="iconfont icon-xiazai"></i><a>下载</a></button>
-                        <button><i class="iconfont icon-stars-lines"></i><a>收藏</a></button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
+<!--        成交记录未定-->
         <div class="tabSelLeft hide">
             <img src="src/img/detail/detailCamera.png" alt="">
             <img src="src/img/detail/detailCamera.png" alt="">
             <img src="src/img/detail/detailCamera.png" alt="">
         </div>
-
+<!--        FAQ-->
         <div class="tabSelLeft hide">
             <dl class="detailFAQ">
                 <dd>
                     <div class="detailFAQTop">
-                        <span>1、问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①</span>
+                        <span>1、问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①
+                            问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①问题①</span>
                     </div>
                     <div class="detailFAQBot">
-                        <span>答：测试测试测试不要超过三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行</span>
+                        <span>答：测试测试测试不要超过三行三行三行三行三行三行行三行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行行三行三行三行三行三行三行三行三行三行三
+                            行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行
+                            三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行三行</span>
                     </div>
                 </dd>
                 <dd>
@@ -1392,158 +1271,67 @@
                 </dd>
             </dl>
         </div>
+<!--        右侧推荐文章-->
         <div class="tabSelRig">
-            <div class="tabRigBox">
-                <div class="detailScaleBox">
-                    <div class="detailImgBox">
-                        <img src="src/img/detail/detailLight.png" alt="">
+            <a href="#">
+                <div class="tabRigBox">
+                    <div class="detailScaleBox">
+                        <div class="detailImgBox">
+                            <img src="src/img/detail/detailLight.png" alt="">
+                        </div>
+                        <div class="probotTitle">标题标题标题</div>
+                        <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
                     </div>
-                    <div class="probotTitle">标题标题标题</div>
-                    <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
+
+                    <div class="probotLine"></div>
+
+                    <button class="flex flex-ac flex-hc productLearnMore">
+                        <p>了解更多</p>
+                        <i class="iconfont icon-line" style="color: #333333;transform: scale(1.8,1);margin: 0 5px"></i>
+                        <i class="iconfont icon-jiantou" style="color: #333333"></i>
+                    </button>
                 </div>
-
-                <div class="probotLine"></div>
-
-                <button class="flex flex-ac flex-hc productLearnMore">
-                    <p>了解更多</p>
-                    <i class="iconfont icon-line" style="color: #333333;transform: scale(1.8,1);margin: 0 5px"></i>
-                    <i class="iconfont icon-jiantou" style="color: #333333"></i>
-                </button>
-            </div>
-            <div class="tabRigBox">
-                <div class="detailScaleBox">
-                    <div class="detailImgBox">
-                        <img src="src/img/detail/detailLight.png" alt="">
+            </a>
+            <a href="#">
+                <div class="tabRigBox">
+                    <div class="detailScaleBox">
+                        <div class="detailImgBox">
+                            <img src="src/img/detail/detailLight.png" alt="">
+                        </div>
+                        <div class="probotTitle">标题标题标题</div>
+                        <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
                     </div>
-                    <div class="probotTitle">标题标题标题</div>
-                    <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
+
+                    <div class="probotLine"></div>
+
+                    <button class="flex flex-ac flex-hc productLearnMore">
+                        <p>了解更多</p>
+                        <i class="iconfont icon-line" style="color: #333333;transform: scale(1.8,1);margin: 0 5px"></i>
+                        <i class="iconfont icon-jiantou" style="color: #333333"></i>
+                    </button>
                 </div>
-
-                <div class="probotLine"></div>
-
-                <button class="flex flex-ac flex-hc productLearnMore">
-                    <p>了解更多</p>
-                    <i class="iconfont icon-line" style="color: #333333;transform: scale(1.8,1);margin: 0 5px"></i>
-                    <i class="iconfont icon-jiantou" style="color: #333333"></i>
-                </button>
-            </div>
-            <div class="tabRigBox">
-                <div class="detailScaleBox">
-                    <div class="detailImgBox">
-                        <img src="src/img/detail/detailLight.png" alt="">
+            </a>
+            <a href="#">
+                <div class="tabRigBox">
+                    <div class="detailScaleBox">
+                        <div class="detailImgBox">
+                            <img src="src/img/detail/detailLight.png" alt="">
+                        </div>
+                        <div class="probotTitle">标题标题标题</div>
+                        <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
                     </div>
-                    <div class="probotTitle">标题标题标题</div>
-                    <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
+
+                    <div class="probotLine"></div>
+
+                    <button class="flex flex-ac flex-hc productLearnMore">
+                        <p>了解更多</p>
+                        <i class="iconfont icon-line" style="color: #333333;transform: scale(1.8,1);margin: 0 5px"></i>
+                        <i class="iconfont icon-jiantou" style="color: #333333"></i>
+                    </button>
                 </div>
-
-                <div class="probotLine"></div>
-
-                <button class="flex flex-ac flex-hc productLearnMore">
-                    <p>了解更多</p>
-                    <i class="iconfont icon-line" style="color: #333333;transform: scale(1.8,1);margin: 0 5px"></i>
-                    <i class="iconfont icon-jiantou" style="color: #333333"></i>
-                </button>
-            </div>
-
+            </a>
         </div>
     </div>
-
-    <div class="_1500 flex tabSelectShow hide">
-        <div class="tabSelLeft">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-        </div>
-        <div class="tabSelRig">
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="_1500 flex tabSelectShow hide">
-        <div class="tabSelLeft">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-            <img src="src/img/detail/detailCamera.png" alt="">
-        </div>
-        <div class="tabSelRig">
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="tabRigBox">
-                <img src="src/img/detail/detailLight.png" alt="">
-                <div class="probotTitle">标题标题标题</div>
-                <div class="probotDec">一个产品的简介不会太长一个产品的简介不会太长一个产品的简介不会太长</div>
-                <div class="probotLine"></div>
-                <div class="flex flex-zEnd flex-ac probotMore">
-                    <div class="flex flex-hc flex-ac probotMoreBox">
-                        <span>了解更多</span>
-                        <img src="src/img/index/rightArrowBlack.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
 </div>
 
 <!--footer-->
